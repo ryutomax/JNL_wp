@@ -41,7 +41,7 @@
     width: 240px;
     height: 180px;
     overflow: hidden;
-    border: solid 0.5px $navy;
+    border: solid 0.5px $black;
     img {
         object-fit: cover;
         width: 240px;
@@ -167,7 +167,7 @@
         line-height: 1.75rem;
         font-weight: bold;
         padding-left: 0.625rem;
-        border-left: 4px solid $navy;
+        border-left: 4px solid $black;
     }
     div,p {
         line-height: 1.5;

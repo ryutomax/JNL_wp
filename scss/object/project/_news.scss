@@ -20,7 +20,7 @@
         margin-left: 54px;
     }
     a {
-        color: $navy;
+        color: $black;
     }
 }
 
@@ -54,7 +54,7 @@
 
 .p-news-link {
     width: 100%;
-    color: $navy;
+    color: $black;
 }
 
 .p-news-thum {
@@ -82,7 +82,7 @@
     float: left;
     width: 100px;
     height: 50px;
-    color: $navy;
+    color: $black;
     font-size: 1rem;
     line-height: 50px;
     text-align: center;
@@ -125,7 +125,7 @@
 
 /*選択されているタブのスタイルを変える*/
 // .p-news-tabs input:checked + .p-news-tab_item {
-//     text-decoration: underline 1.5px $navy solid;
+//     text-decoration: underline 1.5px $black solid;
 //     text-underline-offset: 0.1rem;
 // }
 

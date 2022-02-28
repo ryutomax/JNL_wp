@@ -39,7 +39,7 @@
     border-radius: 2rem;
     background-color: $yellow;
     @include box-anime;
-    @include btn-anime-l ($navy,25px);
+    @include btn-anime-l ($black,25px);
 }
 
 .p-fv-link {

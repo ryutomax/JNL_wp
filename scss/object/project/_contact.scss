@@ -41,14 +41,14 @@
     height: 50px;
     margin-top: 0.75rem;
     padding-left: 1.25rem;
-    border: solid 0.5px $navy;
+    border: solid 0.5px $black;
     font-size: 1rem;
     &::placeholder {
         color: $MD-gray;
         font-size: 0.75rem;
     }
     &:focus {
-        border: solid 1.5px $navy;
+        border: solid 1.5px $black;
     }
 }
 
@@ -81,7 +81,7 @@ input[type=radio] {
     width: auto;
     &::before {
         background: #fff;
-        border: 0.5px solid $navy;
+        border: 0.5px solid $black;
         border-radius: 50%;
         content: '';
         display: block;
@@ -108,7 +108,7 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + .mwform-radio-field-text::before {
-    border-color: $navy;
+    border-color: $black;
 }
 
 input[type=radio]:checked + .mwform-radio-field-text::after {
@@ -125,12 +125,12 @@ input[type=radio]:checked + .mwform-radio-field-text::after {
     padding-top: 1.375rem;
     padding-left: 1.4375rem;
     font-size: 0.75rem;
-    border: solid 0.5px $navy;
+    border: solid 0.5px $black;
     &::placeholder {
         color: $MD-gray;
     }
     &:focus {
-        border: solid 1.5px $navy;
+        border: solid 1.5px $black;
     }
 }
 
@@ -170,7 +170,7 @@ span.mwform-checkbox-field-text {
     &::before {
         position: absolute;
         background: $white;
-        border: 1px solid $navy;
+        border: 1px solid $black;
         content: '';
         display: block;
         width: 18px;
@@ -180,8 +180,8 @@ span.mwform-checkbox-field-text {
         top: 50%;
     }
     &::after {
-        border-right: 3px solid $navy;
-        border-bottom: 3px solid $navy;
+        border-right: 3px solid $black;
+        border-bottom: 3px solid $black;
         content: '';
         display: block;
         height: 12px;
@@ -213,7 +213,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 .p-contact-btn {
     width: 200px;
     height: 50px;
-    background-color: $navy;
+    background-color: $black;
     cursor: pointer;
     padding: 0;
     z-index: 0;

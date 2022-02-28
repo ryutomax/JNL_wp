@@ -49,7 +49,7 @@
 }
 
 .p-table__plan {
-    background-color: $navy;
+    background-color: $black;
     color: $white;
     line-height: 2.25;
     font-weight: bold;
@@ -68,8 +68,8 @@
 
 .p-table__price {
     padding-bottom: 3.125rem;
-    border-right: 0.5px solid $navy;
-    border-left: 0.5px solid $navy;
+    border-right: 0.5px solid $black;
+    border-left: 0.5px solid $black;
 }
 
 .p-table__price-main-wp {
@@ -92,9 +92,9 @@
     height: 278px;
     padding-right: 1.5rem;
     padding-left: 3.125rem;
-    border-right: 0.5px solid $navy;
-    border-left: 0.5px solid $navy;
-    border-bottom: 0.5px solid $navy;
+    border-right: 0.5px solid $black;
+    border-left: 0.5px solid $black;
+    border-bottom: 0.5px solid $black;
     h4 {
         position: relative;
         width: 150px;
@@ -108,7 +108,7 @@
             &::before {
                 content: "";
                 position: absolute;
-                background-color: $navy;
+                background-color: $black;
                 width: 8.5px;
                 height: 3px;
                 transform: rotate(45deg);
@@ -116,7 +116,7 @@
             &::after {
                 content: "";
                 position: absolute;
-                background-color: $navy;
+                background-color: $black;
                 width: 13px;
                 height: 3px;
                 left: 5px;
@@ -154,7 +154,7 @@
     }
     /*スクロールバーの動く部分のホバー（マウスオーバー）*/
     .p-table__wrap::-webkit-scrollbar-thumb:hover {
-        background: $navy;
+        background: $black;
     }
 
     .p-table__cont-inner {

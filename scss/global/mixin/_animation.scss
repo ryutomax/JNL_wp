@@ -17,7 +17,7 @@
         }
 }
 
-@mixin txt-border ($background: $navy) {
+@mixin txt-border ($background: $black) {
     position: relative;
     display: inline-block;
     text-decoration: none;
@@ -49,7 +49,7 @@
 @mixin cnt-anime {
     transition: 0.5s;
     &:hover {
-        box-shadow: 1px 3px 5px $navy;
+        box-shadow: 1px 3px 5px $black;
         opacity: 0.5;
     }
 }
@@ -64,15 +64,15 @@
 @mixin box-anime {
     transition: box-shadow 0.5s;
     &:hover {
-        box-shadow: 1px 1px 0 $navy;
+        box-shadow: 1px 1px 0 $black;
     }
     &:active {
         top: 2px;
-        box-shadow: 0 0 0 $navy;
+        box-shadow: 0 0 0 $black;
     }
 }
 
-@mixin btn-anime ($background: $navy, $border-radius: 5px) {
+@mixin btn-anime ($background: $black, $border-radius: 5px) {
     z-index: 1;
     &::after {
         position: absolute;
@@ -96,7 +96,7 @@
     }
 }
 
-@mixin btn-anime-l ($background: $navy, $border-radius: 5px) {
+@mixin btn-anime-l ($background: $black, $border-radius: 5px) {
     z-index: 1;
     &::after {
         position: absolute;

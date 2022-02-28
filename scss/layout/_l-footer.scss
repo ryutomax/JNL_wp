@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .l-footer {
-    background-color: $navy;
+    background-color: $black;
 }
 
 .l-footer-inner {
@@ -81,7 +81,7 @@
 
 .l-footer-tel {
     a {
-        color: $navy;
+        color: $black;
         &:last-child {
             margin-left: 20px;
         }
@@ -95,7 +95,7 @@
     padding-right: 10.75rem;
     text-align: end;
     small {
-        color: $navy;
+        color: $black;
         font-weight: bold;
     }
 }

@@ -31,7 +31,7 @@
 
 .p-system-item {
     width: 280px;
-    background-color: $navy;
+    background-color: $black;
     text-align: center;
     p {
         font-size: 1.375rem;
@@ -56,7 +56,7 @@
             content: "";
             position: absolute;
             display: block;
-            background-color: $navy;
+            background-color: $black;
             width: 27px;
             height: 2px;
             transform: translate(-50%, -50%);

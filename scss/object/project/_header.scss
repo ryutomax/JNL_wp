@@ -13,7 +13,7 @@
     margin-left: 1.75rem;
     a {
         font-size: 1rem;
-        color: $navy;
+        color: $black;
         font-weight: bold;
         @include txt-border;
     }
@@ -62,7 +62,7 @@
 }
 
 .p-header-btn__navy {
-    background-color: $navy;
+    background-color: $black;
     p {
         font-size: 0.875rem;
     }
@@ -133,7 +133,7 @@
         margin-left: 0;
         a {
             font-size: 2rem;
-            color: $navy;
+            color: $black;
             font-weight: bold;
         }
         &:not(:last-child) {
