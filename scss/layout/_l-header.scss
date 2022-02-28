@@ -15,20 +15,10 @@
     height: 80px;
     margin: 0 auto;
     display: flex;
-    // align-items: center;
     justify-content: space-between;
 }
 
-.l-header-inner_l {
-    display: flex;
-    align-items: center;
-}
 
-
-.l-header-inner_r {
-    display: flex;
-    align-items: center;
-}
 
 @include mq () {
 }

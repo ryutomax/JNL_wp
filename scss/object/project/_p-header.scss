@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.p-header-logo {}
+
+.p-header-logo__img {
+    img {}
+}
+
+
+@include mq (pc) {
+}
+
+@include mq () {
+}
+
+@include mq (sp) {
+
+}
+
