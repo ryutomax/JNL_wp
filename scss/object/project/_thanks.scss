@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.p-complete-inner {
+    height: calc(100vh - 422px);
+    min-height: 315px;
+    background-color: $white;
+    max-width: 900px;
+    margin:  0 auto;
+    padding-top: 5.25rem;
+    padding-bottom: 5rem;
+}
+
+.p-complete-txt {
+    text-align: center;
+    line-height: 1.6875;
+    margin-bottom: 5.25rem;
+}
+
+.p-complete-link {
+    text-align: center;
+    text-decoration: underline 1px;
+}
+
+@include mq (sp) {
+    .p-complete-txt {
+        p {
+            font-size: min(0.75rem, 2vw );
+            font-size: 3.8vw;
+        }
+    }
+
+    .p-complete-link {
+        font-size: 0.8rem;
+    }
+}

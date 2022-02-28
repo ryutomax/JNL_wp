@@ -1,0 +1,20 @@
+@use "../../global" as *;
+
+.c-tag-img {
+    position: relative;
+    img {
+        object-fit: cover;
+    }
+
+}
+
+.c-tag-img__tag {
+    display: inline-block;
+    position: absolute;
+    font-size: 0.75rem;
+    color: $white;
+    background-color: $navy;
+    top: 0;
+    left: 0;
+    border: 1px solid #707070;
+}

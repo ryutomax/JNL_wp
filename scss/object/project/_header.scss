@@ -1,0 +1,198 @@
+@use "global" as *;
+
+.p-header-main-logo {
+    width: 136px;
+    @include logo-anime;
+}
+
+.p-header-nav_list {
+    display: flex;
+}
+
+.p-header-nav-item {
+    margin-left: 1.75rem;
+    a {
+        font-size: 1rem;
+        color: $navy;
+        font-weight: bold;
+        @include txt-border;
+    }
+}
+
+.p-header-info {
+    height: 50px;
+    text-align: end;
+    margin-right: 1.5rem;
+}
+
+.p-header-info_date {
+    font-size: 0.75rem;
+    margin-top: 11.5px;
+    margin-bottom: 0.675rem;
+}
+
+
+.p-header-info_tell {
+    svg {
+        margin-right: 5px;
+    }
+    a {
+        font-weight: bold;
+    }
+}
+
+.p-header-btns {
+    display: flex;
+}
+
+.p-header-btn {
+    margin-right: 0.625rem;
+}
+
+.p-header-btn {
+}
+
+.p-header-btn__yellow {
+    background-color: $yellow;
+    p {
+        font-size: 0.875rem;
+    }
+    @include btn-anime;
+    @include box-anime;
+}
+
+.p-header-btn__navy {
+    background-color: $navy;
+    p {
+        font-size: 0.875rem;
+    }
+    @include btn-anime ($yellow);
+    @include box-anime;
+}
+
+
+@include mq (pc) {
+    .p-header-nav-item {
+        margin-left: 1rem;
+    }
+
+    .p-header-info {
+        margin-right: 0.5rem;
+    }
+
+    .p-header-info_tell {
+        a {
+            font-size: 0.75rem;
+        }
+    }
+
+    .p-header-btn {
+        margin-right: 0.5rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .p-header-btn__yellow {
+        width: 125px;
+    }
+
+    .p-header-btn__navy {
+        width: 125px;
+    }
+}
+
+.p-header-btn__area {
+    display: none;
+}
+
+.p-header-nav__btn {
+    top: 0;
+    right: 30px;
+}
+
+@include mq () {
+    .p-header-nav {
+        display: none;
+        position: absolute;
+    }
+
+    .p-header-nav_list {
+        position: fixed;
+        flex-direction: column;
+        background-color: $white;
+        top: 80px;
+        width: 100vw;
+        left: 0;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .p-header-nav-item {
+        margin-left: 0;
+        a {
+            font-size: 2rem;
+            color: $navy;
+            font-weight: bold;
+        }
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .p-header-info {
+        display: none;
+        position: fixed;
+        background-color: $white;
+        right: 0;
+        top: 288px;
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        text-align: center;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .p-header-btns {
+        display: none;
+        position: fixed;
+        background-color: $white;
+        right: 0%;
+        top: 348px;
+        width: 100vw;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+        box-shadow: 0 1rem 1rem rgb(0 0 0 / 10%);
+    }
+
+    .p-header-btn {
+        margin-right: 0;
+        &:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .p-header-btn__yellow {
+        width: 142px;
+    }
+
+    .p-header-btn__navy {
+        width: 142px;
+    }
+
+    .p-header-btn__area {
+        display: block;
+    }
+
+}
+
+@include mq (sp) {
+    .p-fv-inner_txt {
+        h3 {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+@use "../../global" as *;
+
+.p-news {
+    height: auto;
+    padding: 60px 16px;
+    background-color: $white;
+}
+
+.p-news-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.p-news-ttl {
+    margin-bottom: 46px;
+}
+
+.p-news__tab {
+    &:not(:first-child) {
+        margin-left: 54px;
+    }
+    a {
+        color: $navy;
+    }
+}
+
+.p-news-conts {
+    height: auto;
+    margin-top: 50px;
+    padding: .5rem;
+}
+
+.p-news-list {
+    flex-wrap: wrap;
+}
+
+.p-news-item {
+    width: calc((100% - 45px) / 2);
+    height: 130px;
+    padding: 15px 10px;
+    background-color: $white;
+    transition: 1s ease-in-out !important;
+    &:nth-child(2n) {
+        margin-left: 45px;
+    }
+    &:nth-child(n+3) {
+        margin-top: 20px;
+    }
+    &:hover {
+        box-shadow: 3px 3px 5px rgb(94, 94, 94);
+        transition: all .3s ease-in-out;
+    }
+}
+
+.p-news-link {
+    width: 100%;
+    color: $navy;
+}
+
+.p-news-thum {
+    width: 103px;
+}
+
+.p-news-txt {
+    width: calc(100% - 103px);
+    margin-left: 30px;
+    .p-news-txt__exc {
+        margin-top: 10px;
+    }
+}
+
+/*タブ切り替え全体のスタイル*/
+.p-news-tabs {
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: $white;
+}
+
+/*タブのスタイル*/
+.p-news-tab_item {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 50px;
+    color: $navy;
+    font-size: 1rem;
+    line-height: 50px;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    &:hover {
+        text-shadow: 2px  2px 10px rgb(200, 200, 200),
+        -2px  2px 10px rgb(200, 200, 200),
+        2px -2px 10px rgb(200, 200, 200),
+        -2px -2px 10px rgb(200, 200, 200);
+    }
+}
+
+.p-news-tab_item-first {
+    margin-right: 50px;
+    text-align: end;
+}
+.p-news-tab_item:hover {
+    opacity: .75;
+}
+
+/*ラジオボタンを全て消す*/
+// input[name="tab_item"] {
+//     display: none;
+// }
+
+/*タブ切り替えの中身のスタイル*/
+// .p-news-cont {
+//     display: none;
+//     padding-top: 50px;
+//     clear: both;
+//     overflow: hidden;
+// }
+
+
+/*選択されているタブのコンテンツのみを表示*/
+// #date:checked~#date_content,
+// #other:checked~#other_content {
+//     display: block;
+// }
+
+/*選択されているタブのスタイルを変える*/
+// .p-news-tabs input:checked + .p-news-tab_item {
+//     text-decoration: underline 1.5px $navy solid;
+//     text-underline-offset: 0.1rem;
+// }
+
+@include mq () {
+    .p-news {
+        height: auto;
+    }
+
+    .p-news-inner {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .p-news-item {
+        width: 100%;
+        &:nth-child(2n) {
+            margin-left: 0;
+        }
+        &:nth-child(n+3) {
+            margin-top: 0;
+        }
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@include mq (sp) {
+    .p-news-inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+#topics {
+    position: relative;
+    z-index: 10;
+    padding-top: 3vw;
+    .hide {
+        display: none;
+    }
+}
+
+.p-news-tab_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    li {
+        &:hover {
+            color: #000080;
+            cursor: pointer;
+        }
+    }
+}

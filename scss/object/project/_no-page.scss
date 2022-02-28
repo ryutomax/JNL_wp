@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.p-404 {
+    background: $white;
+    padding-top: 5rem;
+}
+
+.p-404-inner {
+    height: auto;
+    min-height: 300px;
+    text-align: center;
+    padding-top: 5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1.875rem;
+    padding-left: 0.5rem;
+}
+
+.p-404__txt {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+
+}
+
+.p-404__link {
+    a {
+        text-decoration: underline;
+        @include txt-shadow;
+    }
+}

@@ -1,0 +1,92 @@
+@use "../../global" as *;
+
+.p-system {
+    background-color: $white;
+}
+
+.p-system-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 3.625rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.p-system__ttl {
+    margin-bottom: 3.75rem;
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+.p-system__cont {
+}
+
+.p-system__wrap {
+    width: 660px;
+    display: flex;
+    margin:  0 auto;
+    margin-bottom: 2.875rem;
+}
+
+.p-system-item {
+    width: 280px;
+    background-color: $navy;
+    text-align: center;
+    p {
+        font-size: 1.375rem;
+        color: $white;
+        font-weight: bold;
+        line-height: 5.625rem;
+    }
+}
+
+.p-system-band {
+    position: relative;
+    width: 98px;
+    span {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+		-webkit-transform : translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            background-color: $navy;
+            width: 27px;
+            height: 2px;
+            transform: translate(-50%, -50%);
+        }
+        &::before {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+}
+
+.p-system__txt {
+    p {
+        line-height: 1.6875;
+    }
+}
+
+@include mq () {
+    .p-system__wrap {
+        width: 280px;
+        flex-direction: column;
+    }
+
+    .p-system-band {
+        width: 98px;
+        height: 90px;
+        margin: 0 auto;
+    }
+
+    .p-system__txt {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

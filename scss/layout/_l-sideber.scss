@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.l-sidebr {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 4.375rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+@include mq () {
+    .l-sidebr {
+        flex-direction: column;
+    }
+}

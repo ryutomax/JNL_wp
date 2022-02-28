@@ -1,0 +1,126 @@
+@use "global" as *;
+
+.p-recommend {
+
+}
+
+.p-recommend-inner {
+    padding-right: 2.25rem;
+}
+
+.p-recommend-ttl {
+    margin-bottom: 1.875rem;
+    p {
+        font-size: 1.625rem;
+        font-weight: bold;
+        line-height: 2.5;
+    }
+}
+
+.p-recommend-item-wp {
+    display: flex;
+    width: 100%;
+    &:not(:last-child) {
+        margin-bottom: 1.75rem;
+    }
+}
+
+.p-recommend__thumnail-wp {
+    width: 210px;
+    height: 128px;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        width: 210px;
+        height: 128px;
+        @include img-anime
+    }
+}
+
+.p-recommend__cat-wp {
+    padding: 0.5rem 0.8125rem;
+}
+
+.p-recommend-txt {
+    width: calc(100% - 210px);
+    padding-left: 2rem;
+}
+
+.p-recommend__date-wp {
+    margin-bottom: 1.875rem;
+}
+
+.p-recommend__ttl-wp {
+    a {
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-decoration: underline 1px;
+        line-height: 1.6875;
+        @include txt-opa;
+    }
+}
+
+@include mq () {
+    .p-recommend-inner {
+        max-width: 500px;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+
+    .p-recommend-item-wp {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    .p-recommend__thumnail-wp {
+        width: 100%;
+        height: 350px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: 350px;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.1);
+                filter: brightness(0.8);
+            }
+        }
+    }
+
+    .p-recommend-txt {
+        position: absolute;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0.5rem;
+        bottom: 0;
+        background: linear-gradient(#ffffff26, #ffffffd9);
+    }
+
+    .p-recommend-ttl {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 1.875rem;
+    }
+}
+
+@include mq (sp) {
+    .p-recommend-item-wp {
+        height: 250px;
+    }
+
+    .p-recommend__thumnail-wp {
+        width: 100%;
+        height: 250px;
+        img {
+            width: 100%;
+            height: 250px;
+        }
+    }
+
+    .p-recommend-txt {
+    }
+}

@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.c-pagination {
+}
+
+.c-pagination-inner {
+}
+
+ul.page-numbers {
+    display: flex;
+    justify-content: center;
+}
+
+a.page-numbers {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 1rem 1.15rem;
+    border: 1px solid $navy;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    transition: 0.5s;
+    font-weight: bold;
+    &:hover {
+        background-color: $navy;
+        color: $white;
+    }
+}
+
+span.page-numbers {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 1rem 1.25rem;
+    border: 1px solid $navy;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+span.page-numbers.dots {
+    border: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.current {
+    padding: 1rem 1.25rem;
+    background: $navy;
+    color: $white;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+a.prev.page-numbers {
+    display: none;
+}
+a.next.page-numbers {
+    display: none;
+}

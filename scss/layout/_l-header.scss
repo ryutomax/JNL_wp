@@ -1,0 +1,35 @@
+@use "../global" as *;
+
+.l-header {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: $white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.l-header-inner {
+    max-width: 1280px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+}
+
+.l-header-inner_l {
+    display: flex;
+    align-items: center;
+}
+
+
+.l-header-inner_r {
+    display: flex;
+    align-items: center;
+}
+
+@include mq () {
+}
+

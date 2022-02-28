@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.l-main {
+}
+
+.l-main-side {
+    width: 63.75vw;
+}
+
+@include mq () {
+    .l-main-side {
+        width: 100%;
+    }
+}

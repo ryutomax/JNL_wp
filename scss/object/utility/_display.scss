@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.u-dn {
+    display: none;
+}
+
+.u-db-tb {
+    display: none;
+}
+
+.u-db-sp  {
+    display: none;
+}
+
+@include mq () {
+    .u-dn__tb {
+        display: none;
+    }
+
+    .u-db-tb {
+        display: block;
+    }
+}
+
+@include mq (sp) {
+    .u-db-sp {
+        display: block;
+    }
+}

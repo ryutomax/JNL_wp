@@ -1,0 +1,41 @@
+@use "../../global" as *;
+
+.is-closed {
+    display: none;
+}
+
+.is-show {
+    display: block;
+}
+
+.is-active::before{
+    transform: translate(-50%, -50%) rotate(0);
+    opacity: 0;
+}
+
+.is-menu__open {
+    display: block;
+    transition: left 0.7s;
+
+}
+
+.is-btn__active {
+    span {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border: none;
+        transition: transform .8s ease;
+        &:first-child {
+            transform: rotate(135deg);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+            transition:  0.2s ease;
+        }
+        &:last-child {
+            transform: rotate(-135deg);
+
+        }
+    }
+}

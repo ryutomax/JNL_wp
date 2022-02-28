@@ -1,0 +1,20 @@
+@use "../../global" as *;
+
+.u-bg-white {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background-color: $white;
+}
+
+.u-f__black {
+    a {
+        color: $navy;
+    }
+}
+
+@include mq () {
+    .u-tb-f__white {
+        a {
+            color: $white;
+        }
+    }
+}

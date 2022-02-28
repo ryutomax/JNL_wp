@@ -1,0 +1,68 @@
+@use "../../global" as *;
+
+.p-plan {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 775px;
+    padding-top: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.p-plan-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.p-plan-cont {
+    margin-top: 66px;
+}
+
+.p-plan-list {}
+
+.p-plan-item {
+    width: calc((100% - 188px) / 3);
+    &:not(:first-child) {
+        margin-left: 94px;
+    }
+}
+
+.p-plan-text {
+    line-height: 2rem;
+    margin-top: 2rem;
+    .p-plan-text__main {
+        font-size: 1.25rem;
+    }
+    .p-plan-text__sub {
+        margin-top: 2rem;
+    }
+}
+
+@include mq () {
+    .p-plan {
+        height: auto;
+        padding-bottom: 60px;
+    }
+    .p-plan-list {
+        flex-direction: column;
+    }
+
+    .p-plan-item {
+        width: 85%;
+        margin: 0 auto;
+        &:not(:first-child) {
+            margin: 0 auto;
+        }
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@include mq (sp) {
+    .p-plan-ttl {
+        h2 {
+            font-size: min(2.25rem, 9vw);
+        }
+    }
+}

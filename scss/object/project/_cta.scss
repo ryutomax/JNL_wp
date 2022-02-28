@@ -1,0 +1,145 @@
+@use "../../global" as *;
+
+.p-cta {
+    background-color: $white;
+}
+.p-cta-inner {
+}
+
+.p-cta_contact {
+    background-size: cover;
+    height: 256px;
+    text-align: center;
+    padding-top: 4.375rem;
+    padding-bottom: 2.625rem;
+}
+
+.p-cta__copy {
+    margin-bottom: 1.5625rem;
+    p {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $white;
+    }
+}
+
+.p-cta__btn {
+    width: 280px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: $yellow;
+    padding-top: 1.1rem;
+    padding-bottom: 1.125rem;
+    margin-bottom: 1.375rem;
+    color: $white;
+    @include btn-anime-l ($navy,25px);
+}
+
+.p-cta_tel {
+    max-width: 1280px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: $white;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.p-cta_tel-inner {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 15.125rem;
+}
+
+.p-cta_tel-txt {
+    font-weight: bold;
+    p {
+        width: 240px;
+        font-size: 1rem;
+    }
+}
+
+.p-cta_tel-number {
+    width: auto;
+    font-size: 2.25rem;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+    text-align: center;
+    a{
+        font-weight: bold;
+        line-height: 0.8;
+    }
+}
+
+.p-cta_tel-time {
+    width: 158px;
+    time {
+        font-size: 1rem;
+    }
+}
+
+.p-cta_link {
+    a {
+        color: $white;
+        text-decoration: underline;
+        @include txt-shadow;
+    }
+}
+@include mq (pc) {
+
+    .p-cta_tel {
+        padding-right: 5.775rem;
+    }
+
+    .p-cta_tel-inner {
+        align-items: flex-end;
+        justify-content: center;
+        width: 750px;
+        margin: 0 auto;
+    }
+
+    .p-cta_tel-number {
+        width: auto;
+        font-size: 2.25rem;
+        margin-right: 1.25rem;
+        margin-left: 1.25rem;
+        text-align: center;
+        a{
+            font-weight: bold;
+            line-height: 0.8;
+        }
+    }
+}
+
+@include mq () {
+    .p-cta_tel {
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 0;
+    }
+    .p-cta_tel-inner {
+        flex-direction: column;
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .p-cta_tel-number {
+        width: 320px;
+    }
+
+    .p-cta_tel-txt,
+    .p-cta_tel-number,
+    .p-cta_tel-time{
+        margin: 0 auto;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@include mq (sp) {
+    .p-cta_contact {
+        height: auto;
+    }
+
+}
