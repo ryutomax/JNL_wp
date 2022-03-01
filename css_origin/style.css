@@ -853,14 +853,6 @@ a.next.page-numbers {
   margin-left: 1rem;
 }
 
-.p-recipe-cont__list {
-  display: none;
-}
-
-.p-recipe-cont__list.active {
-  display: block;
-}
-
 .p-recipe-cont {
   padding-top: 2rem;
   padding-right: 0.5rem;
@@ -969,21 +961,6 @@ a.next.page-numbers {
     display: block;
   }
 }
-.u-bg-white {
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-}
-
-.u-f__black a {
-  color: #000000;
-}
-
-@media screen and (min-width:860px) {
-  .u-tb-f__white a {
-    color: #ffffff;
-  }
-}
 .u-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1045,6 +1022,10 @@ a.next.page-numbers {
 
 .is-tab-select {
   background-color: #00B906;
+}
+
+.is-tab-active {
+  display: block;
 }
 
 .u-mb__24 {

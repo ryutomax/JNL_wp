@@ -90,9 +90,10 @@ $(function() {
 		$('.p-recipe-tab').removeClass('is-tab-select');
 		$(this).addClass('is-tab-select');
 	});
-	var index01 = $('.p-recipe-tab.is-tab-select').index();
-	$('.p-recipe-cont__list').css('display','none');
-	$('.p-recipe-cont__list').eq(index01).fadeIn(1000);
+    // //
+	// var index01 = $('.p-recipe-tab.is-tab-select').index();
+	// $('.p-recipe-cont__list').css('display','none');
+	// $('.p-recipe-cont__list').eq(index01).fadeIn(1000);
 });
 
 // タブ切り替え 終了/////////////////////////////////////////
