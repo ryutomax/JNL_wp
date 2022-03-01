@@ -82,26 +82,18 @@ $(function(){
 
 // タブ切り替え//////////////////////////////////////////////
 
-// $(function() {
-//     $('.p-recipe-tab').click(function() {
-//         var index = $('.p-recipe-tab').index(this);
-//         $('.p-recipe-cont__list').css('display','none');
-//         $('.p-recipe-cont__list').eq(index).fadeIn(2000);
-//         $('.p-recipe-tab').toggleClass('is-select');
-//     });
-// });
+$(function() {
+	$('.p-recipe-tab').click(function() {
+		var index02 = $('.p-recipe-tab').index(this);
+		$('.p-recipe-cont__list').css('display','none');
+		$('.p-recipe-cont__list').eq(index02).fadeIn(1000);
+		$('.p-recipe-tab').removeClass('active');
+		$(this).addClass('active');
+	});
+	var index01 = $('.p-recipe-tab.active').index();
+	$('.p-recipe-cont__list').css('display','none');
+	$('.p-recipe-cont__list').eq(index01).fadeIn(1000);
+});
 
 // タブ切り替え 終了/////////////////////////////////////////
 
-$(function() {
-	$('.tab_btn').click(function() {
-		var index02 = $('.tab_btn').index(this);
-		$('.tab_panel').css('display','none');
-		$('.tab_panel').eq(index02).fadeIn(1000);
-		$('.tab_btn').removeClass('active');
-		$(this).addClass('active');
-	});
-	var index01 = $('tab_btn.active').index();
-	$('.tab_panel').css('display','none');
-	$('.tab_panel').eq(index01).fadeIn(1000);
-});
