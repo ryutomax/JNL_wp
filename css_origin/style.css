@@ -556,8 +556,12 @@ a.next.page-numbers {
 .c-sec-ttl {
   text-align: center;
 }
-.c-sec-ttl h2 {
-  font-size: 2.25rem;
+.c-sec-ttl h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.c-sec-ttl p {
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -693,6 +697,104 @@ a.next.page-numbers {
     display: none;
   }
 }
+.p-news {
+  background-color: #ffffff;
+  padding-top: 2rem;
+  padding-right: 0.5rem;
+  padding-bottom: 2rem;
+  padding-left: 0.5rem;
+}
+
+.p-news-inner {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.p-news-ttl {
+  margin-bottom: 2rem;
+}
+
+.p-news-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.p-news-top__txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.p-news-top__txt p {
+  font-size: 1.375rem;
+  line-height: 1.6875rem;
+  letter-spacing: -1px;
+}
+
+.p-news-top__img {
+  position: relative;
+  width: 11.375rem;
+  width: calc(100% - 180px);
+  margin-top: -1rem;
+  margin-right: -2rem;
+}
+
+.p-news-cont__ttl {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  background-color: #00B906;
+}
+.p-news-cont__ttl p {
+  color: #ffffff;
+}
+
+.p-news-list-wp {
+  background-color: #eaf4dc;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.75rem;
+  padding-left: 1rem;
+}
+
+.p-news-item-wp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: dotted 2px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.p-news-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 4.5rem;
+}
+
+.p-news-txt {
+  font-size: 1rem;
+}
+
+.p-news-txt__exc {
+  margin-bottom: 0.5rem;
+}
+
+.p-news-txt__link {
+  text-align: right;
+}
+.p-news-txt__link a {
+  text-decoration: underline;
+}
+
 .u-dn {
   display: none;
 }
@@ -797,7 +899,7 @@ a.next.page-numbers {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 3.25rem;
+  height: 100%;
   padding-top: 0;
 }
 
