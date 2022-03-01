@@ -58,6 +58,8 @@ $(function(){
 });
 // スクロールヒント 終了//////////////////////
 
+// IE対応 object-fit ////////////////////////
+
 (function ($) {
     // image bg
     $.fn.imageBg = function () {
@@ -74,3 +76,19 @@ $(function(){
     });
 
 })(jQuery);
+
+// IE対応 object-fit 終了////////////////////////
+
+
+// タブ切り替え//////////////////////////////////////////////
+
+$(function() {
+    $('.p-recipe-tab').click(function() {
+        var index = $('.p-recipe-tab').index(this);
+        $('.p-recipe-cont__list').css('display','none');
+        $('.p-recipe-cont__list').eq(index).fadeIn(2000);
+        $('.p-recipe-tab').toggleClass('is-select');
+    });
+});
+
+// タブ切り替え 終了/////////////////////////////////////////

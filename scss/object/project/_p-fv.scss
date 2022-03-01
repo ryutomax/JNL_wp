@@ -22,8 +22,12 @@
     p {
         font-size: rem(64);
         color: $white;
+        &:last-child {
+            margin-left: rem(56);
+        }
     }
 }
+
 @include mq (sp) {
     .p-fv {
         height: rem(500);

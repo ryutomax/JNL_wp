@@ -1,3 +1,9 @@
+@use "global" as *;
+
 .u-mb__24 {
     margin-bottom: 24px;
+}
+
+.u-ml24 {
+    margin-left: rem(24);
 }
