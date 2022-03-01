@@ -33,6 +33,9 @@
     padding-right: rem(4);
     padding-bottom: rem(8);
     cursor: pointer;
+    &:hover {
+        background-color: $green;
+    }
     &:nth-child(4) {
         p {
             width: rem(62);
@@ -58,10 +61,6 @@
 	transition: all 0.2s ease 0s;
 }
 
-.p-recipe-tab:hover {
-	background-color: $green;
-}
-
 .p-recipe-tab.active {
     background: $green;
 }
@@ -73,6 +72,9 @@
 .p-recipe-cont__list.active {
     display: block;
 }
+
+
+
 
 
 .p-recipe-cont {
