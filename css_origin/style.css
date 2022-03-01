@@ -856,6 +856,10 @@ a.next.page-numbers {
   border: 2px solid #00B906;
 }
 
+.p-recipe-cont__list {
+  display: none;
+}
+
 .p-recipe-cont__item:not(:last-child) {
   margin-bottom: 3.5rem;
 }
@@ -924,6 +928,29 @@ a.next.page-numbers {
 
 .p-recipe-txt__ttl {
   font-size: 1.375rem;
+}
+
+.tab_box .tab_btn {
+  background: #298800;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.tab_box .tab_btn:hover {
+  background-color: #00B906;
+}
+
+.tab_btn.active {
+  background: #00B906;
+  color: #ffffff;
+}
+
+.tab_box .tab_panel {
+  display: none;
+}
+
+.tab_panel.active {
+  display: block;
 }
 
 .u-dn {
@@ -1026,8 +1053,12 @@ a.next.page-numbers {
           transform: rotate(-135deg);
 }
 
-.is-select {
+.is-tab-select {
   background-color: #00B906;
+}
+
+.is-tab-active {
+  display: block;
 }
 
 .u-mb__24 {

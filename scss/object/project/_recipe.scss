@@ -60,7 +60,9 @@
     border: 2px solid $green;
 }
 
-.p-recipe-cont__list {}
+.p-recipe-cont__list {
+    display: none;
+}
 
 .p-recipe-cont__item {
     &:not(:last-child) {
@@ -133,3 +135,26 @@
     font-size: rem(22);
 }
 
+//////////////////////////////
+
+.tab_box .tab_btn {
+	background: $d-green;
+	transition: all 0.2s ease 0s;
+}
+
+.tab_box .tab_btn:hover {
+	background-color: $green;
+}
+
+.tab_btn.active {
+    background: $green;
+    color: $white;
+}
+
+.tab_box .tab_panel {
+    display: none;
+}
+
+.tab_panel.active {
+    display: block;
+}
