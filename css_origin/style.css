@@ -832,6 +832,8 @@ a.next.page-numbers {
   border-radius: 0 10px 0 0;
   padding-right: 0.25rem;
   padding-bottom: 0.5rem;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
   cursor: pointer;
 }
 .p-recipe-tab:hover {
@@ -849,12 +851,6 @@ a.next.page-numbers {
 }
 .p-recipe-tab p span:last-child {
   margin-left: 1rem;
-}
-
-.p-recipe-wrap .p-recipe-tab {
-  background: #298800;
-  -webkit-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
 }
 
 .p-recipe-tab.active {

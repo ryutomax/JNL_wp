@@ -32,6 +32,7 @@
     border-radius: 0 10px 0 0;
     padding-right: rem(4);
     padding-bottom: rem(8);
+	transition: all 0.2s ease 0s;
     cursor: pointer;
     &:hover {
         background-color: $green;
@@ -55,12 +56,6 @@
     }
 }
 //////////////////////////////
-
-.p-recipe-wrap .p-recipe-tab {
-	background: $d-green;
-	transition: all 0.2s ease 0s;
-}
-
 .p-recipe-tab.active {
     background: $green;
 }
@@ -72,9 +67,6 @@
 .p-recipe-cont__list.active {
     display: block;
 }
-
-
-
 
 
 .p-recipe-cont {
