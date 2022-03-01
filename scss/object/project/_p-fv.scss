@@ -17,7 +17,7 @@
 .p-fv-copy {
     position: absolute;
 		top: 50%;
-        left: 50%;
+        left: rem(136);
 		transform: translate(-50%, -50%);
     p {
         font-size: rem(64);
