@@ -1,6 +1,6 @@
 $baseFontsize: 16;
 
 // 「rem」という独自関数を作成
-@function rem($pixels) {
-	@return $pixels / $baseFontsize * 1rem;
+@function rem($px) {
+	@return calc( $px / $baseFontsize * 1rem );
 }

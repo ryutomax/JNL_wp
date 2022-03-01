@@ -1,6 +1,9 @@
+@use "global" as *;
+
 .object-fit {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 52px;
+    height: rem(52);
+    padding-top: 0;
 }

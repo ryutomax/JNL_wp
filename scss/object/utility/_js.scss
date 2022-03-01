@@ -1,4 +1,4 @@
-@use "../../global" as *;
+@use "global" as *;
 
 .is-closed {
     display: none;
@@ -31,7 +31,11 @@
         }
         &:nth-child(2) {
             opacity: 0;
-            transition:  0.2s ease;
+            transition:  0.5s ease;
+        }
+        &:nth-child(3) {
+            opacity: 0;
+            transition:  0.5s ease;
         }
         &:last-child {
             transform: rotate(-135deg);

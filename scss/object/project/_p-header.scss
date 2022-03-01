@@ -1,19 +1,57 @@
 @use "global" as *;
 
-.p-header-logo {}
+.p-header-logo {
+    width: 80px;
+    height: 52px;
+}
 
 .p-header-logo__img {
     img {}
 }
 
-
-@include mq (pc) {
+.p-header-nav {
+    display: none;
 }
 
-@include mq () {
+.p-header-nav__btn {
+    height: 50px;
+}
+
+.p-nav-bar {
+    background-color: $d-green;
+    width: rem(50);
+    height: rem(8);
+    &:first-child {
+        top: 0;
+    }
+    &:nth-child(2) {
+        top: -14px;
+        bottom: 0;
+        margin: auto;
+        transition: .9s ease;
+    }
+    &:nth-child(3) {
+        top: rem(28);
+    }
+    &:last-child {
+        bottom: 0;
+    }
+    &:not(:last-child) {
+    }
 }
 
 @include mq (sp) {
-
 }
 
+@include mq () {
+    .p-header-nav {
+        display: block;
+    }
+
+    .p-header-btn__area {
+        display: none;
+    }
+}
+
+@include mq (pc) {
+}
