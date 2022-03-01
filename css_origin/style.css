@@ -853,10 +853,6 @@ a.next.page-numbers {
   margin-left: 1rem;
 }
 
-.p-recipe-tab.active {
-  background: #00B906;
-}
-
 .p-recipe-cont__list {
   display: none;
 }

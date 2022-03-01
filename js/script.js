@@ -87,10 +87,10 @@ $(function() {
 		var index02 = $('.p-recipe-tab').index(this);
 		$('.p-recipe-cont__list').css('display','none');
 		$('.p-recipe-cont__list').eq(index02).fadeIn(1000);
-		$('.p-recipe-tab').removeClass('active');
-		$(this).addClass('active');
+		$('.p-recipe-tab').removeClass('is-tab-select');
+		$(this).addClass('is-tab-select');
 	});
-	var index01 = $('.p-recipe-tab.active').index();
+	var index01 = $('.p-recipe-tab.is-tab-select').index();
 	$('.p-recipe-cont__list').css('display','none');
 	$('.p-recipe-cont__list').eq(index01).fadeIn(1000);
 });
