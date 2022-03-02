@@ -1,6 +1,5 @@
 @use "../../global" as *;
 
-// 予約ボタン
 .c-ctaBtn {
     display: inline-block;
     position: relative;
@@ -15,50 +14,7 @@
     }
 }
 
-
-// リンクボタン
-.c-feature__link {
-    display: flex;
-    width: 200px;
-    height: 56px;
-    border: 1px solid #707070;
-    background-color: $white;
-    a {
-        display: inline-block;
-        width: 100%;
-        color: $black;
-        line-height: 56px;
-    }
-}
-
-
-// Xボタン
-.c-btn__X {
-    position: absolute;
-    width: 50px;
-    height: 30px;
-    background: transparent;
-    &:hover {
-        opacity: .7;
-    }
-    span {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 3px;
-        border-radius: 25px;
-        background-color: rgb(82, 82, 82);
-        &:first-child {
-            transform: rotate(135deg);
-        }
-        &:last-child {
-            transform: rotate(-135deg);
-        }
-    }
-}
-
-// ハンバーガーメニュー
+// ハンバーガーメニュー//////////////////
 .c-hamburger__btn {
     position: relative;
     width: 50px;
@@ -67,6 +23,7 @@
     background: transparent;
     outline: none;
     appearance: none;
+    cursor: pointer;
     &:hover {
         opacity: .7;
     }

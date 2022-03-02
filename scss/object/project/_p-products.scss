@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.p-products {
+    padding-top: 2rem;
+    padding-right: 0.5rem;
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+}
+
+.p-products-inner {}
+
+.p-products-wrap {}
+
+.p-products-list {}
+
+.p-products-item {
+    margin: 0 auto;
+    max-width: 500px;
+    &:not(:last-child) {
+        margin-bottom: 2.5rem;
+    }
+}
+

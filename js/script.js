@@ -11,28 +11,17 @@ $(function(){
 
 
 // ハンバーガーメニュー
-$(function(){
-    $('.js-nav__btn').on('click',function(){
-        // ハンバーガーアイコン変形
-        $(this).toggleClass('is-btn__active');
-        // メニュー開閉
-        $('.js-nav__open').fadeToggle(500);
 
-        return false;
-
-    });
+$(".js-nav__btn").click(function () {//ボタンがクリックされたら
+    $(this).toggleClass('is-btn__active');//ボタン自身に activeクラスを付与し
+    $(".js-nav__open").toggleClass('is-menu__open');//ナビゲーションにpanelactiveクラスを付与
 });
-$(function(){
-    $('.header-nav__item').on('click',function(){
-        // メニュー閉じる
-        $('.nav').removeClass('header__menu-open');
-        // ハンバーガーアイコン変形
-        $('.js-header-nav-btn').removeClass('is-btn-active');
 
-        return false;
-
-    });
+$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+    $(".js-nav__btn").removeClass('is-btn__active');//ボタンの activeクラスを除去し
+    $(".js-nav__open").removeClass('is-menu__open');//ナビゲーションのpanelactiveクラスも除去
 });
+
 // ハンバーガーメニュー終了/////////////////////////////////////////////
 
 // AOS/////////////////////////////////
@@ -43,20 +32,6 @@ $(function(){
 
 // AOS 終了////////////////////////////
 
-// スクロールヒント//////////////////////
-
-$(function(){
-    new ScrollHint('.js-scrollable', {
-        applyToParents: true,
-        suggestiveShadow: true,
-        enableOverflowScrolling: true,
-        i18n: {
-            scrollable: 'スクロールできます'
-        }
-    });
-
-});
-// スクロールヒント 終了//////////////////////
 
 // IE対応 object-fit ////////////////////////
 
@@ -98,3 +73,19 @@ $(function() {
 
 // タブ切り替え 終了/////////////////////////////////////////
 
+// ページスクロール
+$(function ($) {
+    $('.js-news').on('click',function(){
+        const faqTop = $('.p-news').offset().top;
+        $("html,body").animate({scrollTop: faqTop-80},1000);
+    });
+    $('.js-recipe').on('click',function(){
+        const faqTop = $('.p-recipe').offset().top;
+        $("html,body").animate({scrollTop: faqTop-80},1000);
+    });
+    $('.js-products').on('click',function(){
+        const faqTop = $('.p-products').offset().top;
+        $("html,body").animate({scrollTop: faqTop-80},1000);
+    });
+});
+// ページスクロール終了/////////////////////////////////////////////

@@ -13,12 +13,6 @@
     opacity: 0;
 }
 
-.is-menu__open {
-    display: block;
-    transition: left 0.7s;
-
-}
-
 .is-btn__active {
     span {
         top: 0;
@@ -43,11 +37,16 @@
         }
     }
 }
-
+// タブ//////////////////////////////
 .is-tab-select {
     background-color: $green;
 }
 
 .is-tab-active {
     display: block;
+}
+
+//トップメニュー////////////////////
+.is-menu__open{
+    right: 0;
 }
