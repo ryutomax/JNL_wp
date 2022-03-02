@@ -1,15 +1,3 @@
-// アコーディオン実装
-$(function(){
-    $('.js-accordion__q').click(function() {
-        // click要素の次の指定要素
-        $(this).next('.js-accordion__a').slideToggle();
-        // 指定の子要素を取得
-        $(this).find('.js-minus').toggleClass('is-active');
-    });
-});
-// アコーディオン実装終了/////////////////////////////////////////////
-
-
 // ハンバーガーメニュー
 
 $(".js-nav__btn").click(function () {//ボタンがクリックされたら
@@ -73,7 +61,7 @@ $(function() {
 
 // タブ切り替え 終了/////////////////////////////////////////
 
-// ページスクロール
+// ページスクロール///////////////////////////////////////////////
 $(function ($) {
     $('.js-news').on('click',function(){
         const faqTop = $('.p-news').offset().top;
@@ -89,3 +77,11 @@ $(function ($) {
     });
 });
 // ページスクロール終了/////////////////////////////////////////////
+
+
+// swiper////////////////////////////////
+
+var mySwiper = new Swiper('.swiper-container', {
+});
+
+// swiper 終了////////////////////////////////

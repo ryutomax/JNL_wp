@@ -26,7 +26,7 @@
 
 .p-header-nav__list {
     position: absolute;
-    top:50%;
+    top:30%;
     left:50%;
     transform: translate(-50%,-50%);
 }
@@ -37,6 +37,7 @@
         margin-bottom: 1rem;
     }
     &:last-child {
+        width: 175px;
         background-color: $green;
         a {
             color: $white;
@@ -80,6 +81,11 @@
 }
 
 @include mq () {
+    .p-header-logo {
+        width: 100px;
+        height: 70px;
+    }
+
     .p-header-nav {
         position: static;
         background-color: $white;
@@ -109,6 +115,7 @@
         }
         a {
             color: $black;
+            font-size: 1.2rem;
         }
     
     }

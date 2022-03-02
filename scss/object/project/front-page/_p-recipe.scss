@@ -9,7 +9,8 @@
 }
 
 .p-recipe-inner {
-
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .p-recipe-tabs {
@@ -25,7 +26,7 @@
     align-items: end;
     background-color: $d-green;
     color: $white;
-    font-size: rem(14);
+    font-size: min(0.875rem, 3.75vw);
     font-weight: bold;
     height: rem(64);
     width: calc((100% - 4px*4) / 5);
@@ -69,6 +70,8 @@
 }
 
 .p-recipe-cont__item {
+    margin: 0 auto;
+    max-width: 450px;
     &:not(:last-child) {
         margin-bottom: rem(56);
     }
@@ -137,4 +140,68 @@
 
 .p-recipe-txt__ttl {
     font-size: rem(22);
+}
+
+@include mq (sp) {
+    .p-recipe-tab {
+        display: flex;
+        align-items: end;
+        font-size: rem(20);
+        &:nth-child(4) {
+            p {
+                width: rem(106);
+            }
+        }
+        &:not(:last-child) {
+            margin-right: 0.25rem;
+        }
+        p {
+            margin-left: auto;
+            text-align: end;
+            span {
+                &:last-child {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@include mq () {
+    .p-recipe-tab {
+        display: flex;
+        align-items: end;
+        font-size: rem(24);
+        &:nth-child(4) {
+            p {
+                width: rem(106);
+            }
+        }
+        &:not(:last-child) {
+            margin-right: 0.25rem;
+        }
+        p {
+            margin-left: auto;
+            text-align: end;
+            span {
+                &:last-child {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    .p-recipe-cont__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .p-recipe-cont__item {
+        margin: 0 auto;
+        width: calc((100% - 2rem) /2);
+        max-width: 400px;
+        &:not(:last-child) {
+            margin-bottom: rem(56);
+        }
+    }
 }

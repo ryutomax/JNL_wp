@@ -36,5 +36,18 @@
 }
 @include mq () {
     .p-fv {
+        padding-top: 5rem;
+        height: calc(rem(500) + 5rem);
     }
+
+    .p-fv-copy {
+        left: 50%;
+    p {
+        font-size: rem(72);
+        color: $white;
+        &:last-child {
+            margin-left: rem(64);
+        }
+    }
+}
 }
