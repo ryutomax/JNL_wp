@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.p-intro {
+    background-color: $green;
+}
+
+.p-intro-cont {
+    padding: 1rem;
+}
+
+.p-intro-tag {
+    display: inline-block;
+    background-color: $white;
+    padding: 0.5rem;
+    p {
+        color: $green;
+    }
+}
+
+.p-intro-ttl__sub {
+    margin-bottom: 1rem;
+}
+
+.p-intro-ttl__main {
+    font-size: 1.5rem;
+}
+
+.p-intro-ttl {
+    border-bottom: 2px dotted $white;
+    color: $white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.p-intro-cont__inner {
+    padding-top: 1rem;
+    p {
+        color: $white;
+    }
+}

@@ -1,1 +1,53 @@
 @use "global" as *;
+
+.p-detail {
+    padding-top: rem(64);
+    padding-bottom: rem(64);
+    video {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        margin-bottom: rem(48);
+    }
+    table {
+        background-color: $l-green;
+        width: calc(100% - 2rem);
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1.5rem ;
+        &:first-of-type {
+            margin-bottom: rem(48);
+        }
+    }
+    tbody {
+    }
+    tr {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0.25rem;
+        border-bottom: dotted 2px $black;
+    }
+    td {
+        line-height: 1.2;
+    }
+}
+
+
+
+.p-detail-inner {}
+
+.p-detail-ttl{}
+
+.p-detail-explain__ttl {
+    display: block;
+    width: calc(100% - 2rem);
+    max-width: 600px;
+    margin: 0 auto;
+    p{
+        display: inline-block;
+        color: $white;
+        background-color: $navy;
+        padding: 0.5rem;
+    }
+}
