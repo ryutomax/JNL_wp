@@ -7,7 +7,7 @@
         <title> 【JNL】 モリンガパウダーレシピサイト</title>
         <meta name="description" content="美味しい、ヘルシーモリンガパウダーのレシピをご紹介します">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
         <link rel="stylesheet" href="css_origin/style.css">
     </head>
@@ -51,39 +51,166 @@
             <!-- /.l-header-inner -->
         </heeder>
         <main class="l-main">
-            <div class="p-content__breadcrumb c-breadcrumb">
-                <div class="c-breadcrumb-inner">
-                    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-                        <?php
-                            if(function_exists('bcn_display')){
-                                bcn_display();
-                            }
-                        ?>
-                    </div>
-                    <!-- <p class="c-breadcrumb-main">ホーム＞ブログ</p> -->
-                </div>
-            </div>
-            <section class="p-slide">
-                <div class="p-slide-inner">
-                    <ul class="p-swiper-container">
-                        <li class="p-swiper-item">
-                            <figure class="p-swiper-img">
+            <section class="p-swiper">
+                <div class="p-swiper-inner swiper-container">
+                    <ul class="p-swiper-container swiper-wrapper">
+                        <li class="p-swiper-item swiper-slide">
+                            <figure class="p-swiper-img js-img-bg object-fit">
                                 <img src="img/moringa.jpg" alt="">
-                                <span class="p-swiper-img__tag">モリンガパウダーで</span>
-                                <span class="p-swiper-img__ttl"></span>
+                                <div class="p-swiper-img__meta">
+                                    <span class="p-swiper-img__tag">モリンガパウダーで</span>
+                                    <span class="p-swiper-img__ttl">台湾風モリンガ<br>豆乳スープ台湾風モリンガ<br>豆乳スープ台湾風モリンガ<br>豆乳スープ台湾風モリンガ<br>豆乳スープ</span>
+                                </div>
+                            </figure>
+                        </li>
+                        <li class="p-swiper-item swiper-slide">
+                            <figure class="p-swiper-img js-img-bg object-fit">
+                                <img src="img/moringa.jpg" alt="">
+                                <div class="p-swiper-img__meta">
+                                    <span class="p-swiper-img__tag">モリンガパウダーで</span>
+                                    <span class="p-swiper-img__ttl">洋風モリンガ<br>豆乳スープ</span>
+                                </div>
+                            </figure>
+                        </li>
+                        <li class="p-swiper-item swiper-slide">
+                            <figure class="p-swiper-img js-img-bg object-fit">
+                                <img src="img/moringa.jpg" alt="">
+                                <div class="p-swiper-img__meta">
+                                    <span class="p-swiper-img__tag">モリンガパウダーで</span>
+                                    <span class="p-swiper-img__ttl">和風モリンガ<br>豆乳スープ</span>
+                                </div>
+                            </figure>
+                        </li>
+                        <li class="p-swiper-item swiper-slide">
+                            <figure class="p-swiper-img js-img-bg object-fit">
+                                <img src="img/moringa.jpg" alt="">
+                                <div class="p-swiper-img__meta">
+                                    <span class="p-swiper-img__tag">モリンガパウダーで</span>
+                                    <span class="p-swiper-img__ttl">和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ</span>
+                                </div>
                             </figure>
                         </li>
                     </ul>
                 </div>
             </section>
+            <!-- <div class="p-content__breadcrumb c-breadcrumb">
+                <div class="c-breadcrumb-inner">
+                    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/"> -->
+                        <!-- <?php
+                            if(function_exists('bcn_display')){
+                                bcn_display();
+                            }
+                        ?> -->
+                    <!-- </div> -->
+                    <!-- <p class="c-breadcrumb-main">ホーム＞ブログ</p> -->
+                <!-- </div>
+            </div> -->
             <section class="p-menu">
-
+                <div class="p-menu-inner">
+                    <ul class="p-menu-btns">
+                        <li class="p-menu-btn"><p>FOOD<span>ご飯・麺</span></p></li>
+                        <li class="p-menu-btn"><p>MAIN<span>メイン</span></p></li>
+                        <li class="p-menu-btn"><p>SUB<span>サイド</span></p></li>
+                        <li class="p-menu-btn"><p>DRINKSOUP<span>ドリンク・スープ</span></p></li>
+                        <li class="p-menu-btn"><p>SWEETS<span>スイーツ</span></p></li>
+                        <li class="p-menu-btn"><p>STYLE<span>和風メニュー</span></p></li>
+                        <li class="p-menu-btn"><p>STYLE<span>洋風メニュー</span></p></li>
+                        <li class="p-menu-btn"><p>STYLE<span>中華メニュー</span></p></li>
+                    </ul>
+                </div>
+                <!-- /.p-menu-inner -->
             </section>
             <section class="p-intro">
+                <div class="p-intro-inner">
+                    <div class="p-intro-img">
+                        <figure class="p-intro-img__inner">
+                            <img src="img/moringa.jpg" alt="">
+                        </figure>
+                    </div>
+                    <!-- /.p-intro-img -->
+                    <div class="p-intro-cont">
+                        <div class="p-intro-tag"><p>FOOD<span>ご飯・麺</span></p></div>
+                        <div class="p-intro-ttl">
+                            <h3 class="p-intro-ttl__sub">ヘルシーな豆腐とモリンガのさわやかなディップ</h3>
+                            <h2 class="p-intro-ttl__main">豆腐とモリンガのディップ</h2>
+                        </div>
+                        <div class="p-intro-inner">
+                            <p>豆腐とモリンガ、アンチョビ、オリーブオイルだけ
+                                でも美味しくお召し上がりいただけます。
+                                和風にしたいときワサビや醤油を足したり、
+                                まろやかにしたいときはバターを足したり、
+                                ワサビの代わりにタバスコを加えたりしても◎
+                                しっかり冷やすと野菜スティックで
+                                すくいやすくなります。</p>
+                        </div>
+                        <!-- /.p-intro-inner -->
+                    </div>
+                    <!-- /.p-intro-cont -->
+                </div>
+                <!-- /.p-intro-inner -->
 
             </section>
             <section class="p-detail">
-                
+                <div class="p-detail-inner">
+                    <div class="p-detail-ttl c-sec-ttl">
+                        <h3>RECIPE MOVIE</h3>
+                        <p>レシピ動画</p>
+                    </div>
+                    <div class="p-detail-movie">
+                        <video src="video.mp4" controls></video>
+                    </div>
+                    <div class="p-detail-explain">
+                        <div class="p-detail-explain__ingredients">
+                            <div class="p-detail-explain__ttl"><p>■材料（２～３人分）</p></div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>豆腐</td>
+                                        <td>100g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>モリンガ</td>
+                                        <td>小さじ１</td>
+                                    </tr>
+                                    <tr>
+                                        <td>アンチョビフィレ</td>
+                                        <td>30g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>オリーブオイル</td>
+                                        <td>30g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ワサビ</td>
+                                        <td>小さじ1/2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ハチミツ</td>
+                                        <td>小さじ1/2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>醤油</td>
+                                        <td>小さじ1/2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>お好みの野菜</td>
+                                        <td>適量</td>
+                                    </tr>
+                                    <tr>
+                                        <td>お好みのクラッカー</td>
+                                        <td>適量</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="p-detail-explain__method">
+                            <div class="p-detail-explain__ttl"><p>作り方</p></div>
+                            <div class="p-detail-explain__inner">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="p-review">
 

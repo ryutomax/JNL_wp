@@ -1,0 +1,119 @@
+@use "global" as *;
+
+.p-swiper {
+    padding-top: 5rem;
+}
+
+.p-swiper-inner {
+}
+
+.p-swiper-container {}
+
+.p-swiper-item {
+    height: 300px;
+}
+
+.p-swiper-img {
+    padding-top: 0;
+    height: 300px;
+    img {
+    }
+}
+//swiper.css///////////////
+.swiper-wrapper {
+    height: 300px;
+    overflow: hidden;
+}
+
+.p-swiper-img__meta {
+    position: absolute;
+    display: flex;
+    align-items: start;
+    top: 1rem;
+    left: 5%;
+    width: 95%;
+    max-width: 600px;
+}
+
+.p-swiper-img__tag {
+    background-color: $d-green;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    font-size: max(rem(12), 4vw);
+    color: $white;
+}
+
+.p-swiper-img__ttl {
+    width: calc(100% - min(275px, 49vw));
+    font-size: max(rem(16), 6.4vw);
+    color: $white;
+    text-shadow: 0.5px  0.5px 0px #000000;
+    margin-left: 1rem;
+}
+
+@include mq (sp) {
+    .p-swiper-item {
+        height: 450px;
+    }
+    .swiper-wrapper {
+        height: 450px;
+    }
+    .p-swiper-img__meta {
+        top: 2rem;
+        max-width: 450px;
+        left: calc(50% - 225px);
+    }
+    .p-swiper-img__tag {
+        width: 205px;
+        font-size: rem(20);
+    }
+    .p-swiper-img__ttl {
+        width: calc(100% - 216px);
+        font-size: rem(32);
+    }
+}
+@include mq () {
+    .p-swiper-item {
+        height: 500px;
+    }
+    .swiper-wrapper {
+        height: 500px;
+    }
+    .p-swiper-img__meta {
+        top: 2rem;
+        width: 70%;
+        max-width: 800px;
+        left: calc(50% - 300px);
+    }
+    .p-swiper-img__tag {
+        width: 240px;
+        font-size: rem(24);
+    }
+    .p-swiper-img__ttl {
+        font-size: rem(32);
+        width: calc(100% - 380px);
+    }
+}
+@include mq (pc) {
+    .p-swiper-item {
+        height: 600px;
+    }
+    .swiper-wrapper {
+        height: 600px;
+    }
+    .p-swiper-img__meta {
+        width: 70%;
+        max-width: 900px;
+        left: calc(50% - 400px);
+    }
+
+    .p-swiper-img__tag {
+        padding: 1rem 0.8rem;
+        width: 310px;
+        font-size: rem(32);
+    }
+    .p-swiper-img__ttl {
+        font-size: rem(40);
+        width: calc(100% - 380px);
+    }
+}

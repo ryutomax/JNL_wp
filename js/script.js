@@ -1,3 +1,18 @@
+// swiper////////////////////////////////
+
+var mySwiper = new Swiper('.swiper-container', {
+    effect: 'fade',
+    loop: true,
+	// autoplay: {
+	// 	delay: 3000,
+	// 	stopOnLastSlide: false,
+	// 	disableOnInteraction: true,
+	// 	reverseDirection: false
+	// }
+});
+
+// swiper 終了////////////////////////////////
+
 // ハンバーガーメニュー
 
 $(".js-nav__btn").click(function () {//ボタンがクリックされたら
@@ -79,9 +94,3 @@ $(function ($) {
 // ページスクロール終了/////////////////////////////////////////////
 
 
-// swiper////////////////////////////////
-
-var mySwiper = new Swiper('.swiper-container', {
-});
-
-// swiper 終了////////////////////////////////
