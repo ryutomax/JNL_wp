@@ -62,6 +62,7 @@ select {
 html, body {
   color: #000000;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif, "Noto Sans JP", sans-serif;
+  text-transform: uppercase;
 }
 
 a {
@@ -994,6 +995,7 @@ a.next.page-numbers {
   }
 }
 .p-detail {
+  background-color: #ffffff;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -1041,12 +1043,55 @@ a.next.page-numbers {
   padding: 0.5rem;
 }
 
+@media screen and (min-width:480px) {
+  .p-detail {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .p-detail video {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+  .p-detail table {
+    background-color: #eaf4dc;
+    width: calc(100% - 2rem);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  .p-detail table:first-of-type {
+    margin-bottom: 3rem;
+  }
+  .p-detail tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem 0.25rem;
+    border-bottom: dotted 2px #000000;
+  }
+  .p-detail td {
+    line-height: 1.2;
+  }
+}
 .p-intro {
   background-color: #00B906;
 }
 
+.p-intro-img {
+  height: 250px;
+}
+
 .p-intro-cont {
+  max-width: 750px;
+  margin: 0 auto;
   padding: 1rem;
+  padding-bottom: 2rem;
 }
 
 .p-intro-tag {
@@ -1080,6 +1125,146 @@ a.next.page-numbers {
   color: #ffffff;
 }
 
+@media screen and (min-width:480px) {
+  .p-intro-img {
+    height: 350px;
+  }
+}
+@media screen and (min-width:860px) {
+  .p-intro-img {
+    height: 450px;
+  }
+}
+@media screen and (min-width:1280px) {
+  .p-intro-img {
+    height: 600px;
+  }
+}
+.p-menu {
+  background-color: #ffffff;
+  padding-top: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 2.5rem;
+  padding-left: 0.25rem;
+}
+
+.p-menu-inner {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.p-menu-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.p-menu-btn {
+  background-color: #00B906;
+  width: calc((100% - 0.25rem) / 2);
+  height: 50px;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.p-menu-btn:nth-child(odd) {
+  margin-right: 0.25rem;
+}
+.p-menu-btn:nth-child(n+3) {
+  margin-top: 0.25rem;
+}
+.p-menu-btn a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-size: min(2rem, 7.2vw);
+}
+.p-menu-btn a span {
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+}
+
+.p-menu-btn__drink a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.p-menu-btn__drink a span:first-child {
+  font-size: 1.2rem;
+  line-height: 1.1rem;
+  margin-left: 0;
+}
+
+@media screen and (min-width:480px) {
+  .p-menu-btn {
+    height: 50px;
+    padding: 0.5rem 0.25rem;
+  }
+  .p-menu-btn:nth-child(odd) {
+    margin-right: 0.25rem;
+  }
+  .p-menu-btn:nth-child(n+3) {
+    margin-top: 0.25rem;
+  }
+  .p-menu-btn a {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-size: min(2rem, 7.2vw);
+  }
+  .p-menu-btn a span {
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
+  }
+
+  .p-menu-btn__drink a span:first-child {
+    font-size: 1.2rem;
+    line-height: 1.1rem;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width:860px) {
+  .p-menu-btn {
+    height: 50px;
+    padding: 0.5rem 0.25rem;
+    width: calc((100% - 0.75rem) / 4);
+  }
+  .p-menu-btn:nth-child(2), .p-menu-btn:nth-child(6) {
+    margin-right: 0.25rem;
+  }
+  .p-menu-btn:nth-child(n+3) {
+    margin-top: 0;
+  }
+  .p-menu-btn:nth-child(n+5) {
+    margin-top: 0.25rem;
+  }
+  .p-menu-btn a {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-size: min(2rem, 7.2vw);
+  }
+  .p-menu-btn a span {
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
+  }
+}
 .p-swiper {
   padding-top: 5rem;
 }

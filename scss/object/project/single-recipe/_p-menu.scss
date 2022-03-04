@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.p-menu {
+    background-color: $white;
+    padding-top: 0.25rem;
+    padding-right: 0.25rem;
+    padding-bottom: rem(40);
+    padding-left: 0.25rem;
+}
+
+.p-menu-inner {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+
+.p-menu-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.p-menu-btn {
+    background-color: $green;
+    width: calc( (100% - 0.25rem)/2);
+    height: 50px;
+    padding: 0.5rem 0.25rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(odd) {
+        margin-right: 0.25rem;
+    }
+    &:nth-child(n+3) {
+        margin-top: 0.25rem;
+    }
+    a {
+        color: $white;
+        font-size: 1.4rem;
+        font-size: min(2rem, 7.2vw);
+        span {
+            font-size: rem(12);
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+.p-menu-btn__drink {
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        span {
+            &:first-child {
+                font-size: 1.2rem;
+                line-height: 1.1rem;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@include mq (sp) {
+    .p-menu-btn {
+        height: 50px;
+        padding: 0.5rem 0.25rem;
+        &:nth-child(odd) {
+            margin-right: 0.25rem;
+        }
+        &:nth-child(n+3) {
+            margin-top: 0.25rem;
+        }
+        a {
+            color: $white;
+            font-size: 1.4rem;
+            font-size: min(2rem, 7.2vw);
+            span {
+                font-size: rem(12);
+                margin-left: 0.25rem;
+            }
+        }
+    }
+    .p-menu-btn__drink {
+        a {
+            span {
+                &:first-child {
+                    font-size: 1.2rem;
+                    line-height: 1.1rem;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@include mq () {
+    .p-menu-btn {
+        height: 50px;
+        padding: 0.5rem 0.25rem;
+        width: calc( (100% - 0.75rem)/4);
+        &:nth-child(2),
+        &:nth-child(6){
+            margin-right: 0.25rem;
+        }
+        &:nth-child(n+3) {
+            margin-top: 0;
+        }
+        &:nth-child(n+5) {
+            margin-top: 0.25rem;
+        }
+        a {
+            color: $white;
+            font-size: 1.4rem;
+            font-size: min(2rem, 7.2vw);
+            span {
+                font-size: rem(12);
+                margin-left: 0.25rem;
+            }
+        }
+    }
+}

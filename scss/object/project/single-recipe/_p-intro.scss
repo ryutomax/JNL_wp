@@ -4,8 +4,15 @@
     background-color: $green;
 }
 
+.p-intro-img {
+    height: 250px;
+}
+
 .p-intro-cont {
+    max-width: 750px;
+    margin: 0 auto;
     padding: 1rem;
+    padding-bottom: 2rem;
 }
 
 .p-intro-tag {
@@ -36,5 +43,21 @@
     padding-top: 1rem;
     p {
         color: $white;
+    }
+}
+
+@include mq (sp) {
+    .p-intro-img {
+        height: 350px;
+    }
+}
+@include mq () {
+    .p-intro-img {
+        height: 450px;
+    }
+}
+@include mq (pc) {
+    .p-intro-img {
+        height: 600px;
     }
 }
