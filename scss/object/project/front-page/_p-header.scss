@@ -11,7 +11,7 @@
 
 .p-header-nav {
     position: fixed;
-    background-color: $d-green;
+    background-color: $green;
     top: 80px;
     right: 0;
     right: -320px;
@@ -26,7 +26,7 @@
 
 .p-header-nav__list {
     position: absolute;
-    top:30%;
+    top: 250px;
     left:50%;
     transform: translate(-50%,-50%);
 }
@@ -34,13 +34,13 @@
 .p-header-nav__item {
     font-size: 1.5rem;
     &:not(:last-child) {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     &:last-child {
         width: 175px;
         background-color: $green;
+        border: 1px solid $white;
         a {
-            color: $white;
         }
     }
     a {
@@ -116,6 +116,11 @@
         a {
             color: $black;
             font-size: 1.2rem;
+        }
+        &:last-child {
+            a {
+                color: $white;
+            }
         }
     
     }

@@ -7,6 +7,7 @@
     video {
         display: block;
         width: 100%;
+        height: 235px;
         max-width: 900px;
         margin: 0 auto;
         margin-bottom: rem(48);
@@ -56,11 +57,7 @@
         padding-top: rem(64);
         padding-bottom: rem(64);
         video {
-            display: block;
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            margin-bottom: rem(48);
+            height: auto;
         }
         table {
             background-color: $l-green;
