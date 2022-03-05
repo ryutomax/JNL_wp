@@ -30,11 +30,11 @@
         height: 2px;
         background: $background;
         transform: scale(0, 1);
-        transform-origin: right top;
+        transform-origin: top top;      //アニメーションはここで調整
         transition: transform .5s;
     }
     &:hover::after {
-        transform-origin: left top;
+        transform-origin: top top;      //アニメーションはここで調整
         transform: scale(1, 1);
     }
 }

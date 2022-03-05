@@ -1,14 +1,18 @@
 // swiper////////////////////////////////
 
 var mySwiper = new Swiper('.swiper-container', {
+    speed: 3000,
     effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
     loop: true,
-	// autoplay: {
-	// 	delay: 3000,
-	// 	stopOnLastSlide: false,
-	// 	disableOnInteraction: true,
-	// 	reverseDirection: false
-	// }
+	autoplay: {
+		delay: 3000,
+		stopOnLastSlide: false,
+		disableOnInteraction: true,
+		reverseDirection: false
+	}
 });
 
 // swiper 終了////////////////////////////////
@@ -94,3 +98,34 @@ $(function ($) {
 // ページスクロール終了/////////////////////////////////////////////
 
 
+// ヘッダー変形/////////////////////////////////////////////
+$(function () {
+    $(window).scroll(function () {
+        var $header = $('.js-header-scroll');
+
+
+      // 200以上スクロールしたら処理
+        if ($(window).scrollTop() > 200) {
+        $header.addClass('is-header__op06');
+        $header.addClass('is-header__h65');
+
+        } else {
+
+        $header.removeClass('is-header__op06');
+        $header.removeClass('is-header__h65');
+
+        }
+    });
+		/* ウィンドウサイズ860以上の処理を記述 */
+    $(window).on('load scroll', function () {
+        if (window.matchMedia('(min-width: 860px)').matches) {
+            var $logo = $('.js-header-h65-scroll');
+            if ($(window).scrollTop() > 200) {
+                $logo.addClass('is-header__h65');
+        }else {
+            $logo.removeClass('is-header__h65');;
+        }}
+    });
+
+});
+// ヘッダー変形 終了/////////////////////////////////////////////

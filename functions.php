@@ -20,7 +20,6 @@ function include_files() {
     wp_enqueue_script('scroll-hint','https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js', array(), '1.0.0', true);
 }
 
-
 // バリデーション/////////////////////////////////////////////////////////////////////////////////////////
 function my_exam_validation_rule( $Validation, $data, $Data ) {
 
@@ -37,16 +36,12 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 add_filter( 'mwform_validation_mw-wp-form-24', 'my_exam_validation_rule', 10, 3 );
 // バリデーション 終了/////////////////////////////////////////////////////////////////////////////////////////
 
-
-
 // サムネイル有効化
 function twpp_setup_theme() {
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'small-thumb', 100, 150, true );
 }
     add_action( 'after_setup_theme', 'twpp_setup_theme' );
-
-
 
 // カスタム投稿にカテゴリ・タグを同期
 function my_main_query( $query ) {
@@ -60,7 +55,6 @@ function my_main_query( $query ) {
 }
     add_action( 'pre_get_posts', 'my_main_query' );
 
-
 //ページネーション////////////////////////////////////////
     function custom_pagination_html( $template ) {
         $template = '
@@ -71,7 +65,6 @@ function my_main_query( $query ) {
         return $template;
     }
     add_filter('navigation_markup_template','custom_pagination_html');
-
 
 //本文抜粋//////////////////////////////////////////////
     function wpdocs_custom_excerpt_length( $length ) {

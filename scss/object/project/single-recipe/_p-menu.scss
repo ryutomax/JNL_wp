@@ -46,7 +46,7 @@
         &:hover {
             box-shadow: 5px 5px 10px $navy;
             margin-bottom: rem(2);
-            opacity: 0.7;
+            text-shadow: 1px 1px 1px $navy;
         }
         span {
             font-size: rem(12);
