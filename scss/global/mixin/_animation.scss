@@ -120,3 +120,13 @@
     }
 }
 
+@mixin btn-anime-2 {
+    box-shadow: 2px 2px 5px $navy;
+    border: 2px solid $green;
+    transition: 1s;
+    &:hover {
+        background-color: rgba(255, 255, 255, 1);
+        color: $green;
+        box-shadow: 3px 3px 10px $navy;
+    }
+}
