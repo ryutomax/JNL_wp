@@ -46,11 +46,11 @@
 
 .p-footer-sns__item {
     width: 40px;
+    @include opa;
     &:not(:last-child) {
         margin-right: 2rem;
     }
     a {
-        
     }
 }
 

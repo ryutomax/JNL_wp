@@ -39,6 +39,12 @@ $(function(){
 
 // AOS 終了////////////////////////////
 
+var classElements = document.getElementsByTagName('table');
+for (var i = 0; i < classElements.length; i++) {
+	classElements[i].setAttribute('data-aos', 'zoom-in');
+	classElements[i].setAttribute('data-aos-duration', '2000');
+}
+
 
 // IE対応 object-fit ////////////////////////
 

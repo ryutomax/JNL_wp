@@ -525,6 +525,11 @@ a.next.page-numbers {
 
 .p-footer-sns__item {
   width: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.p-footer-sns__item:hover {
+  opacity: 0.5;
 }
 .p-footer-sns__item:not(:last-child) {
   margin-right: 2rem;
@@ -649,8 +654,18 @@ a.next.page-numbers {
 .p-header-logo {
   width: 80px;
   height: 52px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.p-header-logo:hover {
+  opacity: 0.8;
 }
 
+.p-header-logo__img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
 .p-header-nav {
   position: fixed;
   background-color: #ffffff;
@@ -983,6 +998,13 @@ a.next.page-numbers {
 .p-products-item {
   margin: 0 auto;
   max-width: 500px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.p-products-item:hover {
+  -webkit-box-shadow: 1px 3px 5px #000000;
+          box-shadow: 1px 3px 5px #000000;
+  opacity: 0.8;
 }
 .p-products-item:not(:last-child) {
   margin-bottom: 2.5rem;

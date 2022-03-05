@@ -1,9 +1,9 @@
 @use "../setting/" as *;
 
-@mixin txt-opa {
+@mixin opa ($opa:0.5){
     transition: 0.5s;
     &:hover {
-        opacity: 0.5;
+        opacity: $opa;
     }
 }
 
@@ -46,18 +46,11 @@
     }
 }
 
-@mixin cnt-anime {
+@mixin box-anime-shadow ($opa:0.5){
     transition: 0.5s;
     &:hover {
         box-shadow: 1px 3px 5px $black;
-        opacity: 0.5;
-    }
-}
-
-@mixin logo-anime {
-    transition: all .5s ease-in-out;
-    &:hover {
-        opacity: .7;
+        opacity: $opa;
     }
 }
 

@@ -16,6 +16,7 @@
 .p-products-item {
     margin: 0 auto;
     max-width: 500px;
+    @include box-anime-shadow(0.8);
     &:not(:last-child) {
         margin-bottom: 2.5rem;
     }
