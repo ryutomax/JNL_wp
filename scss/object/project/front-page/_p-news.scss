@@ -64,7 +64,7 @@
 }
 
 // wp////////////////////////////
-.p-news-list-wp {
+.p-news-list {
     background-color: $l-green;
     padding-top: 1rem;
     padding-right: 1rem;
@@ -72,7 +72,12 @@
     padding-left: 1rem;
 }
 
-.p-news-item-wp {
+.p-news-item {
+    @include txt-shadow;
+}
+
+.p-news-item__inner {
+    width: 100%;
     display: flex;
     justify-content: center;
     border-bottom: dotted 2px;

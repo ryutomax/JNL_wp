@@ -33,7 +33,7 @@
     border-radius: 0 10px 0 0;
     padding-right: rem(4);
     padding-bottom: rem(8);
-	transition: all 0.2s ease 0s;
+	transition: all 0.5s ease;
     cursor: pointer;
     &:hover {
         background-color: $green;
@@ -72,21 +72,38 @@
 .p-recipe-cont__item {
     margin: 0 auto;
     max-width: 450px;
+    transition: 1s;
+    &:hover {
+        box-shadow: 0px 0px 5px $d-green;
+    }
     &:not(:last-child) {
         margin-bottom: rem(56);
     }
 }
 
-.p-recipe-img {
-    height: 270px;
+.p-recipe-cont__item-inner {
+    &:hover {
+        .p-recipe-img__inner {
+            transform: scale(0.95);
+        }
+        .p-recipe-txt {
+            opacity: 0.5;
+        }
+    }
 }
 
-.p-recipe-img__inner {
+.p-recipe-img {
+    height: 270px;
+    overflow: hidden;
     position: relative;
-    border-radius: 10px 0 10px 10px;
     span {
         position: absolute;
     }
+}
+
+.p-recipe-img__inner {
+    border-radius: 10px 0 10px 10px;
+    transition: 1s;                     //カードアニメ
 }
 
 .p-recipe-new {
@@ -131,6 +148,8 @@
 
 .p-recipe-txt {
     padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: 1s; //カードアニメ
 }
 
 .p-recipe-txt__exc {
@@ -200,8 +219,8 @@
         margin: 0 auto;
         width: calc((100% - 2rem) /2);
         max-width: 400px;
-        &:not(:last-child) {
-            margin-bottom: rem(56);
+        &:nth-last-child(2) {
+            margin-bottom: 0;
         }
     }
 }
