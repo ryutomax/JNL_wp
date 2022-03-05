@@ -14,10 +14,14 @@
     padding-left: 1rem;
 }
 
+.p-fv-inner[data-aos=zoom-out] {
+    transform: scale(1.5);
+}
+
 .p-fv-copy {
     position: absolute;
 		top: 50%;
-        left: rem(136);
+        left: max(10rem, 36vw);
 		transform: translate(-50%, -50%);
     p {
         font-size: rem(64);

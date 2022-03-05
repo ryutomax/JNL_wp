@@ -613,10 +613,15 @@ a.next.page-numbers {
   padding-left: 1rem;
 }
 
+.p-fv-inner[data-aos=zoom-out] {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 .p-fv-copy {
   position: absolute;
   top: 50%;
-  left: 8.5rem;
+  left: max(10rem, 36vw);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -889,6 +894,7 @@ a.next.page-numbers {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1;
 }
 .p-news-top__txt p {
   font-size: 1.375rem;

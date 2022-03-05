@@ -26,6 +26,7 @@
 .p-news-top__txt {
     display: flex;
     align-items: center;
+    z-index: 1;
     p {
         font-size: rem(22);
         line-height: rem(27);

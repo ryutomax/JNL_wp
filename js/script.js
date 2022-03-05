@@ -74,19 +74,20 @@ $(function() {
 	$('.p-recipe-tab').click(function() {
 		var index02 = $('.p-recipe-tab').index(this);
 		$('.p-recipe-cont__list').css('display','none');
-		$('.p-recipe-cont__list').eq(index02).fadeIn(1000);
+		$('.p-recipe-cont__list').eq(index02).fadeIn(2000);
 		$('.p-recipe-tab').removeClass('is-tab-select');
 		$(this).addClass('is-tab-select');
 	});
-    // //
+    // 初期状態//
 	var index01 = $('.p-recipe-tab.is-tab-select').index();
 	$('.p-recipe-cont__list').css('display','none');
-	$('.p-recipe-cont__list').eq(index01).fadeIn(1000);
+	$('.p-recipe-cont__list').eq(index01).fadeIn(2000);
+	// $('.p-recipe-cont__list').eq(index01).css('display','block');
 });
 
 // タブ切り替え 終了/////////////////////////////////////////
 
-// ページスクロール///////////////////////////////////////////////
+// スムーススクロール///////////////////////////////////////////////
 $(function ($) {
     $('.js-news').on('click',function(){
         const faqTop = $('.p-news').offset().top;
@@ -101,7 +102,7 @@ $(function ($) {
         $("html,body").animate({scrollTop: faqTop-80},1000);
     });
 });
-// ページスクロール終了/////////////////////////////////////////////
+// スムースクロール終了/////////////////////////////////////////////
 
 
 // ヘッダー変形/////////////////////////////////////////////
