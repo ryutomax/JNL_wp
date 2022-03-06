@@ -7,12 +7,12 @@ var mySwiper = new Swiper('.swiper-container', {
         crossFade: true
     },
     loop: true,
-	autoplay: {
-		delay: 3000,
-		stopOnLastSlide: false,
-		disableOnInteraction: true,
-		reverseDirection: false
-	}
+	// autoplay: {
+	// 	delay: 3000,
+	// 	stopOnLastSlide: false,
+	// 	disableOnInteraction: true,
+	// 	reverseDirection: false
+	// }
 });
 
 // swiper 終了////////////////////////////////
@@ -31,20 +31,15 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 
 // ハンバーガーメニュー終了/////////////////////////////////////////////
 
-// AOS/////////////////////////////////
+//AOSクラスを強制付与 ////////////////////////////////
 
-$(function(){
-    AOS.init();
-});
+// var tagElements = document.getElementsByTagName('table');
+// for (var i = 0; i < tagElements.length; i++) {
+// 	tagElements[i].setAttribute('data-aos', 'zoom-in');
+// 	tagElements[i].setAttribute('data-aos-duration', '2000');
+// }
 
-// AOS 終了////////////////////////////
-
-var classElements = document.getElementsByTagName('table');
-for (var i = 0; i < classElements.length; i++) {
-	classElements[i].setAttribute('data-aos', 'zoom-in');
-	classElements[i].setAttribute('data-aos-duration', '2000');
-}
-
+//AOSクラスを強制付与 ////////////////////////////////
 
 // IE対応 object-fit ////////////////////////
 
@@ -110,11 +105,11 @@ $(function () {
     $(window).scroll(function () {
         var $header = $('.js-header-scroll');
 
-
       // 200以上スクロールしたら処理
         if ($(window).scrollTop() > 200) {
         $header.addClass('is-header__op06');
         $header.addClass('is-header__h65');
+        $header.removeAttr('data-aos');       //AOS削除
 
         } else {
 
@@ -136,3 +131,11 @@ $(function () {
 
 });
 // ヘッダー変形 終了/////////////////////////////////////////////
+
+// AOS/////////////////////////////////
+
+$(function(){
+    AOS.init();
+});
+
+// AOS 終了////////////////////////////

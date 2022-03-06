@@ -16,10 +16,19 @@
 .p-cta-copy {
     text-align: center;
     margin-bottom: 1rem;
-    line-height: 1.5;
     h3 {
+        display: block;
         font-weight: bold;
         font-size: rem(22);
+        span {
+            display: block;
+            margin: 0 auto;
+            width: 310px;
+            background: linear-gradient(transparent 50%, yellow 50%);
+            &:first-child {
+                margin-bottom: rem(22);
+            }
+        }
     }
 }
 
@@ -67,8 +76,15 @@
 
 @include mq (sp) {
     .p-cta-copy {
+        margin-bottom: 2rem;
         h3 {
             font-size: rem(28);
+            span {
+                width: 395px;
+                &:first-child {
+                    margin-bottom: rem(28);
+                }
+            }
         }
     }
 
@@ -86,6 +102,10 @@
 }
 
 @include mq () {
+    .p-cta {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
     .p-cta-btn {
         width: 285px;
         a {
@@ -100,9 +120,20 @@
 }
 
 @include mq (pc) {
+    .p-cta {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
     .p-cta-copy {
+        margin-bottom: 3rem;
         h3 {
-            font-size: 2rem;
+            font-size: rem(32);
+            span {
+                width: 450px;
+                &:first-child {
+                    margin-bottom: rem(32);
+                }
+            }
         }
     }
 
