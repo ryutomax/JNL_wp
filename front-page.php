@@ -1,57 +1,6 @@
-<!DOCTYPE html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="noindex">
-        <title> 【JNL】 モリンガパウダーレシピサイト</title>
-        <meta name="description" content="美味しい、ヘルシーモリンガパウダーのレシピをご紹介します">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-        <link rel="stylesheet" href="css_origin/style.css">
-    </head>
-
-    <body>
-        <heeder class="l-header u-zindex__1000">
-            <div class="l-header-inner">
-                <h1 class="p-header-logo">
-                    <figure class="p-header-logo__img js-img-bg object-fit"><img src="img/moringa-powder.png" alt="main logo"></figure>
-                </h1>
-
-                <nav class="p-header-nav js-nav__open">
-                    <ul class="p-header-nav__list">
-                        <li class="p-header-nav__item">
-                            <a href="#" ontouchstart="">ホーム</a>
-                        </li>
-                        <li class="p-header-nav__item js-news">
-                            <a href="#" ontouchstart="">お知らせ</a>
-                        </li>
-                        <li class="p-header-nav__item js-recipe">
-                            <a href="#" ontouchstart="">レシピ</a>
-                        </li>
-                        <li class="p-header-nav__item js-products">
-                            <a href="#" ontouchstart="">商品のご紹介</a>
-                        </li>
-                        <li class="p-header-nav__item c-ctaBtn">
-                            <a href="/contact/" ontouchstart="">お問い合わせ</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="p-header-btn__area">
-                    <button class="p-header-nav__btn js-nav__btn c-hamburger__btn u-zindex__100">
-                        <span class="p-nav-bar c-bar"></span>
-                        <span class="p-nav-bar c-bar"></span>
-                        <span class="p-nav-bar c-bar"></span>
-                        <span class="p-nav-bar c-bar"></span>
-                    </button>
-                </div>
-                <!-- /.p-header-btn__area -->
-            </div>
-            <!-- /.l-header-inner -->
-        </heeder>
+<?php get_header(); ?>
         <main class="l-main">
-            <section class="p-fv"  style="background-image: url(img/moringa.jpg);">
+            <section class="p-fv"  style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>)">
                 <div class="p-fv-inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-delay="300">
                     <h2 class="p-fv-copy">
                         <p>Moringa</p>
@@ -60,7 +9,7 @@
                 </div>
                 <!-- /.p-fv-inner -->
             </section>
-    
+
             <section class="p-news">
                 <div class="p-news-inner">
                     <div class="p-news-ttl c-sec-ttl">
@@ -76,7 +25,7 @@
                         </div>
                         <!-- /.p-news-top__txt -->
                         <div class="p-news-top__img" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300">
-                            <figure class="p-news-top__img-inner object-fit"><img src="img/moringa-powder.png" alt="Moringa powder"></figure>
+                            <figure class="p-news-top__img-inner object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa-powder.png') ?>" alt="Moringa powder"></figure>
                         </div>
                     </div>
                     <!-- /.p-news-top -->
@@ -346,114 +295,5 @@
                 </div>
                 <!-- /.p-recipe-inner -->
             </section>
-    
-            <section class="p-products">
-                <div class="p-products-inner">
-                    <div class="p-products-ttl c-sec-ttl">
-                        <h3>Products</h3>
-                        <p>商品のご紹介</p>
-                    </div>
-                    <div class="p-products-wrap">
-                        <ul class="p-products-list">
-                            <li class="p-products-item">
-                                <a href="#">
-                                    <figure class="p-products-img">
-                                        <img src="img/products.png" alt="moringa powder">
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="p-products-item">
-                                <a href="#">
-                                    <figure class="p-products-img">
-                                        <img src="img/products.png" alt="moringa soba">
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="p-products-item">
-                                <a href="#">
-                                    <figure class="p-products-img">
-                                        <img src="img/products.png" alt="coupon">
-                                    </figure>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="l-footer">
-            <div class="l-footer-inner">
-                <nav class="p-footer-nav">
-                    <ul class="p-footer-nav__list">
-                        <li class="p-footer-nav__item">
-                            <a href="">ホーム</a>
-                        </li>
-                        <li class="p-footer-nav__item">
-                            <a href="">商品について</a>
-                        </li>
-                        <li class="p-footer-nav__item">
-                            <a href="">ジャパンナチュラル研究所</a>
-                        </li>
-                        <li class="p-footer-nav__item">
-                            <a href="">ご購入はこちらから</a>
-                        </li>
-                        <li class="p-footer-nav__item">
-                            <a href="">レシピ</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="p-footer-bottom">
-                    <div class="p-footer-bottom__inner">
-                        <div class="p-footer-sns">
-                            <ul class="p-footer-sns__list">
-                                <li class="p-footer-sns__item">
-                                    <a href="">
-                                        <figure class="p-footer-sns__icon"><img src="img/products.png" alt=""></figure>
-                                    </a>
-                                </li>
-                                <li class="p-footer-sns__item">
-                                    <a href="">
-                                        <figure class="p-footer-sns__icon"><img src="img/products.png" alt=""></figure>
-                                    </a>
-                                </li>
-                                <li class="p-footer-sns__item">
-                                    <a href="">
-                                        <figure class="p-footer-sns__icon"><img src="img/products.png" alt=""></figure>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.p-footer-sns -->
-                        <nav class="p-footer-bottom__nav">
-                            <ul class="p-footer-bottom__list">
-                                <li class="p-footer-bottom__item"><a href="">お問い合わせ</a></li>
-                                <li class="p-footer-bottom__item"><a href="">サイトマップ</a></li>
-                                <li class="p-footer-bottom__item"> <a href="">個人情報保護について</a></li>
-                            </ul>
-                            <ul class="p-footer-bottom__list">
-                                <li class="p-footer-bottom__item"><a href="">ソーシャルメディアポリシー</a></li>
-                                <li class="p-footer-bottom__item"> <a href="">ご利用規約</a></li>
-                            </ul>
-                            <ul class="p-footer-bottom__list">
-                                <li class="p-footer-bottom__item"><a href="">アクセシビリティへの対応方針</a></li>
-                            </ul>
-                        </nav>
-                        
-                    </div>
-                    <!-- /.p-footer-bottom__inner -->
-                </div>
-                <!-- /.p-footer-bottom -->
-                <div class="l-footer-copy"><small>Copyright JNL Co., Ltd. All Right Reserved.</small></div>
-            </div>
-            <!-- /.l-footer-inner -->
 
-        </footer>
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="js/script.js"></script>
-
-    </body>
-</html>
+<?php get_footer('cta_prodacts'); ?>

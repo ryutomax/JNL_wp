@@ -1,21 +1,29 @@
 // swiper////////////////////////////////
 
-var mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('.swiper-container', {
     speed: 3000,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
     },
     loop: true,
-	// autoplay: {
-	// 	delay: 3000,
-	// 	stopOnLastSlide: false,
-	// 	disableOnInteraction: true,
-	// 	reverseDirection: false
-	// }
+	autoplay: {
+		delay: 3000,
+		stopOnLastSlide: false,
+		disableOnInteraction: true,
+		reverseDirection: false
+	}
 });
 
 // swiper 終了////////////////////////////////
+
+// AOS/////////////////////////////////
+
+
+    AOS.init();
+
+
+// AOS 終了////////////////////////////
 
 // ハンバーガーメニュー
 
@@ -132,10 +140,3 @@ $(function () {
 });
 // ヘッダー変形 終了/////////////////////////////////////////////
 
-// AOS/////////////////////////////////
-
-$(function(){
-    AOS.init();
-});
-
-// AOS 終了////////////////////////////
