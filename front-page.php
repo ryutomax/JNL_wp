@@ -1,7 +1,7 @@
 <?php get_header(); ?>
         <main class="l-main">
             <section class="p-fv"  style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>)">
-                <div class="p-fv-inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-delay="300">
+                <div class="p-fv-inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-delay="1000">
                     <h2 class="p-fv-copy">
                         <p>Moringa</p>
                         <p>Recipe</p>

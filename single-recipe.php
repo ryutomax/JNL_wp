@@ -198,38 +198,5 @@
             <section class="p-review">
 
             </section>
-            <section class="p-products">
-                <div class="p-products-inner">
-                    <div class="p-products-ttl c-sec-ttl">
-                        <h3>PRODUCTS</h3>
-                        <p>商品のご紹介</p>
-                    </div>
-                    <div class="p-products-wrap">
-                        <ul class="p-products-list">
-                            <li class="p-products-item">
-                                <a href="#">
-                                    <figure class="p-products-img">
-                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products.png'); ?>" alt="moringa powder">
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="p-products-item">
-                                <a href="#">
-                                    <figure class="p-products-img">
-                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products.png'); ?>" alt="moringa soba">
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="p-products-item">
-                                <a href="#">
-                                    <figure class="p-products-img">
-                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products.png'); ?>" alt="coupon">
-                                    </figure>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
 
         <?php get_footer('cta_prodacts'); ?>
