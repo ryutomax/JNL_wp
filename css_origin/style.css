@@ -306,6 +306,30 @@ a.next.page-numbers {
   font-weight: bold;
 }
 
+@media screen and (min-width:480px) {
+  .c-sec-ttl {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width:860px) {
+  .c-sec-ttl {
+    margin-bottom: 4rem;
+  }
+  .c-sec-ttl h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .c-sec-ttl p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width:1280px) {
+  .c-sec-ttl {
+    margin-bottom: 5rem;
+  }
+}
 .c-tag-img {
   position: relative;
 }
@@ -1087,10 +1111,6 @@ a.next.page-numbers {
   display: flex;
 }
 
-.p-recipe-ttl {
-  margin-bottom: 2rem;
-}
-
 .p-recipe-tab {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1309,15 +1329,24 @@ a.next.page-numbers {
   width: 100%;
   height: 235px;
   max-width: 900px;
+  max-height: 500px;
   margin: 0 auto;
   margin-bottom: 3rem;
 }
+.p-detail p {
+  display: inline-block;
+  margin: 0 auto;
+  color: #ffffff;
+  background-color: #2C3848;
+  padding: 0.5rem;
+}
 .p-detail table {
   background-color: #eaf4dc;
-  width: calc(100% - 2rem);
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 1.5rem;
+  border-collapse: separate;
 }
 .p-detail table:first-of-type {
   margin-bottom: 3rem;
@@ -1337,17 +1366,13 @@ a.next.page-numbers {
   text-transform: none;
 }
 
-.p-detail-explain__ttl {
+.p-detail-explain__inner {
   display: block;
-  width: calc(100% - 2rem);
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
   max-width: 600px;
   margin: 0 auto;
-}
-.p-detail-explain__ttl p {
-  display: inline-block;
-  color: #ffffff;
-  background-color: #2C3848;
-  padding: 0.5rem;
 }
 
 @media screen and (min-width:480px) {
@@ -1360,7 +1385,6 @@ a.next.page-numbers {
   }
   .p-detail table {
     background-color: #eaf4dc;
-    width: calc(100% - 2rem);
     max-width: 600px;
     margin: 0 auto;
     padding: 1.5rem;
@@ -1617,9 +1641,12 @@ a.next.page-numbers {
 }
 
 .p-swiper-img {
-  padding-top: 0;
+  overflow: hidden;
+}
+.p-swiper-img img {
   height: 300px;
 }
+
 .swiper-wrapper {
   height: 300px;
   overflow: hidden;

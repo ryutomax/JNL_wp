@@ -7,9 +7,9 @@ add_action('wp_enqueue_scripts', 'include_files');
 function include_files() {
     // CSSファイルの読み込み
     // wp_enqueue_style('style',get_template_directory_uri() . '/css_origin/style.css', array(), '1.0.0', false);
-    wp_enqueue_style('style',get_theme_file_uri('/css_origin/style.css'), array(), '1.0.0', false);
     wp_enqueue_style('aos', "https://unpkg.com/aos@2.3.1/dist/aos.css", array(), '2.3.1', false);
     wp_enqueue_style('swiper', "https://unpkg.com/swiper@8/swiper-bundle.min.css", array(), '8', false);
+    wp_enqueue_style('style',get_theme_file_uri('/css_origin/style.css'), array(), '1.0.0', false);
     // WPのjQueryを解除
     // wp_deregister_script('jqeury');
     // JavaScriptファイルの読み込み
@@ -47,7 +47,7 @@ function my_main_query( $query ) {
         return;
 
     if ( $query->is_category() || $query->is_tag() ) {
-        $query->set( 'post_type', array( 'post', 'news', 'blog' ) );
+        $query->set( 'post_type', array( 'post', 'news', 'recipe' ) );
         return;
     }
 }

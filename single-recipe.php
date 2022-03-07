@@ -3,57 +3,41 @@
             <section class="p-swiper">
                 <div class="p-swiper-inner swiper-container">
                     <ul class="p-swiper-container swiper-wrapper">
+
+                        <?php
+                            $query_args = array(
+                                'orderby' => 'post_date',
+                                'post_status'=> 'publish',
+                                'post_type'=> 'recipe',
+                                'order'=>'DESC',
+                                'posts_per_page'=>3,
+                                'paged'=>$page
+                            );
+                        $the_query = new WP_Query($query_args);
+                        if ( $the_query->have_posts() ) :
+                            while ( $the_query->have_posts() ) : $the_query->the_post();
+                        ?>
+
                         <li class="p-swiper-item swiper-slide">
                             <figure class="p-swiper-img js-img-bg object-fit" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="0">
-                                <img src="img/moringa.jpg" alt="">
+                                <?php the_post_thumbnail('thumbnail'); ?>
                                 <div class="p-swiper-img__meta">
                                     <span class="p-swiper-img__tag" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1000">モリンガパウダーで</span>
-                                    <span class="p-swiper-img__ttl" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1500">台湾風モリンガ<br>豆乳スープ台湾風モリンガ<br>豆乳スープ台湾風モリンガ<br>豆乳スープ台湾風モリンガ<br>豆乳スープ</span>
+                                    <span class="p-swiper-img__ttl" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1500"><?php the_title(); ?></span>
                                 </div>
                             </figure>
                         </li>
-                        <li class="p-swiper-item swiper-slide">
-                            <figure class="p-swiper-img js-img-bg object-fit">
-                                <img src="img/moringa-powder.png" alt="">
-                                <div class="p-swiper-img__meta">
-                                    <span class="p-swiper-img__tag" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="300">モリンガパウダーで</span>
-                                    <span class="p-swiper-img__ttl">洋風モリンガ<br>豆乳スープ</span>
-                                </div>
-                            </figure>
-                        </li>
-                        <li class="p-swiper-item swiper-slide">
-                            <figure class="p-swiper-img js-img-bg object-fit">
-                                <img src="img/moringa.jpg" alt="">
-                                <div class="p-swiper-img__meta">
-                                    <span class="p-swiper-img__tag">モリンガパウダーで</span>
-                                    <span class="p-swiper-img__ttl">和風モリンガ<br>豆乳スープ</span>
-                                </div>
-                            </figure>
-                        </li>
-                        <li class="p-swiper-item swiper-slide">
-                            <figure class="p-swiper-img js-img-bg object-fit">
-                                <img src="img/products.png" alt="">
-                                <div class="p-swiper-img__meta">
-                                    <span class="p-swiper-img__tag">モリンガパウダーで</span>
-                                    <span class="p-swiper-img__ttl">和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ和風モリンガ豆乳スープ</span>
-                                </div>
-                            </figure>
-                        </li>
+
+                        <?php endwhile; ?>
+                        <?php else: ?>
+                            <p>記事がありません。</p>
+                        <?php endif; ?>
+                        <?php wp_reset_postdata(); ?>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </ul>
                 </div>
             </section>
-            <!-- <div class="p-content__breadcrumb c-breadcrumb">
-                <div class="c-breadcrumb-inner">
-                    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/"> -->
-                        <!-- <?php
-                            if(function_exists('bcn_display')){
-                                bcn_display();
-                            }
-                        ?> -->
-                    <!-- </div> -->
-                    <!-- <p class="c-breadcrumb-main">ホーム＞ブログ</p> -->
-                <!-- </div>
-            </div> -->
             <section class="p-menu">
                 <div class="p-menu-inner">
                     <ul class="p-menu-btns">
@@ -78,7 +62,7 @@
                 <div class="p-intro-inner">
                     <div class="p-intro-img">
                         <figure class="p-intro-img__inner js-img-bg object-fit ">
-                            <img src="<?php echo esc_url(get_template_directory_uri() . 'img/moringa.jpg'); ?>" alt="">
+                            <?php the_post_thumbnail('thumbnail'); ?>
                         </figure>
                     </div>
                     <!-- /.p-intro-img -->
@@ -86,18 +70,19 @@
                         <div class="p-intro-tag"><p>Food<span>ご飯・麺</span></p></div>
                         <div class="p-intro-ttl">
                             <h3 class="p-intro-ttl__sub">ヘルシーな豆腐とモリンガのさわやかなディップ</h3>
-                            <h2 class="p-intro-ttl__main">豆腐とモリンガのディップ</h2>
+                            <h2 class="p-intro-ttl__main" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"><?php the_title(); ?></h2>
                         </div>
                         <div class="p-intro-cont__inner" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-                            <p>
-                                豆腐とモリンガ、アンチョビ、オリーブオイルだけ
+                            <!-- <p> -->
+                                <?php the_excerpt(); ?>
+                                <!-- 豆腐とモリンガ、アンチョビ、オリーブオイルだけ
                                 でも美味しくお召し上がりいただけます。
                                 和風にしたいときワサビや醤油を足したり、
                                 まろやかにしたいときはバターを足したり、
                                 ワサビの代わりにタバスコを加えたりしても◎
                                 しっかり冷やすと野菜スティックで
-                                すくいやすくなります。
-                            </p>
+                                すくいやすくなります。 -->
+                            <!-- </p> -->
                         </div>
                         <!-- /.p-intro-inner -->
                     </div>
@@ -108,11 +93,10 @@
             </section>
             <section class="p-detail">
                 <div class="p-detail-inner">
-                    <div class="p-detail-ttl c-sec-ttl">
-                        <h3>Recipe Movie</h3>
-                        <p>レシピ動画</p>
-                    </div>
-                    <div class="p-detail-movie">
+
+                    <?php the_content(); ?>
+
+                    <!-- <div class="p-detail-movie">
                         <video src="video.mp4" controls></video>
                     </div>
                     <div class="p-detail-explain">
@@ -158,9 +142,9 @@
                                         </tr>
                                     </tbody>
                             </table>
-                        </div>
+                        </div> -->
                         <!-- /.p-detail-explain__inner -->
-                        <div class="p-detail-explain__inner" data-aos="zoom-in" data-aos-duration="2000">
+                        <!-- <div class="p-detail-explain__inner" data-aos="zoom-in" data-aos-duration="2000">
                             <div class="p-detail-explain__ttl"><p>作り方</p></div>
                             <table>
                                     <tbody>
@@ -189,11 +173,12 @@
                                         </tr>
                                     </tbody>
                             </table>
-                        </div>
+                        </div> -->
                         <!-- /.p-detail-explain__inner -->
-                    </div>
+                    <!-- </div> -->
                     <!-- /.p-detail-explain -->
                 </div>
+                <!-- /.p-detail-inner -->
             </section>
             <section class="p-review">
 

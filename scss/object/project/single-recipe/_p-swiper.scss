@@ -14,12 +14,13 @@
 }
 
 .p-swiper-img {
-    padding-top: 0;
-    height: 300px;
+    overflow: hidden;
     img {
+        height: 300px;
     }
 }
 //swiper.css///////////////
+
 .swiper-wrapper {
     height: 300px;
     overflow: hidden;
