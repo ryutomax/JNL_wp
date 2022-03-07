@@ -67,12 +67,19 @@
                     </div>
                     <!-- /.p-intro-img -->
                     <div class="p-intro-cont">
-                        <div class="p-intro-tag"><p>Food<span>ご飯・麺</span></p></div>
+                        <div class="p-intro-tag">
+                            <p>
+                                <?php
+                                    $category = get_the_category();
+                                    echo $category[0]->name;
+                                ?>
+                            </p>
+                        </div>
                         <div class="p-intro-ttl">
                             <h3 class="p-intro-ttl__sub">ヘルシーな豆腐とモリンガのさわやかなディップ</h3>
-                            <h2 class="p-intro-ttl__main" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"><?php the_title(); ?></h2>
+                            <h2 class="p-intro-ttl__main" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100"><?php the_title(); ?></h2>
                         </div>
-                        <div class="p-intro-cont__inner" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                        <div class="p-intro-cont__inner" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
                             <!-- <p> -->
                                 <?php the_excerpt(); ?>
                                 <!-- 豆腐とモリンガ、アンチョビ、オリーブオイルだけ
@@ -96,92 +103,8 @@
 
                     <?php the_content(); ?>
 
-                    <!-- <div class="p-detail-movie">
-                        <video src="video.mp4" controls></video>
-                    </div>
-                    <div class="p-detail-explain">
-                        <div class="p-detail-explain__inner" data-aos="zoom-in" data-aos-duration="2000">
-                            <div class="p-detail-explain__ttl"><p>▪︎材料（２～３人分）</p></div>
-                            <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>豆腐</td>
-                                            <td>100g</td>
-                                        </tr>
-                                        <tr>
-                                            <td>モリンガ</td>
-                                            <td>小さじ１</td>
-                                        </tr>
-                                        <tr>
-                                            <td>アンチョビフィレ</td>
-                                            <td>30g</td>
-                                        </tr>
-                                        <tr>
-                                            <td>オリーブオイル</td>
-                                            <td>30g</td>
-                                        </tr>
-                                        <tr>
-                                            <td>ワサビ</td>
-                                            <td>小さじ1/2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>ハチミツ</td>
-                                            <td>小さじ1/2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>醤油</td>
-                                            <td>小さじ1/2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>お好みの野菜</td>
-                                            <td>適量</td>
-                                        </tr>
-                                        <tr>
-                                            <td>お好みのクラッカー</td>
-                                            <td>適量</td>
-                                        </tr>
-                                    </tbody>
-                            </table>
-                        </div> -->
-                        <!-- /.p-detail-explain__inner -->
-                        <!-- <div class="p-detail-explain__inner" data-aos="zoom-in" data-aos-duration="2000">
-                            <div class="p-detail-explain__ttl"><p>作り方</p></div>
-                            <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>❶豆腐を流水で洗い、ザルにあげペーパーで
-                                                表面の水分を拭く。</td>
-                                        </tr>
-                                        <tr>
-                                            <td>❷アンチョビをみじん切りにする。</td>
-                                        </tr>
-                                        <tr>
-                                            <td>❸１と２のアンチョビをミキサーに入れ、回す。
-                                                （またはすり鉢であたる）</td>
-                                        </tr>
-                                        <tr>
-                                            <td>❹３にオリーブオイルを３回にわけて入れ、
-                                                その都度ミキサーをかけ油分と水分が分離しない
-                                                ようにする。</td>
-                                        </tr>
-                                        <tr>
-                                            <td>❺４にお好みでワサビ・ハチミツ・醤油等を入れ
-                                                ミキサーを回す。</td>
-                                        </tr>
-                                        <tr>
-                                            <td>❻器に盛り冷蔵庫でしっかり冷やす。</td>
-                                        </tr>
-                                    </tbody>
-                            </table>
-                        </div> -->
-                        <!-- /.p-detail-explain__inner -->
-                    <!-- </div> -->
-                    <!-- /.p-detail-explain -->
                 </div>
                 <!-- /.p-detail-inner -->
-            </section>
-            <section class="p-review">
-
             </section>
 
         <?php get_footer('cta_prodacts'); ?>

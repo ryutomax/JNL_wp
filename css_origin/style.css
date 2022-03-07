@@ -1333,7 +1333,7 @@ a.next.page-numbers {
   margin: 0 auto;
   margin-bottom: 3rem;
 }
-.p-detail p {
+.p-detail h2 {
   display: inline-block;
   margin: 0 auto;
   color: #ffffff;
@@ -1366,13 +1366,50 @@ a.next.page-numbers {
   text-transform: none;
 }
 
-.p-detail-explain__inner {
+.p-detail-explain {
   display: block;
   width: 100%;
   padding-right: 1rem;
   padding-left: 1rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.p-detail-review {
+  display: block;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.glsr-no-margins {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.glsr-button {
+  width: 175px;
+}
+.glsr-button .glsr-button-text {
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #00B906;
+  border-radius: 5px;
+  line-height: 2.5rem;
+  -webkit-box-shadow: 2px 2px 5px #2C3848;
+          box-shadow: 2px 2px 5px #2C3848;
+  border: 2px solid #00B906;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.glsr-button .glsr-button-text:hover {
+  background-color: white;
+  color: #00B906;
+  -webkit-box-shadow: 3px 3px 10px #2C3848;
+          box-shadow: 3px 3px 10px #2C3848;
 }
 
 @media screen and (min-width:480px) {
@@ -1428,6 +1465,10 @@ a.next.page-numbers {
 }
 .p-intro-tag p {
   color: #00B906;
+}
+.p-intro-tag p::before {
+  content: "Style";
+  font-size: 1.5rem;
 }
 
 .p-intro-ttl__sub {
@@ -1650,6 +1691,21 @@ a.next.page-numbers {
 .swiper-wrapper {
   height: 300px;
   overflow: hidden;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.3;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #00B906;
 }
 
 .p-swiper-img__meta {

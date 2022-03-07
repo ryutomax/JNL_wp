@@ -13,7 +13,7 @@
         margin: 0 auto;
         margin-bottom: rem(48);
     }
-    p{
+    h2{
         display: inline-block;
         margin: 0 auto;
         color: $white;
@@ -49,24 +49,41 @@
 
 .p-detail-ttl{}
 
-.p-detail-explain__inner {
+.p-detail-explain {
     display: block;
-    width: calc(100%);
+    width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
     max-width: 600px;
     margin: 0 auto;
 }
 
-// .p-detail-explain__ttl {
-//     
-//     p{
-//         display: inline-block;
-//         color: $white;
-//         background-color: $navy;
-//         padding: 0.5rem;
-//     }
-// }
+.p-detail-review {
+    display: block;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.glsr-no-margins {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.glsr-button {
+    width: 175px;
+    .glsr-button-text {
+        display: block;
+        color: $white;
+        font-weight: bold;
+        background-color: $green;
+        border-radius: 5px;
+        line-height: calc(2.75rem - rem(4));
+        @include btn-anime-2;
+    }
+}
 
 @include mq (sp) {
     .p-detail {

@@ -26,6 +26,20 @@
     overflow: hidden;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: 0.3;
+    transition: 1s;
+    &:hover {
+        opacity: 1;
+    }
+    &::after {
+        color: $green;
+    }
+}
+
+/////////////////////////////////
+
 .p-swiper-img__meta {
     position: absolute;
     display: flex;
