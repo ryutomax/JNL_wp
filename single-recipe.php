@@ -76,7 +76,7 @@
                             </p>
                         </div>
                         <div class="p-intro-ttl">
-                            <h3 class="p-intro-ttl__sub">ヘルシーな豆腐とモリンガのさわやかなディップ</h3>
+                            <h3 class="p-intro-ttl__sub"><?php echo get_secondary_title(); ?></h3>
                             <h2 class="p-intro-ttl__main" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100"><?php the_title(); ?></h2>
                         </div>
                         <div class="p-intro-cont__inner" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">

@@ -111,7 +111,7 @@
                         <h3>Recipe</h3>
                         <p>レシピ</p>
                     </div>
-    
+
                     <div class="p-recipe-wrap" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
                         <ul class="p-recipe-tabs">
                             <li class="p-recipe-tab is-tab-select"><p>ご飯・麺</p></li>
@@ -122,173 +122,238 @@
                         </ul>
                         <div class="p-recipe-cont">
                             <ul class="p-recipe-cont__list">
+                                <?php
+                                    $query_args = array(
+                                        'orderby' => 'post_date',
+                                        'post_status'=> 'publish',
+                                        'post_type'=> 'recipe',
+                                        'tag'=> 'staple',
+                                        'order'=>'DESC',
+                                        'posts_per_page'=>6,
+                                        'paged'=>$page
+                                    );
+                                $the_query = new WP_Query($query_args);
+                                if ( $the_query->have_posts() ) :
+                                    while ( $the_query->have_posts() ) : $the_query->the_post();
+                                ?>
+
                                 <li class="p-recipe-cont__item" ontouchstart="">
-                                    <a class="p-recipe-cont__item-inner" href="" ontouchstart="">
+                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
                                         <div class="p-recipe-img">
                                             <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                                <img src="img/moringa-powder.png" alt="menu img">
+                                                <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
+
                                             <span class="p-recipe-new"><p>New</p></span>
-                                            <span class="p-recipe-tag">ご飯・麺</span>
+
+                                            <span class="p-recipe-tag">
+                                                <p>
+                                                    <?php
+                                                        $category = get_the_category();
+                                                        echo $category[0]->name;
+                                                    ?>
+                                                </p>
+                                            </span>
                                             <span class="p-recipe-coming">coming soon</span>
                                         </div>
                                         <!-- /.p-recipe-img -->
                                         <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                            <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
+                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="p-recipe-cont__item">
-                                    <a class="p-recipe-cont__item-inner" href="">
+                                <?php endwhile; ?>
+                                <?php else: ?>
+                                <p>記事がありません。</p>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
+                            </ul>
+                            <ul class="p-recipe-cont__list">
+                                <?php
+                                    $query_args = array(
+                                        'orderby' => 'post_date',
+                                        'post_status'=> 'publish',
+                                        'post_type'=> 'recipe',
+                                        'tag'=> 'main',
+                                        'order'=>'DESC',
+                                        'posts_per_page'=>6,
+                                        'paged'=>$page
+                                    );
+                                $the_query = new WP_Query($query_args);
+                                if ( $the_query->have_posts() ) :
+                                    while ( $the_query->have_posts() ) : $the_query->the_post();
+                                ?>
+
+                                <li class="p-recipe-cont__item" ontouchstart="">
+                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
                                         <div class="p-recipe-img">
                                             <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                                <img src="img/moringa-powder.png" alt="menu img">
+                                                <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
+
                                             <span class="p-recipe-new"><p>New</p></span>
-                                            <span class="p-recipe-tag">ご飯・麺</span>
+
+                                            <span class="p-recipe-tag"><p>
+                                                    <?php
+                                                        $category = get_the_category();
+                                                        echo $category[0]->name;
+                                                    ?>
+                                            </p></span>
                                             <span class="p-recipe-coming">coming soon</span>
                                         </div>
                                         <!-- /.p-recipe-img -->
                                         <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                            <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
+                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="p-recipe-cont__item">
-                                    <a class="p-recipe-cont__item-inner" href="">
+                                <?php endwhile; ?>
+                                <?php else: ?>
+                                <p>記事がありません。</p>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
+                            </ul>
+                            <ul class="p-recipe-cont__list">
+                                <?php
+                                    $query_args = array(
+                                        'orderby' => 'post_date',
+                                        'post_status'=> 'publish',
+                                        'post_type'=> 'recipe',
+                                        'tag'=> 'side',
+                                        'order'=>'DESC',
+                                        'posts_per_page'=>6,
+                                        'paged'=>$page
+                                    );
+                                $the_query = new WP_Query($query_args);
+                                if ( $the_query->have_posts() ) :
+                                    while ( $the_query->have_posts() ) : $the_query->the_post();
+                                ?>
+
+                                <li class="p-recipe-cont__item" ontouchstart="">
+                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
                                         <div class="p-recipe-img">
                                             <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                                <img src="img/moringa-powder.png" alt="menu img">
+                                                <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
+
                                             <span class="p-recipe-new"><p>New</p></span>
-                                            <span class="p-recipe-tag">ご飯・麺</span>
+
+                                            <span class="p-recipe-tag"><p>
+                                                    <?php
+                                                        $category = get_the_category();
+                                                        echo $category[0]->name;
+                                                    ?>
+                                            </p></span>
                                             <span class="p-recipe-coming">coming soon</span>
                                         </div>
                                         <!-- /.p-recipe-img -->
                                         <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                            <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
+                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="p-recipe-cont__item">
-                                    <a class="p-recipe-cont__item-inner" href="">
+                                <?php endwhile; ?>
+                                <?php else: ?>
+                                <p>記事がありません。</p>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
+                            </ul>
+                            <ul class="p-recipe-cont__list">
+                                <?php
+                                    $query_args = array(
+                                        'orderby' => 'post_date',
+                                        'post_status'=> 'publish',
+                                        'post_type'=> 'recipe',
+                                        'tag'=> 'drink-soup',
+                                        'order'=>'DESC',
+                                        'posts_per_page'=>6,
+                                        'paged'=>$page
+                                    );
+                                $the_query = new WP_Query($query_args);
+                                if ( $the_query->have_posts() ) :
+                                    while ( $the_query->have_posts() ) : $the_query->the_post();
+                                ?>
+
+                                <li class="p-recipe-cont__item" ontouchstart="">
+                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
                                         <div class="p-recipe-img">
                                             <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                                <img src="img/moringa-powder.png" alt="menu img">
+                                                <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
+
                                             <span class="p-recipe-new"><p>New</p></span>
-                                            <span class="p-recipe-tag">ご飯・麺</span>
+
+                                            <span class="p-recipe-tag"><p>
+                                                    <?php
+                                                        $category = get_the_category();
+                                                        echo $category[0]->name;
+                                                    ?>
+                                            </p></span>
                                             <span class="p-recipe-coming">coming soon</span>
                                         </div>
                                         <!-- /.p-recipe-img -->
                                         <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                            <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
+                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
+                                <?php endwhile; ?>
+                                <?php else: ?>
+                                <p>記事がありません。</p>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
                             </ul>
                             <ul class="p-recipe-cont__list">
-                                <li class="p-recipe-cont__item">
-                                    <div class="p-recipe-img">
-                                        <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                            <img src="img/moringa-powder.png" alt="menu img">
-                                            <span class="p-recipe-new"><p>NEW</p></span>
-                                            <span class="p-recipe-tag">メイン</span>
+                                <?php
+                                    $query_args = array(
+                                        'orderby' => 'post_date',
+                                        'post_status'=> 'publish',
+                                        'post_type'=> 'recipe',
+                                        'tag'=> 'sweets',
+                                        'order'=>'DESC',
+                                        'posts_per_page'=>6,
+                                        'paged'=>$page
+                                    );
+                                $the_query = new WP_Query($query_args);
+                                if ( $the_query->have_posts() ) :
+                                    while ( $the_query->have_posts() ) : $the_query->the_post();
+                                ?>
+
+                                <li class="p-recipe-cont__item" ontouchstart="">
+                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                                        <div class="p-recipe-img">
+                                            <figure class="p-recipe-img__inner js-img-bg object-fit">
+                                                <?php the_post_thumbnail('thumbnail'); ?>
+                                            </figure>
+
+                                            <span class="p-recipe-new"><p>New</p></span>
+
+                                            <span class="p-recipe-tag"><p>
+                                                    <?php
+                                                        $category = get_the_category();
+                                                        echo $category[0]->name;
+                                                    ?>
+                                            </p></span>
                                             <span class="p-recipe-coming">coming soon</span>
-                                        </figure>
-                                    </div>
-                                    <!-- /.p-recipe-img -->
-                                    <div class="p-recipe-txt">
-                                        <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                        <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
-                                    </div>
+                                        </div>
+                                        <!-- /.p-recipe-img -->
+                                        <div class="p-recipe-txt">
+                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                                        </div>
+                                    </a>
                                 </li>
-                                <li class="p-recipe-cont__item">
-                                    <div class="p-recipe-img">
-                                        <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                            <img src="img/moringa-powder.png" alt="menu img">
-                                            <span class="p-recipe-new"><p>NEW</p></span>
-                                            <span class="p-recipe-tag">メイン</span>
-                                            <span class="p-recipe-coming">coming soon</span>
-                                        </figure>
-                                    </div>
-                                    <!-- /.p-recipe-img -->
-                                    <div class="p-recipe-txt">
-                                        <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                        <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
-                                    </div>
-                                </li>
-                                <li class="p-recipe-cont__item">
-                                    <div class="p-recipe-img">
-                                        <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                            <img src="img/moringa-powder.png" alt="menu img">
-                                            <span class="p-recipe-new"><p>NEW</p></span>
-                                            <span class="p-recipe-tag">メイン</span>
-                                            <span class="p-recipe-coming">coming soon</span>
-                                        </figure>
-                                    </div>
-                                    <!-- /.p-recipe-img -->
-                                    <div class="p-recipe-txt">
-                                        <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                        <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
-                                    </div>
-                                </li>
+                                <?php endwhile; ?>
+                                <?php else: ?>
+                                <p>記事がありません。</p>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="p-recipe-cont__list">
-                                <li class="p-recipe-cont__item">
-                                    <div class="p-recipe-img">
-                                        <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                            <img src="img/moringa-powder.png" alt="menu img">
-                                            <span class="p-recipe-new"><p>NEW</p></span>
-                                            <span class="p-recipe-tag">サイド</span>
-                                            <span class="p-recipe-coming">coming soon</span>
-                                        </figure>
-                                    </div>
-                                    <!-- /.p-recipe-img -->
-                                    <div class="p-recipe-txt">
-                                        <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                        <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="p-recipe-cont__list">
-                                <li class="p-recipe-cont__item">
-                                    <div class="p-recipe-img">
-                                        <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                            <img src="img/moringa-powder.png" alt="menu img">
-                                            <span class="p-recipe-new"><p>NEW</p></span>
-                                            <span class="p-recipe-tag">DRINK・SOUP</span>
-                                            <span class="p-recipe-coming">coming soon</span>
-                                        </figure>
-                                    </div>
-                                    <!-- /.p-recipe-img -->
-                                    <div class="p-recipe-txt">
-                                        <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                        <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="p-recipe-cont__list">
-                                <li class="p-recipe-cont__item">
-                                    <div class="p-recipe-img">
-                                        <figure class="p-recipe-img__inner js-img-bg object-fit">
-                                            <img src="img/moringa-powder.png" alt="menu img">
-                                            <span class="p-recipe-new"><p>NEW</p></span>
-                                            <span class="p-recipe-tag">SWEETS</span>
-                                            <span class="p-recipe-coming">coming soon</span>
-                                        </figure>
-                                    </div>
-                                    <!-- /.p-recipe-img -->
-                                    <div class="p-recipe-txt">
-                                        <p class="p-recipe-txt__exc">朝食の定番！お好きなフルーツや野菜とモリンガで</p>
-                                        <h3 class="p-recipe-txt__ttl">モリンガフルーツスムージー</h3>
-                                    </div>
-                                </li>
-                            </ul>
+
                         </div>
                         <!-- /.p-recipe-cont -->
                     </div>

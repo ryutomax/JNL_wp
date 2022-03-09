@@ -42,6 +42,8 @@
     td {
         line-height: 1.2;
         text-transform: none;
+        text-indent: -1em;
+        padding-left: 1em;
     }
 }
 
@@ -67,6 +69,15 @@
     margin: 0 auto;
 }
 
+#glsr_9be16351 {
+    margin-bottom: 2rem;
+}
+
+.glsr-review-author {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
 .glsr-no-margins {
     margin-top: 1rem;
     margin-bottom: 3rem;
@@ -83,6 +94,21 @@
         line-height: calc(2.75rem - rem(4));
         @include btn-anime-2;
     }
+}
+
+.glsr .glsr-reviews-wrap .glsr-reviews {
+    gap: 1rem;
+}
+
+.glsr-reviews-wrap {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.glsr-review {
+    border-bottom: 2px dotted $black;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
 }
 
 @include mq (sp) {

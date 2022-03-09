@@ -70,4 +70,26 @@ function my_main_query( $query ) {
     }
     add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+//投稿一覧 タグ絞り込み実装/////////////////////////////////
+    function add_post_tag_filter() {
+        global $post_type;
+        if ( $post_type == 'recipe' ) {        //ポストタイプを変更
+        wp_dropdown_categories( array(
+        'show_option_all' => 'タグ一覧',
+        'orderby' => 'name',
+        'hide_empty' => 0,
+        'selected' => get_query_var( 'tag' ),
+        'name' => 'tag',
+        'taxonomy' => 'post_tag',
+        'value_field' => 'slug',
+        ) );
+        }
+        }
+        add_action( 'restrict_manage_posts', 'add_post_tag_filter' );
+        function reset_post_tag_filter() {
+        if ( isset( $_GET['tag'] ) && '0' == $_GET['tag'] ) {
+        unset( $_GET['tag'] );
+        }
+        }
+        add_action( 'load-edit.php', 'reset_post_tag_filter' );
 ?>
