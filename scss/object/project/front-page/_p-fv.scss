@@ -1,11 +1,12 @@
 @use "global" as *;
 
 .p-fv {
-    padding-top: 5rem;
     height: calc(rem(300) + 5rem);
     background-size: cover;
     background-position: center center;
+    padding-top: 5rem;
 }
+
 
 .p-fv-inner {
     position: relative;
@@ -35,12 +36,10 @@
 @include mq (sp) {
     .p-fv {
         height: rem(500);
-        background-size: cover;
     }
 }
 @include mq () {
     .p-fv {
-        padding-top: 5rem;
         height: calc(rem(500) + 5rem);
     }
 

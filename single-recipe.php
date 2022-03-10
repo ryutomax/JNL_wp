@@ -38,22 +38,34 @@
                     </ul>
                 </div>
             </section>
+            <div class="p-content__breadcrumb c-breadcrumb">
+                <div class="c-breadcrumb-inner">
+                    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+                        <?php
+                            if(function_exists('bcn_display')){
+                                bcn_display();
+                            }
+                        ?>
+                    </div>
+                    <!-- <p class="c-breadcrumb-main">ホーム＞ブログ</p> -->
+                </div>
+            </div>
             <section class="p-menu">
                 <div class="p-menu-inner">
                     <ul class="p-menu-btns">
-                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="300"><a href="" ontouchstart="">Food<span>ご飯・麺</span></a></li>
-                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="400"><a href="" ontouchstart="">Main<span>メイン</span></a></li>
-                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="500"><a href="" ontouchstart="">Side<span>サイド</span></a></li>
+                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="300"><a href="<?php esc_url(home_url('/staple')); ?>" ontouchstart="">Staple<span>ご飯・麺</span></a></li>
+                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="400"><a href="<?php esc_url(home_url('/mian')); ?>" ontouchstart="">Main<span>メイン</span></a></li>
+                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="500"><a href="<?php esc_url(home_url('/side')); ?>" ontouchstart="">Side<span>サイド</span></a></li>
                         <li class="p-menu-btn p-menu-btn__drink" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="600">
-                            <a href="" ontouchstart="">
+                            <a href="<?php esc_url(home_url('/drink-soup')); ?>" ontouchstart="">
                                 <span>Drink<br> Soup</span>
                                 <span>ドリンク・<br>スープ</span>
                             </a>
                         </li>
-                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="700"><a href="" ontouchstart="">Sweets<span>スイーツ</span></a></li>
-                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="800"><a href="" ontouchstart="">Style<span>和風メニュー</span></a></li>
-                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="900"><a href="" ontouchstart="">Style<span>洋風メニュー</span></a></li>
-                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="1000"><a href="" ontouchstart="">Style<span>中華メニュー</span></a></li>
+                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="700"><a href="<?php esc_url(home_url('/sweets')); ?>" ontouchstart="">Sweets<span>スイーツ</span></a></li>
+                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="800"><a href="<?php esc_url(home_url('/japanese')); ?>" ontouchstart="">Style<span>和風メニュー</span></a></li>
+                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="900"><a href="<?php esc_url(home_url('/western')); ?>" ontouchstart="">Style<span>洋風メニュー</span></a></li>
+                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="1000"><a href="<?php esc_url(home_url('/chinese')); ?>" ontouchstart="">Style<span>中華メニュー</span></a></li>
                     </ul>
                 </div>
                 <!-- /.p-menu-inner -->

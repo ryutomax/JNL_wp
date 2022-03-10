@@ -28,7 +28,7 @@
                             <a href="#">お知らせ</a>
                         </li>
                         <li class="p-header-nav__item js-recipe">
-                            <a href="<?php esc_url(home_url('/recipe'));?>">レシピ</a>
+                            <a href="#">レシピ</a>
                         </li>
                         <li class="p-header-nav__item js-products">
                             <a href="#">商品のご紹介</a>

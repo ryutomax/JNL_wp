@@ -61,3 +61,19 @@
 .is-header__h65 {
     height: rem(65);
 }
+
+.is-header__slidein{
+	animation: DownAnime 1s forwards;
+    position: fixed;
+}
+
+@keyframes DownAnime{
+    from {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

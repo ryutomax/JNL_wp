@@ -1,28 +1,28 @@
 @use "global" as *;
 
 .p-swiper {
-    padding-top: 5rem;
 }
 
 .p-swiper-inner {
+
 }
 
 .p-swiper-container {}
 
 .p-swiper-item {
-    height: 300px;
+    height: calc(300px + 5rem);
 }
 
 .p-swiper-img {
     overflow: hidden;
     img {
-        height: 300px;
+        height: calc(300px + 5rem);
     }
 }
 //swiper.css///////////////
 
 .swiper-wrapper {
-    height: 300px;
+    height: calc(300px + 5rem);
     overflow: hidden;
 }
 
@@ -44,7 +44,7 @@
     position: absolute;
     display: flex;
     align-items: start;
-    top: 1rem;
+    top: 6rem;
     left: 5%;
     width: 95%;
     max-width: 600px;
@@ -63,19 +63,20 @@
     font-size: max(rem(16), 6.4vw);
     color: $white;
     text-shadow: 0.5px  0.5px 0px #000000;
+    margin-top: 0.25rem;
     margin-left: 1rem;
 }
 
 @include mq (sp) {
     .p-swiper-item {
-        height: 450px;
+        height: calc(450px + 5rem);
     }
     .swiper-wrapper {
-        height: 450px;
+        height: calc(450px + 5rem);
     }
     .p-swiper-img__meta {
         justify-content: center;
-        top: 2rem;
+        top: 7rem;
         max-width: 450px;
         left: calc(50% - 225px);
     }
@@ -91,13 +92,12 @@
 }
 @include mq () {
     .p-swiper-item {
-        height: 500px;
+        height: calc(500px + 5rem);
     }
     .swiper-wrapper {
-        height: 500px;
+        height: calc(500px + 5rem);
     }
     .p-swiper-img__meta {
-        top: 2rem;
         width: 70%;
         max-width: 800px;
         left: calc(50% - 400px);
@@ -122,7 +122,6 @@
     }
 
     .p-swiper-img__meta {
-        width: 70%;
         max-width: 900px;
         left: calc(50% - 450px);
     }
@@ -136,5 +135,6 @@
         font-size: rem(40);
         width: auto;
         max-width: calc(100% - 380px);
+        margin-top: 0.75rem;
     }
 }
