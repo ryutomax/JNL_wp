@@ -119,4 +119,4 @@
                 <!-- /.p-detail-inner -->
             </section>
 
-        <?php get_footer('cta_prodacts'); ?>
+        <?php get_footer('cta_products'); ?>

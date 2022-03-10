@@ -133,4 +133,4 @@
     </section>
 </main>
 
-<?php get_footer('cta'); ?>
+<?php get_footer('cta_products'); ?>

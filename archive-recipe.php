@@ -53,7 +53,10 @@
 
     <section class="p-content">
         <div class="p-content-inner">
-            <div class="p-content-ttl c-sec-ttl"><h2>新着一覧</h2></div>
+            <div class="p-news-ttl c-sec-ttl">
+                <h3>RECIPE</h3>
+                <p>レシピ一覧</p>
+            </div>
 
             <div class="p-content-wrap">
                 <ul class="p-content__list-wp">
@@ -75,57 +78,37 @@
 
                     ?>
 
-                    <li class="p-content__item-wp">
-                        <figure class="p-content__img-wp c-tag-img">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
-                                <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                <?php else: ?><!-- アイキャッチが無い時-->
-                                <img src="<?php echo get_template_directory_uri();?>/img/noimage.png" alt="アイキャッチがない時の画像です。" />
-                                <?php endif; ?>
-                            </a>
-                            <span class="p-content__cat-wp c-tag-img__tag">
-                                <!-- カテゴリ名のみ取得 ///////////////////////////////////// -->
-                            <?php
-                                $category = get_the_category();
-                                echo $category[0]->name;
-                            ?>
+                    <li class="p-recipe-cont__item" ontouchstart="">
+                        <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                            <div class="p-recipe-img">
+                                <figure class="p-recipe-img__inner js-img-bg object-fit">
+                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                </figure>
 
-                            </span>
-                        </figure>
-                        <div class="p-content__txt-wp">
-                            <div class="p-content__date-wp"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time></div>
+                                <span class="p-recipe-new"><p>New</p></span>
 
-                            <h3 class="p-content__ttl-wp">
-                                <a href="<?php the_permalink(); ?>">
-                                <?php
-                                    if(mb_strlen($post->post_title, 'UTF-8')>30){
-                                    $title= mb_substr($post->post_title, 0, 30, 'UTF-8');
-                                            echo $title.'・・・';
-                                    }else{
-                                            echo $post->post_title;
-                                    }
-                                ?>
-                                </a>
-                            </h3>
-
-                            <div class="p-content__exc-wp">
-                                <a href="<?php the_permalink(); ?>">
+                                <span class="p-recipe-tag">
                                     <p>
-                                        <!-- 文章のみ取得 /////////////////////////////////////-->
-                                        <?php the_excerpt(); ?>
-                                    
+                                        <?php
+                                            $category = get_the_category();
+                                            echo $category[0]->name;
+                                        ?>
                                     </p>
-                                </a>
+                                </span>
+                                <span class="p-recipe-coming">coming soon</span>
                             </div>
-                        </div>
+                            <!-- /.p-recipe-img -->
+                            <div class="p-recipe-txt">
+                                <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                            </div>
+                        </a>
                     </li>
-
                     <?php endwhile; ?>
-                    <?php else: ?>
-                        <p>記事がありません。</p>
-                    <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
+                                <?php else: ?>
+                                <p>記事がありません。</p>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
                 </ul>
             </div>
             <!-- /.p-content-wrap -->
@@ -149,4 +132,4 @@
     </section>
 </main>
 
-<?php get_footer('cta'); ?>
+<?php get_footer('cta_products'); ?>

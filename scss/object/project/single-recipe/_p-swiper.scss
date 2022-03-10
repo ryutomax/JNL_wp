@@ -15,6 +15,7 @@
 
 .p-swiper-img {
     overflow: hidden;
+    position: relative;
     img {
         height: calc(300px + 5rem);
     }
@@ -44,10 +45,12 @@
     position: absolute;
     display: flex;
     align-items: start;
-    top: 6rem;
-    left: 5%;
-    width: 95%;
+    width: 100%;
     max-width: 600px;
+    top: 6rem;
+	left: 50%;
+	transform: translate(-50%);
+
 }
 
 .p-swiper-img__tag {
@@ -59,12 +62,13 @@
 }
 
 .p-swiper-img__ttl {
-    width: calc(100% - min(275px, 49vw));
+    max-width: calc(100% - min(275px, 49vw));
     font-size: max(rem(16), 6.4vw);
     color: $white;
     text-shadow: 0.5px  0.5px 0px #000000;
     margin-top: 0.25rem;
     margin-left: 1rem;
+    background: #00b90654;
 }
 
 @include mq (sp) {
@@ -78,15 +82,21 @@
         justify-content: center;
         top: 7rem;
         max-width: 450px;
-        left: calc(50% - 225px);
+        // width: 70%;
+        // width: auto;
+        max-width: 800px;
+        // left: calc(50% - 300px);
     }
     .p-swiper-img__tag {
         width: 205px;
         font-size: rem(20);
     }
     .p-swiper-img__ttl {
-        width: calc(100% - 216px - 1.5rem);
-        font-size: rem(32);
+        // width: calc(100% - 216px - 1.5rem);
+        // width: auto;
+        // max-width: calc(100% - 380px);
+        font-size: rem(28);
+        font-size: max(rem(24), 4.2vw);
         margin-left: 1.5rem;
     }
 }
@@ -98,9 +108,9 @@
         height: calc(500px + 5rem);
     }
     .p-swiper-img__meta {
-        width: 70%;
+        // width: 70%;
         max-width: 800px;
-        left: calc(50% - 400px);
+        // left: calc(50% - 400px);
     }
     .p-swiper-img__tag {
         width: 240px;
@@ -108,8 +118,8 @@
     }
     .p-swiper-img__ttl {
         font-size: rem(32);
-        width: auto;
-        max-width: calc(100% - 380px);
+        // width: auto;
+        // max-width: calc(100% - 380px);
     }
 }
 @include mq (pc) {
@@ -123,7 +133,7 @@
 
     .p-swiper-img__meta {
         max-width: 900px;
-        left: calc(50% - 450px);
+        // left: calc(50% - 450px);
     }
 
     .p-swiper-img__tag {
@@ -133,8 +143,8 @@
     }
     .p-swiper-img__ttl {
         font-size: rem(40);
-        width: auto;
-        max-width: calc(100% - 380px);
+        // width: auto;
+        // max-width: calc(100% - 380px);
         margin-top: 0.75rem;
     }
 }
