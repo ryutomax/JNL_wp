@@ -3,9 +3,39 @@
 
 <main class="l-main">
 
-    <section class="c-top-ttl">
-        <div class="c-top-ttl-inner" style="background-image: url(<?php echo get_template_directory_uri();?>/img/blog@2x.png);">
-            <h2 class="c-top-ttl-main">ブログ</h2>
+    <section class="p-swiper">
+        <div class="p-swiper-inner swiper-container">
+            <ul class="p-swiper-container swiper-wrapper">
+                <?php
+                    $query_args = array(
+                        'orderby' => 'post_date',
+                        'post_status'=> 'publish',
+                        'post_type'=> 'recipe',
+                        'order'=>'DESC',
+                        'posts_per_page'=>3,
+                        'paged'=>$page
+                    );
+                $the_query = new WP_Query($query_args);
+                if ( $the_query->have_posts() ) :
+                    while ( $the_query->have_posts() ) : $the_query->the_post();
+                ?>
+                <li class="p-swiper-item swiper-slide">
+                    <figure class="p-swiper-img js-img-bg object-fit" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="0">
+                        <?php the_post_thumbnail('thumbnail'); ?>
+                        <div class="p-swiper-img__meta">
+                            <span class="p-swiper-img__tag" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1000">モリンガパウダーで</span>
+                            <span class="p-swiper-img__ttl" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1500"><?php the_title(); ?></span>
+                        </div>
+                    </figure>
+                </li>
+                <?php endwhile; ?>
+                <?php else: ?>
+                    <p>記事がありません。</p>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </ul>
         </div>
     </section>
 
@@ -23,13 +53,68 @@
         </div>
     </div>
 
-    <section class="p-content">
+    <section class="p-menu">
+        <div class="p-menu-inner">
+            <ul class="p-menu-btns">
+                <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="300">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'ご飯・麺', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">
+                            Staple<span>ご飯・麺</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="400">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'メイン', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">
+                            Main<span>メイン</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="500">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'サイド', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">Side<span>サイド</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn p-menu-btn__drink" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="600">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'ドリンク・スープ', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">
+                        <span>Drink<br> Soup</span>
+                        <span>ドリンク・<br>スープ</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="700">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'スイーツ', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">Sweets<span>スイーツ</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="800"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '和風メニュー' ) ) ); ?>" ontouchstart="">Style<span>和風メニュー</span></a></li>
+                <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="900"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '洋風メニュー' ) ) ); ?>" ontouchstart="">Style<span>洋風メニュー</span></a></li>
+                <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="1000"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '中華風メニュー' ) ) ); ?>" ontouchstart="">Style<span>中華メニュー</span></a></li>
+            </ul>
+        </div>
+        <!-- /.p-menu-inner -->
+    </section>
+
+    <section class="p-content c-frame">
         <div class="p-content-inner">
             <div class="p-content-ttl c-sec-ttl">
-                <h2>
-                    <?php single_cat_title( '', true ); ?>
-                    一覧
-                </h2>
+                <h3>
+                    <?php single_term_title( '', true ); ?>
+                    LIST
+                </h3>
             </div>
 
             <div class="p-content-wrap">
@@ -59,55 +144,36 @@
 
                     ?>
 
-                    <li class="p-content__item-wp">
-                        <figure class="p-content__img-wp c-tag-img">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
-                                <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                <?php else: ?><!-- アイキャッチが無い時-->
-                                <img src="<?php echo get_template_directory_uri();?>/img/noimage.png" alt="アイキャッチがない時の画像です。" />
-                                <?php endif; ?>
-                            </a>
-                            <span class="p-content__cat-wp c-tag-img__tag">
-                                <!-- カテゴリ名のみ取得 ///////////////////////////////////// -->
-                            <?php
-                                $category = get_the_category();
-                                echo $category[0]->name;
-                            ?>
+                    <li class="p-recipe-cont__item" ontouchstart="">
+                        <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                            <div class="p-recipe-img">
+                                <figure class="p-recipe-img__inner js-img-bg object-fit">
+                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                </figure>
 
-                            </span>
-                        </figure>
-                        <div class="p-content__txt-wp">
-                            <div class="p-content__date-wp"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time></div>
+                                <span class="p-recipe-new"><p>New</p></span>
 
-                            <h3 class="p-content__ttl-wp">
-                                <a href="<?php the_permalink(); ?>">
-                                <?php
-                                    if(mb_strlen($post->post_title, 'UTF-8')>40){
-                                    $title= mb_substr($post->post_title, 0, 40, 'UTF-8');
-                                            echo $title.'・・・';
-                                    }else{
-                                            echo $post->post_title;
-                                    }
-                                ?>
-                                </a>
-                            </h3>
-
-                            <div class="p-content__exc-wp">
-                                <p>
-                                    <!-- 文章のみ取得 /////////////////////////////////////-->
-                                <?php
-                                    $content  = get_the_content();
-                                    $text     = strip_tags( strip_shortcodes( $content ) );
-                                ?>
-                                </p>
+                                <span class="p-recipe-tag">
+                                    <p>
+                                        <?php
+                                            $category = get_the_category();
+                                            echo $category[0]->name;
+                                        ?>
+                                    </p>
+                                </span>
+                                <span class="p-recipe-coming">coming soon</span>
                             </div>
-                        </div>
+                            <!-- /.p-recipe-img -->
+                            <div class="p-recipe-txt">
+                                <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                            </div>
+                        </a>
                     </li>
 
                     <?php endwhile; ?>
                     <?php else: ?>
-                        <p>記事がありません。</p>
+                        <p>レシピがありません。</p>
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
                 </ul>

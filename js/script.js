@@ -113,12 +113,13 @@ $(function ($) {
 
 
 // ヘッダー変形/////////////////////////////////////////////
+
 $(function FixedAnime() {
     $(window).scroll(function () {
-        var headerH = $(".js-header-scroll").outerHeight(true);//headerの高さを取得
+        var headerH = $(".js-header-scroll").outerHeight(true);      //headerの高さを取得
         var $header = $('.js-header-scroll');
 
-      // 200以上スクロールしたら処理
+        // header高以上スクロールしたら処理
         if ($(window).scrollTop() > headerH) {
         $header.addClass('is-header__op06');
         $header.addClass('is-header__h65');
@@ -149,26 +150,7 @@ $(function FixedAnime() {
 $(window).on('load', function () {
 	FixedAnime();
 });
-// var headerH = $(".js-header-scroll").outerHeight(true);//headerの高さを取得
 
-// //スクロール途中からヘッダーの高さを変化させるための設定を関数でまとめる
-// function FixedAnime() {
-// 	//ヘッダーの高さを取得
-// 	var scroll = $(window).scrollTop();
-// 	if (scroll >= headerH){//ヘッダーの高さを超えたら
-//         $('.js-header-scroll').addClass('HeightMin');//#headerについているHeightMinというクラス名を付与
-// 	}else{
-//         $('.js-header-scroll').removeClass('HeightMin');//HeightMinというクラス名を除去
-// 	}
-// }
-
-// // 画面をスクロールをしたら動かしたい場合の記述
-// $(window).scroll(function () {
-// 	FixedAnime();//スクロール途中からヘッダーの高さを変化させる関数を呼ぶ
-// });
-
-// // ページが読み込まれたらすぐに動かしたい場合の記述
-// 
 // ヘッダー変形 終了/////////////////////////////////////////////
 
 
@@ -177,3 +159,9 @@ $(function() {
     $('.glsr-field-textarea').insertAfter('.glsr-field-text');
 });
 //Site reviewsの配置入れ替え 終了///////////////////
+
+// パンくずリスト<br>削除///////////////////////
+$(function() {
+    $('.current-item').children('br').remove();
+});
+// パンくずリスト<br>削除 終了///////////////////////

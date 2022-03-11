@@ -165,7 +165,7 @@
                                 </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
-                                <p>記事がありません。</p>
+                                <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
@@ -211,7 +211,7 @@
                                 </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
-                                <p>記事がありません。</p>
+                                <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
@@ -257,7 +257,7 @@
                                 </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
-                                <p>記事がありません。</p>
+                                <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
@@ -303,7 +303,7 @@
                                 </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
-                                <p>記事がありません。</p>
+                                <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
@@ -349,7 +349,7 @@
                                 </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
-                                <p>記事がありません。</p>
+                                <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>

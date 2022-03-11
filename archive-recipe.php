@@ -12,7 +12,7 @@
                         'post_status'=> 'publish',
                         'post_type'=> 'recipe',
                         'order'=>'DESC',
-                        'posts_per_page'=>3,
+                        'posts_per_page'=>6,
                         'paged'=>$page
                     );
                 $the_query = new WP_Query($query_args);
@@ -118,14 +118,12 @@
                     <?php
                         $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
                         $query_args = array(
-
                                 'orderby' => 'post_date',   //日付順に並び替え
                                 'order'=>'DESC',            //上記パラメータについて昇順か降順かを指定
                                 'post_status'=> 'publish',  //公開された投稿もしくは固定ページ
                                 'post_type'=> 'recipe',
                                 'posts_per_page'=>10,
                                 'paged'=>$paged
-
                             );
                         $the_query = new WP_Query($query_args);
                         if ( $the_query->have_posts() ) :
@@ -161,7 +159,7 @@
                     </li>
                     <?php endwhile; ?>
                     <?php else: ?>
-                    <p>記事がありません。</p>
+                    <p>レシピがありません。</p>
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
                 </ul>
