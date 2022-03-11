@@ -105,23 +105,23 @@
                 <!-- /.p-news-inner -->
             </section>
 
-            <section class="p-recipe c-frame">
-                <div class="p-recipe-inner">
-                    <div class="p-recipe-ttl c-sec-ttl">
+            <section class="c-recipe c-frame">
+                <div class="c-recipe-inner">
+                    <div class="c-recipe-ttl c-sec-ttl">
                         <h3>Recipe</h3>
                         <p>レシピ</p>
                     </div>
 
-                    <div class="p-recipe-wrap" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
-                        <ul class="p-recipe-tabs">
-                            <li class="p-recipe-tab is-tab-select"><p>ご飯・麺</p></li>
-                            <li class="p-recipe-tab"><p>メイン</p></li>
-                            <li class="p-recipe-tab"><p>サイド</p></li>
-                            <li class="p-recipe-tab"><p><span>ドリンク•</span><span>スープ</span></p></li>
-                            <li class="p-recipe-tab"><p>スイーツ</p></li>
+                    <div class="c-recipe-wrap" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                        <ul class="c-recipe-tabs">
+                            <li class="c-recipe-tab is-tab-select"><p>ご飯・麺</p></li>
+                            <li class="c-recipe-tab"><p>メイン</p></li>
+                            <li class="c-recipe-tab"><p>サイド</p></li>
+                            <li class="c-recipe-tab"><p><span>ドリンク•</span><span>スープ</span></p></li>
+                            <li class="c-recipe-tab"><p>スイーツ</p></li>
                         </ul>
-                        <div class="p-recipe-cont">
-                            <ul class="p-recipe-cont__list">
+                        <div class="c-recipe-cont">
+                            <ul class="c-recipe-cont__list">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -137,16 +137,16 @@
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
 
-                                <li class="p-recipe-cont__item" ontouchstart="">
-                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                        <div class="p-recipe-img">
-                                            <figure class="p-recipe-img__inner js-img-bg object-fit">
+                                <li class="c-recipe-cont__item" ontouchstart="">
+                                    <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                                        <div class="c-recipe-img">
+                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
                                                 <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
 
-                                            <span class="p-recipe-new"><p>New</p></span>
+                                            <span class="c-recipe-new"><p>New</p></span>
 
-                                            <span class="p-recipe-tag">
+                                            <span class="c-recipe-tag">
                                                 <p>
                                                     <?php
                                                         $category = get_the_category();
@@ -154,12 +154,12 @@
                                                     ?>
                                                 </p>
                                             </span>
-                                            <span class="p-recipe-coming">coming soon</span>
+                                            <span class="c-recipe-coming">coming soon</span>
                                         </div>
-                                        <!-- /.p-recipe-img -->
-                                        <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
-                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                                        <!-- /.c-recipe-img -->
+                                        <div class="c-recipe-txt">
+                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
@@ -169,7 +169,7 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="p-recipe-cont__list">
+                            <ul class="c-recipe-cont__list">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -185,27 +185,27 @@
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
 
-                                <li class="p-recipe-cont__item" ontouchstart="">
-                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                        <div class="p-recipe-img">
-                                            <figure class="p-recipe-img__inner js-img-bg object-fit">
+                                <li class="c-recipe-cont__item" ontouchstart="">
+                                    <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                                        <div class="c-recipe-img">
+                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
                                                 <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
 
-                                            <span class="p-recipe-new"><p>New</p></span>
+                                            <span class="c-recipe-new"><p>New</p></span>
 
-                                            <span class="p-recipe-tag"><p>
+                                            <span class="c-recipe-tag"><p>
                                                     <?php
                                                         $category = get_the_category();
                                                         echo $category[0]->name;
                                                     ?>
                                             </p></span>
-                                            <span class="p-recipe-coming">coming soon</span>
+                                            <span class="c-recipe-coming">coming soon</span>
                                         </div>
-                                        <!-- /.p-recipe-img -->
-                                        <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
-                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                                        <!-- /.c-recipe-img -->
+                                        <div class="c-recipe-txt">
+                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
@@ -215,7 +215,7 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="p-recipe-cont__list">
+                            <ul class="c-recipe-cont__list">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -231,27 +231,27 @@
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
 
-                                <li class="p-recipe-cont__item" ontouchstart="">
-                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                        <div class="p-recipe-img">
-                                            <figure class="p-recipe-img__inner js-img-bg object-fit">
+                                <li class="c-recipe-cont__item" ontouchstart="">
+                                    <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                                        <div class="c-recipe-img">
+                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
                                                 <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
 
-                                            <span class="p-recipe-new"><p>New</p></span>
+                                            <span class="c-recipe-new"><p>New</p></span>
 
-                                            <span class="p-recipe-tag"><p>
+                                            <span class="c-recipe-tag"><p>
                                                     <?php
                                                         $category = get_the_category();
                                                         echo $category[0]->name;
                                                     ?>
                                             </p></span>
-                                            <span class="p-recipe-coming">coming soon</span>
+                                            <span class="c-recipe-coming">coming soon</span>
                                         </div>
-                                        <!-- /.p-recipe-img -->
-                                        <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
-                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                                        <!-- /.c-recipe-img -->
+                                        <div class="c-recipe-txt">
+                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
@@ -261,7 +261,7 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="p-recipe-cont__list">
+                            <ul class="c-recipe-cont__list">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -277,27 +277,27 @@
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
 
-                                <li class="p-recipe-cont__item" ontouchstart="">
-                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                        <div class="p-recipe-img">
-                                            <figure class="p-recipe-img__inner js-img-bg object-fit">
+                                <li class="c-recipe-cont__item" ontouchstart="">
+                                    <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                                        <div class="c-recipe-img">
+                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
                                                 <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
 
-                                            <span class="p-recipe-new"><p>New</p></span>
+                                            <span class="c-recipe-new"><p>New</p></span>
 
-                                            <span class="p-recipe-tag"><p>
+                                            <span class="c-recipe-tag"><p>
                                                     <?php
                                                         $category = get_the_category();
                                                         echo $category[0]->name;
                                                     ?>
                                             </p></span>
-                                            <span class="p-recipe-coming">coming soon</span>
+                                            <span class="c-recipe-coming">coming soon</span>
                                         </div>
-                                        <!-- /.p-recipe-img -->
-                                        <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
-                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                                        <!-- /.c-recipe-img -->
+                                        <div class="c-recipe-txt">
+                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
@@ -307,7 +307,7 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="p-recipe-cont__list">
+                            <ul class="c-recipe-cont__list">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -323,27 +323,27 @@
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
 
-                                <li class="p-recipe-cont__item" ontouchstart="">
-                                    <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                        <div class="p-recipe-img">
-                                            <figure class="p-recipe-img__inner js-img-bg object-fit">
+                                <li class="c-recipe-cont__item" ontouchstart="">
+                                    <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                                        <div class="c-recipe-img">
+                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
                                                 <?php the_post_thumbnail('thumbnail'); ?>
                                             </figure>
 
-                                            <span class="p-recipe-new"><p>New</p></span>
+                                            <span class="c-recipe-new"><p>New</p></span>
 
-                                            <span class="p-recipe-tag"><p>
+                                            <span class="c-recipe-tag"><p>
                                                     <?php
                                                         $category = get_the_category();
                                                         echo $category[0]->name;
                                                     ?>
                                             </p></span>
-                                            <span class="p-recipe-coming">coming soon</span>
+                                            <span class="c-recipe-coming">coming soon</span>
                                         </div>
-                                        <!-- /.p-recipe-img -->
-                                        <div class="p-recipe-txt">
-                                            <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
-                                            <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                                        <!-- /.c-recipe-img -->
+                                        <div class="c-recipe-txt">
+                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     </a>
                                 </li>
@@ -355,10 +355,10 @@
                             </ul>
 
                         </div>
-                        <!-- /.p-recipe-cont -->
+                        <!-- /.c-recipe-cont -->
                     </div>
                 </div>
-                <!-- /.p-recipe-inner -->
+                <!-- /.c-recipe-inner -->
             </section>
 
 <?php get_footer('cta_products'); ?>

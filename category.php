@@ -144,16 +144,16 @@
 
                     ?>
 
-                    <li class="p-recipe-cont__item" ontouchstart="">
-                        <a class="p-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                            <div class="p-recipe-img">
-                                <figure class="p-recipe-img__inner js-img-bg object-fit">
+                    <li class="c-recipe-cont__item" ontouchstart="">
+                        <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                            <div class="c-recipe-img">
+                                <figure class="c-recipe-img__inner js-img-bg object-fit">
                                     <?php the_post_thumbnail('thumbnail'); ?>
                                 </figure>
 
-                                <span class="p-recipe-new"><p>New</p></span>
+                                <span class="c-recipe-new"><p>New</p></span>
 
-                                <span class="p-recipe-tag">
+                                <span class="c-recipe-tag">
                                     <p>
                                         <?php
                                             $category = get_the_category();
@@ -161,12 +161,12 @@
                                         ?>
                                     </p>
                                 </span>
-                                <span class="p-recipe-coming">coming soon</span>
+                                <span class="c-recipe-coming">coming soon</span>
                             </div>
-                            <!-- /.p-recipe-img -->
-                            <div class="p-recipe-txt">
-                                <p class="p-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
-                                <h3 class="p-recipe-txt__ttl"><?php the_title(); ?></h3>
+                            <!-- /.c-recipe-img -->
+                            <div class="c-recipe-txt">
+                                <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                             </div>
                         </a>
                     </li>

@@ -1,21 +1,19 @@
 @use "global" as *;
 
-.p-recipe {
-}
 
-.p-recipe-inner {
+.c-recipe-inner {
     max-width: 900px;
     margin: 0 auto;
 }
 
-.p-recipe-tabs {
+.c-recipe-tabs {
     display: flex;
 }
 
-.p-recipe-ttl  {
+.c-recipe-ttl  {
 }
 
-.p-recipe-tab {
+.c-recipe-tab {
     display: flex;
     align-items: flex-end;
     background-color: $d-green;
@@ -46,7 +44,7 @@
     }
 }
 
-.p-recipe-cont {
+.c-recipe-cont {
     padding-top: 2rem;
     padding-right: 0.5rem;
     padding-bottom: 2rem;
@@ -54,34 +52,35 @@
     border: 2px solid $green;
 }
 
-.p-recipe-cont__list {
+.c-recipe-cont__list {
     display: none;
 }
 
-.p-recipe-cont__item {
+.c-recipe-cont__item {
     margin: 0 auto;
     max-width: 450px;
     transition: 1s;
     &:hover {
         box-shadow: 0px 0px 5px $d-green;
+        opacity: 0.8;
     }
     &:not(:last-child) {
         margin-bottom: rem(56);
     }
 }
 
-.p-recipe-cont__item-inner {
+.c-recipe-cont__item-inner {
     &:hover {
-        .p-recipe-img__inner {
+        .c-recipe-img__inner {
             transform: scale(1.05);
         }
-        .p-recipe-txt {
+        .c-recipe-txt {
             opacity: 0.5;
         }
     }
 }
 
-.p-recipe-img {
+.c-recipe-img {
     height: 270px;
     overflow: hidden;
     position: relative;
@@ -90,12 +89,12 @@
     }
 }
 
-.p-recipe-img__inner {
+.c-recipe-img__inner {
     border-radius: 10px 0 10px 10px;
     transition: 1s;                     //カードアニメ
 }
 
-.p-recipe-new {
+.c-recipe-new {
     width: 0;
     height: 0;
     right: 0;
@@ -113,7 +112,7 @@
     }
 }
 
-.p-recipe-tag {
+.c-recipe-tag {
     left: 0;
     bottom: 1rem;
     background-color: $d-green;
@@ -132,7 +131,7 @@
     }
 }
 
-.p-recipe-coming {
+.c-recipe-coming {
     left: 0;
     top: 0;
     color: $white;
@@ -141,24 +140,25 @@
     padding: 0.5rem;
 }
 
-.p-recipe-txt {
+.c-recipe-txt {
     padding-top: 1rem;
     padding-bottom: 1rem;
     transition: 1s; //カードアニメ
 }
 
-.p-recipe-txt__exc {
+.c-recipe-txt__exc {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.p-recipe-txt__ttl {
+.c-recipe-txt__ttl {
     font-size: rem(22);
     line-height: 1.2;
+    font-weight: bold;
 }
 
 @include mq (sp) {
-    .p-recipe-tab {
+    .c-recipe-tab {
         font-size: rem(20);
         &:nth-child(4) {
             p {
@@ -172,7 +172,7 @@
 }
 
 @include mq () {
-    .p-recipe-tab {
+    .c-recipe-tab {
         font-size: rem(24);
         &:nth-child(4) {
             p {
@@ -181,12 +181,12 @@
         }
     }
 
-    .p-recipe-cont__list {
+    .c-recipe-cont__list {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .p-recipe-cont__item {
+    .c-recipe-cont__item {
         margin: 0 auto;
         width: calc((100% - 2rem) /2);
         max-width: 400px;

@@ -78,18 +78,18 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 // タブ切り替え//////////////////////////////////////////////
 
 $(function() {
-	$('.p-recipe-tab').click(function() {
-		var index02 = $('.p-recipe-tab').index(this);
-		$('.p-recipe-cont__list').css('display','none');
-		$('.p-recipe-cont__list').eq(index02).fadeIn(2000);
-		$('.p-recipe-tab').removeClass('is-tab-select');
+	$('.c-recipe-tab').click(function() {
+		var index02 = $('.c-recipe-tab').index(this);
+		$('.c-recipe-cont__list').css('display','none');
+		$('.c-recipe-cont__list').eq(index02).fadeIn(2000);
+		$('.c-recipe-tab').removeClass('is-tab-select');
 		$(this).addClass('is-tab-select');
 	});
     // 初期状態//
-	var index01 = $('.p-recipe-tab.is-tab-select').index();
-	$('.p-recipe-cont__list').css('display','none');
-	$('.p-recipe-cont__list').eq(index01).fadeIn(2000);
-	// $('.p-recipe-cont__list').eq(index01).css('display','block');
+	var index01 = $('.c-recipe-tab.is-tab-select').index();
+	$('.c-recipe-cont__list').css('display','none');
+	$('.c-recipe-cont__list').eq(index01).fadeIn(2000);
+	// $('.c-recipe-cont__list').eq(index01).css('display','block');
 });
 
 // タブ切り替え 終了/////////////////////////////////////////
@@ -101,7 +101,7 @@ $(function ($) {
         $("html,body").animate({scrollTop: faqTop-80},1000);
     });
     $('.js-recipe').on('click',function(){
-        const faqTop = $('.p-recipe').offset().top;
+        const faqTop = $('.c-recipe').offset().top;
         $("html,body").animate({scrollTop: faqTop-80},1000);
     });
     $('.js-products').on('click',function(){

@@ -16,13 +16,14 @@ a.page-numbers {
     width: 50px;
     height: 50px;
     padding: 1rem 1.15rem;
-    border: 1px solid $black;
+    border: 1px solid $green;
     margin-left: 0.625rem;
     margin-right: 0.625rem;
     transition: 0.5s;
     font-weight: bold;
+    color: $green;
     &:hover {
-        background-color: $black;
+        background-color: $green;
         color: $white;
     }
 }
@@ -32,7 +33,7 @@ span.page-numbers {
     width: 50px;
     height: 50px;
     padding: 1rem 1.25rem;
-    border: 1px solid $black;
+    border: 1px solid $green;
     margin-left: 0.625rem;
     margin-right: 0.625rem;
 }
@@ -45,7 +46,7 @@ span.page-numbers.dots {
 
 .current {
     padding: 1rem 1.25rem;
-    background: $black;
+    background: $green;
     color: $white;
     margin-left: 0.625rem;
     margin-right: 0.625rem;
