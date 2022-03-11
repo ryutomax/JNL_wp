@@ -51,16 +51,71 @@
         </div>
     </div>
 
-    <section class="p-content">
-        <div class="p-content-inner">
-            <div class="p-news-ttl c-sec-ttl">
+    <section class="p-menu">
+        <div class="p-menu-inner">
+            <ul class="p-menu-btns">
+                <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="300">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'ご飯・麺', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">
+                            Staple<span>ご飯・麺</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="400">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'メイン', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">
+                            Main<span>メイン</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="500">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'サイド', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">Side<span>サイド</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn p-menu-btn__drink" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="600">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'ドリンク・スープ', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">
+                        <span>Drink<br> Soup</span>
+                        <span>ドリンク・<br>スープ</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="700">
+                    <a href="<?php
+                                $tag = get_term_by('name', 'スイーツ', 'post_tag');
+                                $tag_id = $tag->term_id;
+                                echo esc_url(get_tag_link($tag_id));
+                            ?>" ontouchstart="">Sweets<span>スイーツ</span>
+                    </a>
+                </li>
+                <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="800"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '和風メニュー' ) ) ); ?>" ontouchstart="">Style<span>和風メニュー</span></a></li>
+                <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="900"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '洋風メニュー' ) ) ); ?>" ontouchstart="">Style<span>洋風メニュー</span></a></li>
+                <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="1000"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '中華風メニュー' ) ) ); ?>" ontouchstart="">Style<span>中華メニュー</span></a></li>
+            </ul>
+        </div>
+        <!-- /.p-menu-inner -->
+    </section>
+
+    <section class="p-archive c-frame">
+        <div class="p-archive-inner">
+            <div class="p-archive-ttl c-sec-ttl">
                 <h3>RECIPE</h3>
                 <p>レシピ一覧</p>
             </div>
 
-            <div class="p-content-wrap">
-                <ul class="p-content__list-wp">
-                        <?php
+            <div class="p-archive-wrap">
+                <ul class="p-archive__list-wp">
+                    <?php
                         $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
                         $query_args = array(
 
@@ -105,14 +160,14 @@
                         </a>
                     </li>
                     <?php endwhile; ?>
-                                <?php else: ?>
-                                <p>記事がありません。</p>
-                                <?php endif; ?>
-                                <?php wp_reset_postdata(); ?>
+                    <?php else: ?>
+                    <p>記事がありません。</p>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
                 </ul>
             </div>
-            <!-- /.p-content-wrap -->
-            <div class="p-content-pagination c-pagination">
+            <!-- /.p-archive-wrap -->
+            <div class="p-archive-pagination c-pagination">
                 <?php
                     the_posts_pagination(
                         array(
@@ -125,9 +180,9 @@
                     );
                 ?>
             </div>
-            <!-- /.p-content-pagination  -->
+            <!-- /.p-archive-pagination  -->
         </div>
-        <!-- /.p-content-inner -->
+        <!-- /.p-archive-inner -->
 
     </section>
 </main>

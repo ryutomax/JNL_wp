@@ -47,7 +47,7 @@
                                 'orderby' => 'post_date',   //日付順に並び替え
                                 'order'=>'DESC',            //上記パラメータについて昇順か降順かを指定
                                 'post_status'=> 'publish',  //公開された投稿もしくは固定ページ
-                                'post_type'=> 'blog',
+                                'post_type'=> 'recipe',
                                 'category_name'  => $cat_slug ,
                                 'posts_per_page'=>10,
                                 'paged'=>$paged

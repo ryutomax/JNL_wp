@@ -16,19 +16,19 @@
         <header class="l-header u-zindex__1000 js-header-scroll" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="300">
             <div class="l-header-inner">
                 <h1 class="p-header-logo js-header-h65-scroll">
-                    <a href="<?php esc_url(home_url('/')); ?>" class="p-header-logo__img js-img-bg object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa-powder.png'); ?>" alt="main logo"></a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header-logo__img js-img-bg object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa-powder.png'); ?>" alt="main logo"></a>
                 </h1>
 
                 <nav class="p-header-nav js-nav__open">
                     <ul class="p-header-nav__list">
                         <li class="p-header-nav__item">
-                            <a href="<?php esc_url(home_url('/')); ?>">ホーム</a>
+                            <a href="<?php echo esc_url(home_url('/')); ?>">ホーム</a>
                         </li>
                         <li class="p-header-nav__item js-news">
-                            <a href="#">お知らせ</a>
+                            <a href="<?php echo esc_url(home_url('/news'));?>">お知らせ</a>
                         </li>
                         <li class="p-header-nav__item js-recipe">
-                            <a href="<?php esc_url(home_url('/recipe'));?>">レシピ</a>
+                            <a href="<?php echo esc_url(home_url('/recipe'));?>">レシピ</a>
                         </li>
                         <li class="p-header-nav__item js-products">
                             <a href="#">商品のご紹介</a>

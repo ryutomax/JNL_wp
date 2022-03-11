@@ -1,5 +1,5 @@
 
-            <section class="p-products">
+            <section class="p-products c-frame">
                 <div class="p-products-inner">
                     <div class="p-products-ttl c-sec-ttl">
                         <h3>Products</h3>

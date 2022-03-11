@@ -10,7 +10,7 @@
                 <!-- /.p-fv-inner -->
             </section>
 
-            <section class="p-news">
+            <section class="p-news c-frame">
                 <div class="p-news-inner">
                     <div class="p-news-ttl c-sec-ttl">
                         <h3>NEWS</h3>
@@ -105,7 +105,7 @@
                 <!-- /.p-news-inner -->
             </section>
 
-            <section class="p-recipe">
+            <section class="p-recipe c-frame">
                 <div class="p-recipe-inner">
                     <div class="p-recipe-ttl c-sec-ttl">
                         <h3>Recipe</h3>
