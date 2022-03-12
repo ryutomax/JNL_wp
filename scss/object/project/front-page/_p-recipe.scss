@@ -51,6 +51,33 @@
     padding-left: 0.5rem;
     border: 2px solid $green;
 }
+.p-recipe-more {
+    width: 175px;
+    margin: 0 auto;
+    a {
+        display: block;
+        position: relative;
+        color: $white;
+        background-color: $green;
+        border-radius: 5px;
+        line-height: calc(3.75rem - rem(4));
+        @include btn-anime-2;
+        &:hover {
+            &::after {
+                content:"→";
+                margin-left: rem(8);
+            }
+        }
+        &::after {
+            content:"→";
+            position: absolute;
+            font-size: rem(24);
+            font-weight: bold;
+            margin-left: rem(4);
+        }
+    }
+}
+
 
 @include mq (sp) {
     .p-recipe-tab {

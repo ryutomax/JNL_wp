@@ -23,9 +23,9 @@ const mySwiper = new Swiper('.swiper-container', {
 
 // AOS/////////////////////////////////
 
-
-    AOS.init();
-
+AOS.init({
+    once: true,
+});
 
 // AOS 終了////////////////////////////
 
@@ -143,7 +143,6 @@ $(function FixedAnime() {
             $logo.removeClass('is-header__h65');;
         }}
     });
-
 });
 //スクロール途中からヘッダーの高さを変化させる関数を呼ぶ
 $(window).on('load', function () {
@@ -164,3 +163,36 @@ $(function() {
     $('.current-item').children('br').remove();
 });
 // パンくずリスト<br>削除 終了///////////////////////
+
+// 1. 動くきっかけを独自の名前（関数：fadeAnime）で定義
+
+function waveAnime(){
+
+    //動きの指定
+    $('.js-wave').each(function(){ //fadeInTriggerというクラス名が
+        var elemPos = $(this).offset().top-50;//要素より、50px上の
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('is-show__wave');// 画面内に入ったらfadeInというクラス名を追記
+        }else{
+        $('.js-wave').removeClass('is-show__wave');// 画面外に出たらfadeInというクラス名を外す
+        }
+    });
+}
+
+    // 2. 定義した名前をページが読み込まれた後・スクロールした後それぞれのきっかけに指定
+
+    // 画面をスクロールをしたら動く場合の記述
+        $(window).scroll(function (){
+    
+            waveAnime();/* アニメーション用の関数を呼ぶ*/
+    
+        });// ここまで画面をスクロールをしたら動く場合の記述
+    
+    // 画面が読み込まれたらすぐに動く場合の記述
+        $(window).on('load', function(){
+    
+            waveAnime();/* アニメーション用の関数を呼ぶ*/
+
+        });// ここまで画面が読み込まれたらすぐに動く場合の記述

@@ -1,5 +1,6 @@
 @use "global" as *;
 
+
 .p-content {
     
 }
@@ -7,6 +8,58 @@
 .p-content-inner {
     max-width: 1280px;
     margin: 0 auto;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -15px, 0);
+    }
+}
+
+.js-wave{
+    display:inline-block;
+    opacity: 0;
+    letter-spacing: rem(-10);
+    transition: 2.5s;
+}
+
+.is-show__wave{
+    opacity: 1;
+    animation-name: wave;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    animation-fill-mode:forwards;
+    &:nth-of-type(2){
+        animation-delay: .1s;
+    }
+    &:nth-of-type(3){
+        animation-delay: .2s;
+    }
+    &:nth-of-type(4){
+        animation-delay: .3s;
+    }
+    &:nth-of-type(5){
+        animation-delay: .4s;
+    }
+    &:nth-of-type(6){
+        animation-delay: .5s;
+    }
+    &:nth-of-type(7){
+        animation-delay: .6s;
+    }
+    &:nth-of-type(8){
+        animation-delay: .7s;
+    }
+    &:nth-of-type(9){
+        animation-delay: .8s;
+    }
+    &:nth-of-type(10){
+        animation-delay: .9s;
+    }
 }
 
 .p-content-list {
@@ -20,6 +73,12 @@
     width: 100%;
 }
 
+.p-content-pagination {
+    margin: 0 auto;
+    width: 100%;
+
+}
+
 @include mq() {
     .p-content-list {
         flex-direction: row;
@@ -28,6 +87,5 @@
 
     .p-content-item {
         width: calc((100% - 2rem) /2);
-    
     }
 }

@@ -109,7 +109,14 @@
     <section class="p-content c-frame">
         <div class="p-content-inner">
             <div class="p-content-ttl c-sec-ttl">
-                <h3>RECIPE</h3>
+                <h3>
+                    <span class="js-wave">R</span>
+                    <span class="js-wave">e</span>
+                    <span class="js-wave">c</span>
+                    <span class="js-wave">i</span>
+                    <span class="js-wave">p</span>
+                    <span class="js-wave">e</span>
+                </h3>
                 <p>レシピ一覧</p>
             </div>
 
@@ -162,10 +169,8 @@
                     <p>レシピがありません。</p>
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
-                </ul>
-            </div>
-            <!-- /.p-archive-wrap -->
-            <div class="p-archive-pagination c-pagination">
+
+                    <div class="p-content-pagination c-pagination">
                 <?php
                     the_posts_pagination(
                         array(
@@ -179,6 +184,11 @@
                 ?>
             </div>
             <!-- /.p-archive-pagination  -->
+                </ul>
+                
+            </div>
+            <!-- /.p-archive-wrap -->
+            
         </div>
         <!-- /.p-archive-inner -->
 

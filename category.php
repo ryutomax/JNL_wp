@@ -111,10 +111,21 @@
     <section class="p-content c-frame">
         <div class="p-content-inner">
             <div class="p-content-ttl c-sec-ttl">
-                <h3>Recipe List</h3>
+                <h3>
+                    <span class="js-wave">R</span>
+                    <span class="js-wave">e</span>
+                    <span class="js-wave">c</span>
+                    <span class="js-wave">i</span>
+                    <span class="js-wave">p</span>
+                    <span class="js-wave">e</span>
+                    <span class="js-wave u-ml__16">L</span>
+                    <span class="js-wave">i</span>
+                    <span class="js-wave">s</span>
+                    <span class="js-wave">t</span>
+                </h3>
                 <p><?php single_term_title( '', true ); ?></p>
             </div>
-
+            
             <div class="p-content-wrap">
                 <ul class="p-content-list">
                     <?php
@@ -174,23 +185,24 @@
                         <p>レシピがありません。</p>
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
+
+                    <div class="p-content-pagination c-pagination">
+                        <?php
+                            the_posts_pagination(
+                                array(
+                                    'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+                                    'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
+                                    'prev_text'     => __( '前へ'), // 「前へ」リンクのテキスト
+                                    'next_text'     => __( '次へ'), // 「次へ」リンクのテキスト
+                                    'type'          => 'list', // 戻り値の指定 (plain/list)
+                                )
+                            );
+                        ?>
+                    </div>
+                    <!-- /.p-content-pagination  -->
                 </ul>
             </div>
             <!-- /.p-content-wrap -->
-            <div class="p-content-pagination c-pagination">
-                <?php
-                    the_posts_pagination(
-                        array(
-                            'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
-                            'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
-                            'prev_text'     => __( '前へ'), // 「前へ」リンクのテキスト
-                            'next_text'     => __( '次へ'), // 「次へ」リンクのテキスト
-                            'type'          => 'list', // 戻り値の指定 (plain/list)
-                        )
-                    );
-                ?>
-            </div>
-            <!-- /.p-content-pagination  -->
         </div>
         <!-- /.p-content-inner -->
 

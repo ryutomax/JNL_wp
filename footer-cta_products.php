@@ -2,7 +2,16 @@
             <section class="p-products c-frame">
                 <div class="p-products-inner">
                     <div class="p-products-ttl c-sec-ttl">
-                        <h3>Products</h3>
+                        <h3>
+                            <span class="js-wave">P</span>
+                            <span class="js-wave">r</span>
+                            <span class="js-wave">o</span>
+                            <span class="js-wave">d</span>
+                            <span class="js-wave">u</span>
+                            <span class="js-wave">c</span>
+                            <span class="js-wave">t</span>
+                            <span class="js-wave">s</span>
+                        </h3>
                         <p>商品のご紹介</p>
                     </div>
                     <div class="p-products-wrap">

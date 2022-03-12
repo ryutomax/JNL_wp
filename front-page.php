@@ -168,6 +168,10 @@
                                 <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
+
+                                <div class="p-recipe-more c-ctaBtn">
+                                    <a href="<?php echo esc_url(home_url('/recipe'));?>">もっと見る</a>
+                                </div>
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
