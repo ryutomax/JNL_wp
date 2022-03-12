@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.p-content {
+    
+}
+
+.p-content-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.p-content-list {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $green;
+    padding: 2rem 0.5rem;
+}
+
+.p-content-item {
+    width: 100%;
+}
+
+@include mq() {
+    .p-content-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .p-content-item {
+        width: calc((100% - 2rem) /2);
+    
+    }
+}

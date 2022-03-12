@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.p-recipe-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+.p-recipe-tabs {
+    display: flex;
+}
+
+.p-recipe-ttl  {
+}
+
+.p-recipe-tab {
+    display: flex;
+    align-items: flex-end;
+    background-color: $d-green;
+    height: rem(64);
+    width: calc((100% - 4px*4) / 5);
+    border-radius: 0 10px 0 0;
+    padding-right: rem(4);
+    padding-bottom: rem(8);
+	transition: all 0.5s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: $green;
+    }
+    p {
+        color: $white;
+        font-size: min(0.875rem, 3.75vw);
+        font-weight: bold;
+        margin-left: auto;
+        text-align: end;
+    }
+    &:nth-child(4) {
+        p {
+            width: rem(62);
+        }
+    }
+    &:not(:last-child) {
+        margin-right: 0.25rem;
+    }
+}
+
+.p-recipe-cont {
+    padding-top: 2rem;
+    padding-right: 0.5rem;
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+    border: 2px solid $green;
+}
+
+@include mq (sp) {
+    .p-recipe-tab {
+        p{
+            font-size: rem(20);
+        }
+        &:nth-child(4) {
+            p {
+                width: rem(106);
+            }
+        }
+        &:not(:last-child) {
+            margin-right: 0.25rem;
+        }
+    }
+}
+
+@include mq () {
+
+    .p-recipe-tab {
+        height: rem(80);
+
+        &:nth-child(4) {
+            font-size: rem(21);
+            p {
+                width: auto;
+                font-size: min(rem(28), 2.45vw);
+            }
+        }
+        p {
+            font-size: min(rem(32), 2.8vw);
+        }
+    }
+}

@@ -106,17 +106,17 @@
         <!-- /.p-menu-inner -->
     </section>
 
-    <section class="p-content">
+    <section class="p-content c-frame">
         <div class="p-content-inner">
             <div class="p-content-ttl c-sec-ttl">
-                <h3>
-                    <?php single_term_title( '', true ); ?>
-                    LIST
-                </h3>
+            <div class="p-content-ttl c-sec-ttl">
+                <h3>Recipe List</h3>
+                <p><?php single_term_title( '', true ); ?></p>
+            </div>
             </div>
 
             <div class="p-content-wrap">
-                <ul class="c-recipe-cont__list">
+                <ul class="p-content-list">
                     <?php
                         $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
 
@@ -140,7 +140,7 @@
 
                     ?>
 
-                    <li class="c-recipe-cont__item" ontouchstart="">
+                    <li class="p-content-item c-recipe-cont__item" ontouchstart="">
                         <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
                             <div class="c-recipe-img">
                                 <figure class="c-recipe-img__inner js-img-bg object-fit">

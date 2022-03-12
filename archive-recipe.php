@@ -106,15 +106,15 @@
         <!-- /.p-menu-inner -->
     </section>
 
-    <section class="p-archive c-frame">
-        <div class="p-archive-inner">
-            <div class="p-archive-ttl c-sec-ttl">
+    <section class="p-content c-frame">
+        <div class="p-content-inner">
+            <div class="p-content-ttl c-sec-ttl">
                 <h3>RECIPE</h3>
                 <p>レシピ一覧</p>
             </div>
 
-            <div class="p-archive-wrap">
-                <ul class="c-recipe-cont__list">
+            <div class="p-content-wrap">
+                <ul class="p-content-list">
                     <?php
                         $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
                         $query_args = array(
@@ -131,7 +131,7 @@
 
                     ?>
 
-                    <li class="c-recipe-cont__item" ontouchstart="">
+                    <li class="p-content-item c-recipe-cont__item" ontouchstart="">
                         <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
                             <div class="c-recipe-img">
                                 <figure class="c-recipe-img__inner js-img-bg object-fit">

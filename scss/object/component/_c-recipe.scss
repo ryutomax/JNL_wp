@@ -1,64 +1,12 @@
 @use "global" as *;
 
-
-.c-recipe-inner {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.c-recipe-tabs {
-    display: flex;
-}
-
-.c-recipe-ttl  {
-}
-
-.c-recipe-tab {
-    display: flex;
-    align-items: flex-end;
-    background-color: $d-green;
-    color: $white;
-    font-size: min(0.875rem, 3.75vw);
-    font-weight: bold;
-    height: rem(64);
-    width: calc((100% - 4px*4) / 5);
-    border-radius: 0 10px 0 0;
-    padding-right: rem(4);
-    padding-bottom: rem(8);
-	transition: all 0.5s ease;
-    cursor: pointer;
-    &:hover {
-        background-color: $green;
-    }
-    &:nth-child(4) {
-        p {
-            width: rem(62);
-        }
-    }
-    &:not(:last-child) {
-        margin-right: 0.25rem;
-    }
-    p {
-        margin-left: auto;
-        text-align: end;
-    }
-}
-
-.c-recipe-cont {
-    padding-top: 2rem;
-    padding-right: 0.5rem;
-    padding-bottom: 2rem;
-    padding-left: 0.5rem;
-    border: 2px solid $green;
-}
-
 .c-recipe-cont__list {
     display: none;
 }
 
 .c-recipe-cont__item {
     margin: 0 auto;
-    max-width: 450px;
+    max-width: 500px;
     transition: 1s;
     &:hover {
         box-shadow: 0px 0px 5px $d-green;
@@ -158,28 +106,9 @@
 }
 
 @include mq (sp) {
-    .c-recipe-tab {
-        font-size: rem(20);
-        &:nth-child(4) {
-            p {
-                width: rem(106);
-            }
-        }
-        &:not(:last-child) {
-            margin-right: 0.25rem;
-        }
-    }
 }
 
 @include mq () {
-    .c-recipe-tab {
-        font-size: rem(24);
-        &:nth-child(4) {
-            p {
-                width: rem(106);
-            }
-        }
-    }
 
     .c-recipe-cont__list {
         display: flex;
@@ -189,7 +118,22 @@
     .c-recipe-cont__item {
         margin: 0 auto;
         width: calc((100% - 2rem) /2);
-        max-width: 400px;
+        max-width: 500px;
         margin-bottom: rem(56);
+    }
+
+    .c-recipe-img {
+        height: 350px;
+    }
+
+    .c-recipe-txt__exc {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .c-recipe-txt__ttl {
+        font-size: rem(28);
+        line-height: 1.2;
+        font-weight: bold;
     }
 }

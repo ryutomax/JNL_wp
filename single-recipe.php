@@ -126,16 +126,7 @@
                             <h2 class="p-intro-ttl__main" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100"><?php the_title(); ?></h2>
                         </div>
                         <div class="p-intro-cont__inner" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
-                            <!-- <p> -->
-                                <?php the_excerpt(); ?>
-                                <!-- 豆腐とモリンガ、アンチョビ、オリーブオイルだけ
-                                でも美味しくお召し上がりいただけます。
-                                和風にしたいときワサビや醤油を足したり、
-                                まろやかにしたいときはバターを足したり、
-                                ワサビの代わりにタバスコを加えたりしても◎
-                                しっかり冷やすと野菜スティックで
-                                すくいやすくなります。 -->
-                            <!-- </p> -->
+                            <?php the_excerpt(); ?>
                         </div>
                         <!-- /.p-intro-inner -->
                     </div>

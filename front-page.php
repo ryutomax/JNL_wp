@@ -105,23 +105,23 @@
                 <!-- /.p-news-inner -->
             </section>
 
-            <section class="c-recipe c-frame">
-                <div class="c-recipe-inner">
-                    <div class="c-recipe-ttl c-sec-ttl">
+            <section class="p-recipe c-frame">
+                <div class="p-recipe-inner">
+                    <div class="p-recipe-ttl c-sec-ttl">
                         <h3>Recipe</h3>
                         <p>レシピ</p>
                     </div>
 
-                    <div class="c-recipe-wrap" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
-                        <ul class="c-recipe-tabs">
-                            <li class="c-recipe-tab is-tab-select"><p>ご飯・麺</p></li>
-                            <li class="c-recipe-tab"><p>メイン</p></li>
-                            <li class="c-recipe-tab"><p>サイド</p></li>
-                            <li class="c-recipe-tab"><p><span>ドリンク•</span><span>スープ</span></p></li>
-                            <li class="c-recipe-tab"><p>スイーツ</p></li>
+                    <div class="p-recipe-wrap" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                        <ul class="p-recipe-tabs">
+                            <li class="p-recipe-tab js-tab is-tab-select"><p>ご飯・麺</p></li>
+                            <li class="p-recipe-tab js-tab"><p>メイン</p></li>
+                            <li class="p-recipe-tab js-tab"><p>サイド</p></li>
+                            <li class="p-recipe-tab js-tab"><p><span>ドリンク•</span><span>スープ</span></p></li>
+                            <li class="p-recipe-tab js-tab"><p>スイーツ</p></li>
                         </ul>
-                        <div class="c-recipe-cont">
-                            <ul class="c-recipe-cont__list">
+                        <div class="p-recipe-cont">
+                            <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -169,7 +169,7 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="c-recipe-cont__list">
+                            <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -215,7 +215,7 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="c-recipe-cont__list">
+                            <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -261,7 +261,7 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="c-recipe-cont__list">
+                            <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
@@ -307,7 +307,7 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
-                            <ul class="c-recipe-cont__list">
+                            <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
                                     $query_args = array(
                                         'orderby' => 'post_date',
