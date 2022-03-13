@@ -169,7 +169,7 @@ $(function() {
 function waveAnime(){
 
     //動きの指定
-    $('.js-wave').each(function(){ //fadeInTriggerというクラス名が
+    $('.js-wave').each(function(){
         const elemPos = $(this).offset().top-50;//要素より、50px上の
         const scroll = $(window).scrollTop();
         const windowHeight = $(window).height();
@@ -180,19 +180,15 @@ function waveAnime(){
         }
     });
 }
+// 画面をスクロールをしたら動く場合の記述
+    $(window).scroll(function (){
 
-    // 2. 定義した名前をページが読み込まれた後・スクロールした後それぞれのきっかけに指定
+        waveAnime();/* アニメーション用の関数を呼ぶ*/
 
-    // 画面をスクロールをしたら動く場合の記述
-        $(window).scroll(function (){
-    
-            waveAnime();/* アニメーション用の関数を呼ぶ*/
-    
-        });// ここまで画面をスクロールをしたら動く場合の記述
-    
-    // 画面が読み込まれたらすぐに動く場合の記述
-        $(window).on('load', function(){
-    
-            waveAnime();/* アニメーション用の関数を呼ぶ*/
+    });// ここまで画面をスクロールをしたら動く場合の記述
 
-        });// ここまで画面が読み込まれたらすぐに動く場合の記述
+// 画面が読み込まれたらすぐに動く場合の記述
+    // $(window).on('load', function(){
+
+    //     waveAnime();/* アニメーション用の関数を呼ぶ*/
+    // });// ここまで画面が読み込まれたらすぐに動く場合の記述

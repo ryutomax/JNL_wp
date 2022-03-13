@@ -1335,6 +1335,7 @@ a.next.page-numbers {
   background-size: cover;
   background-position: center center;
   padding-top: 5rem;
+  overflow: hidden;
 }
 
 .p-fv-inner {
