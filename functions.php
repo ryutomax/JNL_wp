@@ -12,7 +12,7 @@ function include_files() {
     // WPのjQueryを解除
     // wp_deregister_script('jqeury');
     // JavaScriptファイルの読み込み
-    wp_enqueue_script('my-jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', array('jquery'), '3.6.0', true);
+    wp_enqueue_script('my-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array('jquery'), '3.6.0', true);
     wp_enqueue_script('aos','https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true);
     wp_enqueue_script('swiper','https://unpkg.com/swiper@8/swiper-bundle.min.js', array(), '8', true);
     wp_enqueue_script('my-script', get_theme_file_uri('/js/script.js'), array('jquery'), '1.0.0', true);
@@ -89,6 +89,18 @@ function my_main_query( $query ) {
         if ( isset( $_GET['tag'] ) && '0' == $_GET['tag'] ) {
         unset( $_GET['tag'] );
         }
+    }
+
+//Breadcrumb NavXT 拡張  ////////////////////////////
+
+    function my_static_breadcrumb_adder($breadcrumb_trail){
+        if ( is_category() || is_tag()) {
+            $item = new bcn_breadcrumb( 'レシピ', NULL, array('archive'), esc_url(home_url('/recipe')), NULL, true );
+            $stuck = array_pop( $breadcrumb_trail->breadcrumbs ); // ホーム 一時退避
+            $breadcrumb_trail->breadcrumbs[] = $item; //任意 追加
+            $breadcrumb_trail->breadcrumbs[] = $stuck; //ホーム 戻す
         }
-        add_action( 'load-edit.php', 'reset_post_tag_filter' );
+    }
+    add_action('bcn_after_fill','my_static_breadcrumb_adder');
 ?>
+

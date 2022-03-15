@@ -13,7 +13,12 @@
             <section class="p-news c-frame">
                 <div class="p-news-inner">
                     <div class="p-news-ttl c-sec-ttl">
-                        <h3>NEWS</h3>
+                        <h3>
+                            <span class="js-wave">N</span>
+                            <span class="js-wave">e</span>
+                            <span class="js-wave">w</span>
+                            <span class="js-wave">s</span>
+                        </h3>
                         <p>お知らせ</p>
                     </div>
                     <!-- /.p-news-ttl -->
@@ -29,7 +34,7 @@
                         </div>
                     </div>
                     <!-- /.p-news-top -->
-    
+
                     <div class="p-news-cont" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
                         <div class="p-news-cont__wrap">
                             <div class="p-news-cont__ttl">
@@ -108,7 +113,14 @@
             <section class="p-recipe c-frame">
                 <div class="p-recipe-inner">
                     <div class="p-recipe-ttl c-sec-ttl">
-                        <h3>Recipe</h3>
+                        <h3>
+                            <span class="js-wave">R</span>
+                            <span class="js-wave">e</span>
+                            <span class="js-wave">c</span>
+                            <span class="js-wave">i</span>
+                            <span class="js-wave">p</span>
+                            <span class="js-wave">e</span>
+                        </h3>
                         <p>レシピ</p>
                     </div>
 
@@ -169,9 +181,12 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
 
-                                <div class="p-recipe-more c-ctaBtn">
-                                    <a href="<?php echo esc_url(home_url('/recipe'));?>">もっと見る</a>
+                                <div class="p-recipe-more">
+                                    <div class="p-recipe-btn c-ctaBtn">
+                                        <a href="<?php echo esc_url(home_url('/recipe'));?>">もっと見る</a>
+                                    </div>
                                 </div>
+                                <!-- /.p-recipe-more -->
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
@@ -218,6 +233,13 @@
                                 <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
+
+                                <div class="p-recipe-more">
+                                    <div class="p-recipe-btn c-ctaBtn">
+                                        <a href="<?php echo esc_url(home_url('/recipe'));?>">もっと見る</a>
+                                    </div>
+                                </div>
+                                <!-- /.p-recipe-more -->
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
@@ -264,6 +286,13 @@
                                 <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
+
+                                <div class="p-recipe-more">
+                                    <div class="p-recipe-btn c-ctaBtn">
+                                        <a href="<?php echo esc_url(home_url('/recipe'));?>">もっと見る</a>
+                                    </div>
+                                </div>
+                                <!-- /.p-recipe-more -->
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
@@ -310,6 +339,13 @@
                                 <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
+
+                                <div class="p-recipe-more">
+                                    <div class="p-recipe-btn c-ctaBtn">
+                                        <a href="<?php echo esc_url(home_url('/recipe'));?>">もっと見る</a>
+                                    </div>
+                                </div>
+                                <!-- /.p-recipe-more -->
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
@@ -356,6 +392,13 @@
                                 <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
+
+                                <div class="p-recipe-more">
+                                    <div class="p-recipe-btn c-ctaBtn">
+                                        <a href="<?php echo esc_url(home_url('/recipe'));?>">もっと見る</a>
+                                    </div>
+                                </div>
+                                <!-- /.p-recipe-more -->
                             </ul>
 
                         </div>

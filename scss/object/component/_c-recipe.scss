@@ -18,6 +18,8 @@
 }
 
 .c-recipe-cont__item-inner {
+    height: 100%;
+    display: block;
     &:hover {
         .c-recipe-img__inner {
             transform: scale(1.05);

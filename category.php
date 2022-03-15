@@ -125,7 +125,6 @@
                 </h3>
                 <p><?php single_term_title( '', true ); ?></p>
             </div>
-            
             <div class="p-content-wrap">
                 <ul class="p-content-list">
                     <?php

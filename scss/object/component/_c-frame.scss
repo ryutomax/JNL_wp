@@ -7,3 +7,10 @@
     padding-bottom: 2rem;
     padding-left: 0.5rem;
 }
+
+@include mq () {
+    .c-frame {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}

@@ -29,6 +29,7 @@
         line-height: 1.5;
     }
     .home,
+    .taxonomy,
     .category,
     .archive{
         color: $white;
@@ -44,6 +45,7 @@
 @include mq (sp) {
     .breadcrumbs {
         .home,
+        .taxonomy,
         .category,
         .archive{
             font-size: 1rem;
