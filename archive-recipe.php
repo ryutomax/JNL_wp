@@ -139,13 +139,23 @@
                     ?>
 
                     <li class="p-content-item c-recipe-cont__item" ontouchstart="">
-                        <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                            <div class="c-recipe-img">
+                            <!-- 予約投稿時 リンクなし -->
+                            <?php if( get_post_status( $post->ID ) == 'publish'): ?>
+                                <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
+                            <?php endif; ?>                             <div class="c-recipe-img">
                                 <figure class="c-recipe-img__inner js-img-bg object-fit">
                                     <?php the_post_thumbnail('thumbnail'); ?>
                                 </figure>
 
-                                <span class="c-recipe-new"><p>New</p></span>
+                                <!-- 更新から14日間 表示 -->
+                                <?php
+                                    $post_time = get_the_time('U');
+                                    $days = 14; //New!を表示させる日数
+                                    $last = time() - ($days * 24 * 60 * 60);
+                                    if ($post_time > $last):
+                                ?>
+                                    <span class="c-recipe-new"><p>New</p></span>
+                                <?php endif; ?>
 
                                 <span class="c-recipe-tag">
                                     <p>
@@ -155,14 +165,19 @@
                                         ?>
                                     </p>
                                 </span>
-                                <span class="c-recipe-coming">coming soon</span>
-                            </div>
+                                <!-- 予約投稿時 表示 -->
+                                <?php if( get_post_status( $post->ID ) == 'future'): ?>
+                                    <span class="c-recipe-coming">coming soon</span>
+                                <?php endif; ?>                                </div>
                             <!-- /.c-recipe-img -->
                             <div class="c-recipe-txt">
                                 <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
                                 <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                             </div>
-                        </a>
+                        <!-- 予約投稿時 リンクなし -->
+                        <?php if( get_post_status( $post->ID ) == 'publish'): ?>
+                            </a>
+                        <?php endif; ?>
                     </li>
                     <?php endwhile; ?>
                     <?php else: ?>

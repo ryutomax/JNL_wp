@@ -1630,15 +1630,17 @@ a.next.page-numbers {
           box-shadow: 3px 3px 10px #2C3848;
 }
 .p-recipe-btn a:hover::after {
-  content: "→";
+  content: "＞";
   margin-left: 0.375rem;
 }
 .p-recipe-btn a::after {
-  content: "→";
+  content: "＞";
   position: absolute;
   font-size: 1.5rem;
   font-weight: bold;
   margin-left: 0.125rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (min-width:480px) {
