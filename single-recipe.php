@@ -113,6 +113,8 @@
                     </div>
                     <!-- /.p-intro-img -->
                     <div class="p-intro-cont">
+                        <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
+
                         <div class="p-intro-tag">
                             <p>
                                 <?php

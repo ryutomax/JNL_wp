@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="noindex">
-        <title> 【JNL】 モリンガパウダーレシピサイト</title>
+        <title> 【JNL】モリンガパウダーレシピサイト</title>
         <meta name="description" content="美味しい、ヘルシーモリンガパウダーのレシピをご紹介します">
 
         <?php wp_head(); ?>

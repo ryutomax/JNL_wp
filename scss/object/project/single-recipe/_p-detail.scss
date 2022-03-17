@@ -30,8 +30,6 @@
             margin-bottom: rem(48);
         }
     }
-    tbody {
-    }
     tr {
         display: flex;
         justify-content: space-between;
@@ -66,8 +64,11 @@
     padding-left: 1rem;
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: rem(64);
 }
 
+
+// レビュープラグイン調整用////////////////////////////
 #glsr_9be16351 {
     margin-bottom: 2rem;
 }
@@ -108,6 +109,19 @@
     border-bottom: 2px dotted $black;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
+}
+
+// SNS共有 プラグイン調整用////////////////////////////
+
+.addtoany_content {
+    max-width: 600px;
+    padding-left: rem(16);
+    padding-right: rem(16);
+}
+
+.a2a_kit.addtoany_list {
+    display: block;
+    padding-bottom: 1rem;
 }
 
 @include mq (sp) {

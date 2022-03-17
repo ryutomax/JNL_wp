@@ -1733,6 +1733,7 @@ a.next.page-numbers {
   padding-left: 1rem;
   max-width: 600px;
   margin: 0 auto;
+  margin-bottom: 4rem;
 }
 
 #glsr_9be16351 {
@@ -1785,6 +1786,17 @@ a.next.page-numbers {
   border-bottom: 2px dotted #000000;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
+}
+
+.addtoany_content {
+  max-width: 600px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.a2a_kit.addtoany_list {
+  display: block;
+  padding-bottom: 1rem;
 }
 
 @media screen and (min-width:480px) {
