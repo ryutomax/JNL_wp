@@ -20,7 +20,11 @@
                 ?>
                 <li class="p-swiper-item swiper-slide">
                     <figure class="p-swiper-img js-img-bg object-fit" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="0">
-                        <?php the_post_thumbnail('thumbnail'); ?>
+                        <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                        <?php the_post_thumbnail( 'thumbnail' ); ?>
+                        <?php else: ?><!-- アイキャッチが無い時-->
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                        <?php endif; ?>
                         <div class="p-swiper-img__meta">
                             <span class="p-swiper-img__tag" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1000">モリンガパウダーで</span>
                             <span class="p-swiper-img__ttl" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1500"><?php the_title(); ?></span>
@@ -156,7 +160,11 @@
                         <?php endif; ?>
                             <div class="c-recipe-img">
                                 <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                    <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                    <?php else: ?><!-- アイキャッチが無い時-->
+                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                                    <?php endif; ?>
                                 </figure>
 
                                 <!-- 更新から14日間 表示 -->
@@ -184,7 +192,7 @@
                             </div>
                             <!-- /.c-recipe-img -->
                             <div class="c-recipe-txt">
-                                <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
                                 <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                             </div>
                         <!-- 予約投稿時 リンクなし -->

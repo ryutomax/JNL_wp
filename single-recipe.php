@@ -20,7 +20,11 @@
 
                         <li class="p-swiper-item swiper-slide">
                             <figure class="p-swiper-img js-img-bg object-fit" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="0">
-                                <?php the_post_thumbnail('thumbnail'); ?>
+                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                <?php else: ?><!-- アイキャッチが無い時-->
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                                <?php endif; ?>
                                 <div class="p-swiper-img__meta">
                                     <span class="p-swiper-img__tag" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1000">モリンガパウダーで</span>
                                     <span class="p-swiper-img__ttl" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="1500"><?php the_title(); ?></span>
@@ -108,11 +112,16 @@
                 <div class="p-intro-inner">
                     <div class="p-intro-img">
                         <figure class="p-intro-img__inner js-img-bg object-fit ">
-                            <?php the_post_thumbnail('thumbnail'); ?>
+                            <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                            <?php the_post_thumbnail( 'thumbnail' ); ?>
+                            <?php else: ?><!-- アイキャッチが無い時-->
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                            <?php endif; ?>
                         </figure>
                     </div>
                     <!-- /.p-intro-img -->
                     <div class="p-intro-cont">
+                        <!-- SNS共有ボタン設置 -->
                         <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
 
                         <div class="p-intro-tag">
@@ -124,11 +133,11 @@
                             </p>
                         </div>
                         <div class="p-intro-ttl">
-                            <h3 class="p-intro-ttl__sub"><?php echo get_secondary_title(); ?></h3>
+                            <h3 class="p-intro-ttl__sub"><?php the_field('sub_ttl'); ?></h3>
                             <h2 class="p-intro-ttl__main" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100"><?php the_title(); ?></h2>
                         </div>
                         <div class="p-intro-cont__inner" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
-                            <?php the_excerpt(); ?>
+                            <p><?php the_field('point'); ?></p>
                         </div>
                         <!-- /.p-intro-inner -->
                     </div>
@@ -139,8 +148,93 @@
             </section>
             <section class="p-detail c-frame">
                 <div class="p-detail-inner">
+                    <?php
+                        $movie = esc_url(get_field('movie'));
+                        if( !empty($movie) ):
+                    ?>
+                        <video src="<?php echo $movie; ?>" controls muted autobuffer autoloop loop playsinline></video>
+                    <?php endif; ?>
 
-                    <?php the_content(); ?>
+                    <div class="p-detail-table" id="tableTtl" data-aos="zoom-in" data-aos-duration="2000">
+                        <h3><?php the_field('tableTtl_mate'); ?></h3>
+                        <!-- テーブルのデータを取得 -->
+                        <?php
+                        $table = get_field( 'table_mate' );
+                        if ( ! empty ( $table ) ) {
+                            echo '<table>';
+                                if ( ! empty( $table['caption'] ) ) {
+                                    echo '<caption>' . $table['caption'] . '</caption>';
+                                }
+                                if ( ! empty( $table['header'] ) ) {
+                                    echo '<thead>';
+                                        echo '<tr>';
+                                            foreach ( $table['header'] as $th ) {
+                                                echo '<th>';
+                                                    echo $th['c'];
+                                                echo '</th>';
+                                            }
+                                        echo '</tr>';
+                                    echo '</thead>';
+                                }
+                                echo '<tbody>';
+                                    foreach ( $table['body'] as $tr ) {
+                                        echo '<tr>';
+                                            foreach ( $tr as $td ) {
+                                                echo '<td>';
+                                                    echo $td['c'];
+                                                echo '</td>';
+                                            }
+                                        echo '</tr>';
+                                    }
+                                echo '</tbody>';
+                            echo '</table>';
+                        }
+                        ?>
+                        </div>
+                        <!-- /.p-detail-table -->
+                        <div class="p-detail-table" id="tableTtl2" data-aos="zoom-in" data-aos-duration="2000">
+                            <h3>作り方</h3>
+                            <!-- テーブルのデータを取得 -->
+                            <?php
+                            $table = get_field( 'table_way' );
+                            if ( ! empty ( $table ) ) {
+                                echo '<table>';
+                                    if ( ! empty( $table['caption'] ) ) {
+                                        echo '<caption>' . $table['caption'] . '</caption>';
+                                    }
+                                    if ( ! empty( $table['header'] ) ) {
+                                        echo '<thead>';
+                                            echo '<tr>';
+                                                foreach ( $table['header'] as $th ) {
+                                                    echo '<th>';
+                                                        echo $th['c'];
+                                                    echo '</th>';
+                                                }
+                                            echo '</tr>';
+                                        echo '</thead>';
+                                    }
+                                    echo '<tbody>';
+                                        foreach ( $table['body'] as $tr ) {
+                                            echo '<tr>';
+                                                foreach ( $tr as $td ) {
+                                                    echo '<td class="p-detail-table_explain">';
+                                                        echo $td['c'];
+                                                    echo '</td>';
+                                                }
+                                            echo '</tr>';
+                                        }
+                                    echo '</tbody>';
+                                echo '</table>';
+                            }
+                            ?>
+                        </div>
+                        <!-- /.p-detail-table -->
+                        <div class="p-detail-review" data-aos="zoom-in" data-aos-duration="2000">
+                            <h3>レビュー</h3>
+                            <?php the_content(); ?>
+                        </div>
+                        <!-- /.p-detail-explain -->
+
 
                 </div>
                 <!-- /.p-detail-inner -->

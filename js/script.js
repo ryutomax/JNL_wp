@@ -158,17 +158,15 @@ $(function() {
 });
 //Site reviewsの配置入れ替え 終了///////////////////
 
+
 // パンくずリスト<br>削除///////////////////////
 $(function() {
     $('.current-item').children('br').remove();
 });
 // パンくずリスト<br>削除 終了///////////////////////
 
-// 1. 動くきっかけを独自の名前（関数：fadeAnime）で定義
-
+// セクションタイトルアニメ//////////////////////////
 function waveAnime(){
-
-    //動きの指定
     $('.js-wave').each(function(){
         const elemPos = $(this).offset().top-50;//要素より、50px上の
         const scroll = $(window).scrollTop();
@@ -181,14 +179,36 @@ function waveAnime(){
     });
 }
 // 画面をスクロールをしたら動く場合の記述
-    $(window).scroll(function (){
-
-        waveAnime();/* アニメーション用の関数を呼ぶ*/
-
-    });// ここまで画面をスクロールをしたら動く場合の記述
+    $(window).scroll(function (){ waveAnime(); });
 
 // 画面が読み込まれたらすぐに動く場合の記述
-    $(window).on('load', function(){
+    $(window).on('load', function(){ waveAnime(); });
 
-        waveAnime();/* アニメーション用の関数を呼ぶ*/
-    });// ここまで画面が読み込まれたらすぐに動く場合の記述
+// セクションタイトルアニメ 終了//////////////////////////
+
+
+
+$(function() {
+    var str = document.getElementById("tableTtl").innerHTML;
+
+str = str.replace(/＜/g,'<br><b class="p-detail-tableTtl">＜');
+str = str.replace(/＞/g,'＞</b>');
+
+document.getElementById("tableTtl").innerHTML = str;
+});
+
+$(function() {
+    var str = document.getElementById("tableTtl2").innerHTML;
+
+str = str.replace(/＜/g,'<br><b class="p-detail-tableTtl>＜');
+str = str.replace(/＞/g,'＞</b>');
+
+document.getElementById("tableTtl2").innerHTML = str;
+});
+
+
+// getElementsByClassName = class
+
+// getElementsByTagName = HTMLtag
+
+// getElementById = id

@@ -63,12 +63,6 @@ function my_main_query( $query ) {
     }
     add_filter('navigation_markup_template','custom_pagination_html');
 
-//本文抜粋//////////////////////////////////////////////
-    function wpdocs_custom_excerpt_length( $length ) {
-        return 70;
-    }
-    add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
 //投稿一覧 タグ絞り込み実装/////////////////////////////////
     function add_post_tag_filter() {
         global $post_type;
@@ -102,5 +96,5 @@ function my_main_query( $query ) {
         }
     }
     add_action('bcn_after_fill','my_static_breadcrumb_adder');
-?>
 
+?>

@@ -19,12 +19,19 @@
         background-color: $navy;
         padding: 0.5rem;
     }
+    h3{
+        display: inline-block;
+        margin: 0 auto;
+        color: $white;
+        background-color: $navy;
+        padding: 0.5rem;
+    }
     table {
         background-color: $l-green;
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
-        padding: 1.5rem ;
+        padding: 1.5rem 0.5rem;
         border-collapse: separate;       //padding無効の対処
         &:first-of-type {
             margin-bottom: rem(48);
@@ -33,44 +40,62 @@
     tr {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 1rem 0.25rem;
         border-bottom: dotted 2px $black;
     }
     td {
         line-height: 1.2;
         text-transform: none;
-        text-indent: -1em;
-        padding-left: 1em;
     }
 }
 
-.p-detail-inner {}
+.p-detail-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 .p-detail-ttl{}
 
-.p-detail-explain {
+
+.p-detail-table_explain {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+.p-detail-table {
     display: block;
     width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.p-detail-tableTtl {
+    font-size: rem(18);
 }
 
 .p-detail-review {
     display: block;
     width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
     max-width: 600px;
     margin: 0 auto;
-    margin-bottom: rem(64);
+    p {
+        display: none;
+    }
 }
 
 
 // レビュープラグイン調整用////////////////////////////
+
+#glsr_00e475e8 {
+    margin-bottom: rem(48);
+}
+
 #glsr_9be16351 {
-    margin-bottom: 2rem;
+    margin-bottom: rem(64);
+    p {
+        display: block;
+    }
 }
 
 .glsr-review-author {
@@ -115,8 +140,8 @@
 
 .addtoany_content {
     max-width: 600px;
-    padding-left: rem(16);
-    padding-right: rem(16);
+    // padding-left: rem(16);
+    // padding-right: rem(16);
 }
 
 .a2a_kit.addtoany_list {
@@ -132,10 +157,7 @@
             height: auto;
         }
         table {
-            background-color: $l-green;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 1.5rem ;
+            padding: 1.5rem;
             &:first-of-type {
                 margin-bottom: rem(48);
             }

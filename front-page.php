@@ -156,7 +156,11 @@
                                     <?php endif; ?>
                                         <div class="c-recipe-img">
                                             <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php the_post_thumbnail('thumbnail'); ?>
+                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                                <?php else: ?><!-- アイキャッチが無い時-->
+                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                                                <?php endif; ?>
                                             </figure>
                                             <!-- 更新から14日間 表示 -->
                                             <?php
@@ -183,7 +187,7 @@
                                         </div>
                                         <!-- /.c-recipe-img -->
                                         <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
                                             <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     <!-- 予約投稿時 リンクなし -->
@@ -227,7 +231,11 @@
                                     <?php endif; ?>
                                     <div class="c-recipe-img">
                                             <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php the_post_thumbnail('thumbnail'); ?>
+                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                                <?php else: ?><!-- アイキャッチが無い時-->
+                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                                                <?php endif; ?>
                                             </figure>
 
                                             <!-- 更新から14日間 表示 -->
@@ -253,7 +261,7 @@
                                         </div>
                                         <!-- /.c-recipe-img -->
                                         <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
                                             <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     <!-- 予約投稿時 リンクなし -->
@@ -297,7 +305,11 @@
                                     <?php endif; ?>
                                         <div class="c-recipe-img">
                                             <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php the_post_thumbnail('thumbnail'); ?>
+                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                                <?php else: ?><!-- アイキャッチが無い時-->
+                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                                                <?php endif; ?>
                                             </figure>
 
                                             <!-- 更新から14日間 表示 -->
@@ -323,7 +335,7 @@
                                         </div>
                                         <!-- /.c-recipe-img -->
                                         <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
                                             <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     <!-- 予約投稿時 リンクなし -->
@@ -367,7 +379,11 @@
                                     <?php endif; ?>
                                         <div class="c-recipe-img">
                                             <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php the_post_thumbnail('thumbnail'); ?>
+                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                                <?php else: ?><!-- アイキャッチが無い時-->
+                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                                                <?php endif; ?>
                                             </figure>
 
                                             <!-- 更新から14日間 表示 -->
@@ -392,7 +408,7 @@
                                         </div>
                                         <!-- /.c-recipe-img -->
                                         <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
                                             <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     <!-- 予約投稿時 リンクなし -->
@@ -436,7 +452,11 @@
                                     <?php endif; ?>
                                         <div class="c-recipe-img">
                                             <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php the_post_thumbnail('thumbnail'); ?>
+                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                                <?php else: ?><!-- アイキャッチが無い時-->
+                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                                                <?php endif; ?>
                                             </figure>
 
                                             <!-- 更新から14日間 表示 -->
@@ -462,7 +482,7 @@
                                         </div>
                                         <!-- /.c-recipe-img -->
                                         <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
                                             <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     <!-- 予約投稿時 リンクなし -->

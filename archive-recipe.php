@@ -142,9 +142,14 @@
                             <!-- 予約投稿時 リンクなし -->
                             <?php if( get_post_status( $post->ID ) == 'publish'): ?>
                                 <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                            <?php endif; ?>                             <div class="c-recipe-img">
+                            <?php endif; ?>
+                            <div class="c-recipe-img">
                                 <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                    <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
+                                        <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                    <?php else: ?><!-- アイキャッチが無い時-->
+                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
+                                    <?php endif; ?>
                                 </figure>
 
                                 <!-- 更新から14日間 表示 -->
@@ -168,10 +173,11 @@
                                 <!-- 予約投稿時 表示 -->
                                 <?php if( get_post_status( $post->ID ) == 'future'): ?>
                                     <span class="c-recipe-coming">coming soon</span>
-                                <?php endif; ?>                                </div>
+                                <?php endif; ?>
+                            </div>
                             <!-- /.c-recipe-img -->
                             <div class="c-recipe-txt">
-                                <p class="c-recipe-txt__exc"><?php echo get_secondary_title(); ?></p>
+                                <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
                                 <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                             </div>
                         <!-- 予約投稿時 リンクなし -->
@@ -186,19 +192,19 @@
                     <?php wp_reset_postdata(); ?>
 
                     <div class="p-content-pagination c-pagination">
-                <?php
-                    the_posts_pagination(
-                        array(
-                            'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
-                            'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
-                            'prev_text'     => __( '前へ'), // 「前へ」リンクのテキスト
-                            'next_text'     => __( '次へ'), // 「次へ」リンクのテキスト
-                            'type'          => 'list', // 戻り値の指定 (plain/list)
-                        )
-                    );
-                ?>
-            </div>
-            <!-- /.p-archive-pagination  -->
+                        <?php
+                            the_posts_pagination(
+                                array(
+                                    'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+                                    'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
+                                    'prev_text'     => __( '前へ'), // 「前へ」リンクのテキスト
+                                    'next_text'     => __( '次へ'), // 「次へ」リンクのテキスト
+                                    'type'          => 'list', // 戻り値の指定 (plain/list)
+                                )
+                            );
+                        ?>
+                    </div>
+                    <!-- /.p-archive-pagination  -->
                 </ul>
                 
             </div>

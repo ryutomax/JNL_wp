@@ -1617,6 +1617,7 @@ a.next.page-numbers {
   background-color: #00B906;
   border-radius: 5px;
   line-height: 3.5rem;
+  padding-right: 0.5rem;
   -webkit-box-shadow: 2px 2px 5px #2C3848;
           box-shadow: 2px 2px 5px #2C3848;
   border: 2px solid #00B906;
@@ -1689,12 +1690,19 @@ a.next.page-numbers {
   background-color: #2C3848;
   padding: 0.5rem;
 }
+.p-detail h3 {
+  display: inline-block;
+  margin: 0 auto;
+  color: #ffffff;
+  background-color: #2C3848;
+  padding: 0.5rem;
+}
 .p-detail table {
   background-color: #eaf4dc;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.5rem 0.5rem;
   border-collapse: separate;
 }
 .p-detail table:first-of-type {
@@ -1707,37 +1715,57 @@ a.next.page-numbers {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem 0.25rem;
   border-bottom: dotted 2px #000000;
 }
 .p-detail td {
   line-height: 1.2;
   text-transform: none;
+}
+
+.p-detail-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.p-detail-table_explain {
   text-indent: -1em;
   padding-left: 1em;
 }
 
-.p-detail-explain {
+.p-detail-table {
   display: block;
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.p-detail-tableTtl {
+  font-size: 1.125rem;
 }
 
 .p-detail-review {
   display: block;
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
   max-width: 600px;
   margin: 0 auto;
-  margin-bottom: 4rem;
+}
+.p-detail-review p {
+  display: none;
+}
+
+#glsr_00e475e8 {
+  margin-bottom: 3rem;
 }
 
 #glsr_9be16351 {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+#glsr_9be16351 p {
+  display: block;
 }
 
 .glsr-review-author {
@@ -1790,8 +1818,6 @@ a.next.page-numbers {
 
 .addtoany_content {
   max-width: 600px;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .a2a_kit.addtoany_list {
@@ -1808,9 +1834,6 @@ a.next.page-numbers {
     height: auto;
   }
   .p-detail table {
-    background-color: #eaf4dc;
-    max-width: 600px;
-    margin: 0 auto;
     padding: 1.5rem;
   }
   .p-detail table:first-of-type {
@@ -1875,6 +1898,7 @@ a.next.page-numbers {
 
 .p-intro-cont__inner {
   padding-top: 1rem;
+  text-transform: none;
 }
 .p-intro-cont__inner p {
   color: #ffffff;
@@ -1910,6 +1934,7 @@ a.next.page-numbers {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 2px solid #00B906;
+  border-radius: 0.3125rem;
   padding: 2rem 0.5rem;
 }
 
