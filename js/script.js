@@ -188,11 +188,20 @@ function waveAnime(){
 
 
 
+// $(function() {
+//     var str = document.getElementById("tableTtl").innerHTML;
+
+// str = str.replace(/＜/g,'<br><b class="p-detail-tableTtl">＜');
+// str = str.replace(/＞/g,'＞</b>');
+
+// document.getElementById("tableTtl").innerHTML = str;
+// });
+
 $(function() {
     var str = document.getElementById("tableTtl").innerHTML;
 
-str = str.replace(/＜/g,'<br><b class="p-detail-tableTtl">＜');
-str = str.replace(/＞/g,'＞</b>');
+str = str.replace(/＜(.*?)＞/g,'<br><b class="p-detail-tableTtl">＜$1＞</b>');
+// str = str.replace(/＞/g,'＞</b>');
 
 document.getElementById("tableTtl").innerHTML = str;
 });
