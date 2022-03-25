@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -24,16 +24,24 @@
                             <a href="<?php echo esc_url(home_url('/')); ?>">ホーム</a>
                         </li>
                         <li class="p-header-nav__item js-news">
+                        <?php if(is_front_page()): ?>
+                            <a href="#">お知らせ</a>
+                        <?php else: ?>
                             <a href="<?php echo esc_url(home_url('/news'));?>">お知らせ</a>
+                        <?php endif; ?>
                         </li>
                         <li class="p-header-nav__item js-recipe">
+                        <?php if(is_front_page()): ?>
+                            <a href="#">レシピ</a>
+                        <?php else: ?>
                             <a href="<?php echo esc_url(home_url('/recipe'));?>">レシピ</a>
+                        <?php endif; ?>
                         </li>
                         <li class="p-header-nav__item js-products">
                             <a href="#">商品のご紹介</a>
                         </li>
                         <li class="p-header-nav__item c-ctaBtn">
-                            <a href="/contact/">お問い合わせ</a>
+                            <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
                         </li>
                     </ul>
                 </nav>

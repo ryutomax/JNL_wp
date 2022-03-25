@@ -137,3 +137,27 @@
         animation-delay: 1.1s;
     }
 }
+
+//fadeup アニメ///////////////////
+
+.js-fade {
+    opacity: 0;
+}
+
+@keyframes fadeup{
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.is-show__fadeup {
+    animation-name: fadeup;
+    animation-duration: 1.5s;
+    animation-fill-mode:forwards;
+}

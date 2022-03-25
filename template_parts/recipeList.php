@@ -18,7 +18,7 @@
                                                     <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
                                                 <?php endif; ?>
                                             </figure>
-                                            <!-- 更新から14日間 表示 -->
+                                            <!-- 投稿から14日間 表示 -->
                                             <?php
                                                 $post_time = get_the_time('U');
                                                 $days = 14; //New!を表示させる日数
@@ -43,7 +43,7 @@
                                         </div>
                                         <!-- /.c-recipe-img -->
                                         <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
+                                            <p class="c-recipe-txt__exc"><?php echo esc_html(the_field( 'sub_ttl' )); ?></p>
                                             <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
                                         </div>
                                     <!-- 予約投稿時 リンクなし -->

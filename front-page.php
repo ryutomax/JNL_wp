@@ -1,4 +1,4 @@
-<?php get_template_part('template_header/header-home'); ?>
+<?php get_template_part('template_header/header'); ?>
 
         <main class="l-main">
             <section class="p-fv"  style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>)">
@@ -136,6 +136,7 @@
                         <div class="p-recipe-cont">
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
+                                    $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
                                     $query_args = array(
                                         'orderby' => 'post_date',
                                         'post_status'=> 'publish, future',
@@ -143,7 +144,7 @@
                                         'tag'=> 'staple',
                                         'order'=>'DESC',
                                         'posts_per_page'=>6,
-                                        'paged'=>$page
+                                        'paged'=>$paged
                                     );
                                 $the_query = new WP_Query($query_args);
                                 if ( $the_query->have_posts() ) :
@@ -168,6 +169,7 @@
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
+                                    $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
                                     $query_args = array(
                                         'orderby' => 'post_date',
                                         'post_status'=> 'publish, future',
@@ -175,7 +177,7 @@
                                         'tag'=> 'main',
                                         'order'=>'DESC',
                                         'posts_per_page'=>6,
-                                        'paged'=>$page
+                                        'paged'=>$paged
                                     );
                                 $the_query = new WP_Query($query_args);
                                 if ( $the_query->have_posts() ) :
@@ -199,6 +201,7 @@
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
+                                    $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
                                     $query_args = array(
                                         'orderby' => 'post_date',
                                         'post_status'=> 'publish, future',
@@ -206,7 +209,7 @@
                                         'tag'=> 'side',
                                         'order'=>'DESC',
                                         'posts_per_page'=>6,
-                                        'paged'=>$page
+                                        'paged'=>$paged
                                     );
                                 $the_query = new WP_Query($query_args);
                                 if ( $the_query->have_posts() ) :
@@ -230,6 +233,7 @@
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
+                                    $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
                                     $query_args = array(
                                         'orderby' => 'post_date',
                                         'post_status'=> 'publish, future',
@@ -237,7 +241,7 @@
                                         'tag'=> 'drink-soup',
                                         'order'=>'DESC',
                                         'posts_per_page'=>6,
-                                        'paged'=>$page
+                                        'paged'=>$paged
                                     );
                                 $the_query = new WP_Query($query_args);
                                 if ( $the_query->have_posts() ) :
@@ -261,6 +265,7 @@
                             </ul>
                             <ul class="c-recipe-cont__list js-tab-cont">
                                 <?php
+                                    $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
                                     $query_args = array(
                                         'orderby' => 'post_date',
                                         'post_status'=> 'publish, future',
@@ -268,7 +273,7 @@
                                         'tag'=> 'sweets',
                                         'order'=>'DESC',
                                         'posts_per_page'=>6,
-                                        'paged'=>$page
+                                        'paged'=>$paged
                                     );
                                 $the_query = new WP_Query($query_args);
                                 if ( $the_query->have_posts() ) :
@@ -298,4 +303,9 @@
                 <!-- /.c-recipe-inner -->
             </section>
 
-<?php get_template_part('template_footer/footer-cta_products'); ?>
+            <!-- prodactsCtaのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/prodactsCta'); ?>
+
+        </main>
+
+<?php get_template_part('template_footer/footer'); ?>

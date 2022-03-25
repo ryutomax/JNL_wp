@@ -13,21 +13,10 @@
 
     <section class="p-content c-frame">
         <div class="p-content-inner">
-            <div class="p-content-ttl c-sec-ttl">
-                <h3>
-                    <span class="js-wave">R</span>
-                    <span class="js-wave">e</span>
-                    <span class="js-wave">c</span>
-                    <span class="js-wave">i</span>
-                    <span class="js-wave">p</span>
-                    <span class="js-wave">e</span>
-                    <span class="js-wave u-ml__16">L</span>
-                    <span class="js-wave">i</span>
-                    <span class="js-wave">s</span>
-                    <span class="js-wave">t</span>
-                </h3>
-                <p><?php single_term_title( '', true ); ?></p>
-            </div>
+
+            <!-- コンテンツタイトルのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/title-content'); ?>
+
             <div class="p-content-wrap">
                 <ul class="p-content-list">
                     <?php
@@ -73,6 +62,10 @@
         <!-- /.p-content-inner -->
 
     </section>
+    
+    <!-- prodactsCtaのテンプレート呼び出し -->
+    <?php get_template_part('template_parts/prodactsCta'); ?>
+
 </main>
 
-<?php get_template_part('template_footer/footer-cta_products'); ?>
+<?php get_template_part('template_footer/footer'); ?>

@@ -10,13 +10,13 @@
                             <a href="<?php esc_url( home_url('/') );?>">商品について</a>
                         </li>
                         <li class="p-footer-nav__item" ontouchstart="">
-                            <a href="<?php esc_url( home_url('/') );?>">ジャパンナチュラル研究所</a>
+                            <a href="<?php esc_url('');?>">ジャパンナチュラル研究所</a>
                         </li>
                         <li class="p-footer-nav__item" ontouchstart="">
-                            <a href="<?php esc_url( home_url('/') );?>">ご購入はこちらから</a>
+                            <a href="<?php esc_url('');?>">ご購入はこちらから</a>
                         </li>
                         <li class="p-footer-nav__item" ontouchstart="">
-                            <a href="<?php esc_url( home_url('/') );?>">レシピ</a>
+                            <a href="<?php esc_url( home_url('/recipe') );?>">レシピ</a>
                         </li>
                     </ul>
                 </nav>

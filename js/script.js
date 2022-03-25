@@ -43,16 +43,6 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 
 // ハンバーガーメニュー終了/////////////////////////////////////////////
 
-//AOSクラスを強制付与 ////////////////////////////////
-
-// var tagElements = document.getElementsByTagName('table');
-// for (var i = 0; i < tagElements.length; i++) {
-// 	tagElements[i].setAttribute('data-aos', 'zoom-in');
-// 	tagElements[i].setAttribute('data-aos-duration', '2000');
-// }
-
-//AOSクラスを強制付与 ////////////////////////////////
-
 // IE対応 object-fit ////////////////////////
 
 (function ($) {
@@ -165,7 +155,7 @@ $(function() {
 });
 // パンくずリスト<br>削除 終了///////////////////////
 
-// セクションタイトルアニメ//////////////////////////
+// セクションタイトルスクロールアニメ//////////////////////////
 function waveAnime(){
     $('.js-wave').each(function(){
         const elemPos = $(this).offset().top-50;//要素より、50px上の
@@ -184,18 +174,26 @@ function waveAnime(){
 // 画面が読み込まれたらすぐに動く場合の記述
     $(window).on('load', function(){ waveAnime(); });
 
-// セクションタイトルアニメ 終了//////////////////////////
+    function fadeUpAnime(){
+    $('.js-fade').each(function(){
+        const elemPos = $(this).offset().top+100;//要素より、50px上の
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+            $(this).addClass('is-show__fadeup');;// 画面内に入ったらfadeInというクラス名を追記
+        }
+    });
+}
+// 画面をスクロールをしたら動く場合の記述
+    $(window).scroll(function (){ fadeUpAnime(); });
+
+// 画面が読み込まれたらすぐに動く場合の記述
+    $(window).on('load', function(){ fadeUpAnime(); });
+
+// セクションタイトルアニメ 終了
 
 
-
-// $(function() {
-//     var str = document.getElementById("tableTtl").innerHTML;
-
-// str = str.replace(/＜/g,'<br><b class="p-detail-tableTtl">＜');
-// str = str.replace(/＞/g,'＞</b>');
-
-// document.getElementById("tableTtl").innerHTML = str;
-// });
+//正規表現/////////////////////////////////
 
 $(function() {
     var str = document.getElementById("tableTtl").innerHTML;

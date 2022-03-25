@@ -14,22 +14,15 @@
 
     <section class="p-content c-frame">
         <div class="p-content-inner">
-            <div class="p-content-ttl c-sec-ttl">
-                <h3>
-                    <span class="js-wave">R</span>
-                    <span class="js-wave">e</span>
-                    <span class="js-wave">c</span>
-                    <span class="js-wave">i</span>
-                    <span class="js-wave">p</span>
-                    <span class="js-wave">e</span>
-                </h3>
-                <p>レシピ一覧</p>
-            </div>
+
+            <!-- コンテンツタイトルのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/title-content'); ?>
 
             <div class="p-content-wrap">
                 <ul class="p-content-list">
                     <?php
                         $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
+
                         $query_args = array(
                                 'orderby' => 'post_date',   //日付順に並び替え
                                 'order'=>'DESC',            //上記パラメータについて昇順か降順かを指定
@@ -62,6 +55,10 @@
         <!-- /.p-archive-inner -->
 
     </section>
+
+    <!-- prodactsCtaのテンプレート呼び出し -->
+    <?php get_template_part('template_parts/prodactsCta'); ?>
+
 </main>
 
-<?php get_template_part('template_footer/footer-cta_products'); ?>
+<?php get_template_part('template_footer/footer'); ?>
