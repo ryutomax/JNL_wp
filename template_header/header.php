@@ -5,12 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="noindex">
-        <title> 【JNL】モリンガパウダーレシピサイト|<?php the_title(); ?></title>
-        <?php if(is_single()):?>
-        <meta name="description" content="<?php the_excerpt(); ?>">
-        <?php else: ?>
-        <meta name="description" content="美味しい、ヘルシーモリンガパウダーのレシピをご紹介します">
-        <?php endif; ?>
+
         <?php wp_head(); ?>
     </head>
 

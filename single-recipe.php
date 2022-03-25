@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part('template_header/header'); ?>
 
         <main class="l-main">
             <section class="p-swiper">
@@ -51,63 +51,12 @@
                             }
                         ?>
                     </div>
-                    <!-- <p class="c-breadcrumb-main">ホーム＞ブログ</p> -->
                 </div>
             </div>
-            <section class="p-menu">
-                <div class="p-menu-inner">
-                    <ul class="p-menu-btns">
-                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="300">
-                            <a href="<?php
-                                        $tag = get_term_by('name', 'ご飯・麺', 'post_tag');
-                                        $tag_id = $tag->term_id;
-                                        echo esc_url(get_tag_link($tag_id));
-                                    ?>" ontouchstart="">
-                                    Staple<span>ご飯・麺</span>
-                            </a>
-                        </li>
-                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="400">
-                            <a href="<?php
-                                        $tag = get_term_by('name', 'メイン', 'post_tag');
-                                        $tag_id = $tag->term_id;
-                                        echo esc_url(get_tag_link($tag_id));
-                                    ?>" ontouchstart="">
-                                    Main<span>メイン</span>
-                            </a>
-                        </li>
-                        <li class="p-menu-btn" data-aos="flip-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="500">
-                            <a href="<?php
-                                        $tag = get_term_by('name', 'サイド', 'post_tag');
-                                        $tag_id = $tag->term_id;
-                                        echo esc_url(get_tag_link($tag_id));
-                                    ?>" ontouchstart="">Side<span>サイド</span>
-                            </a>
-                        </li>
-                        <li class="p-menu-btn p-menu-btn__drink" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="600">
-                            <a href="<?php
-                                        $tag = get_term_by('name', 'ドリンク・スープ', 'post_tag');
-                                        $tag_id = $tag->term_id;
-                                        echo esc_url(get_tag_link($tag_id));
-                                    ?>" ontouchstart="">
-                                <span>Drink<br> Soup</span>
-                                <span>ドリンク・<br>スープ</span>
-                            </a>
-                        </li>
-                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="700">
-                            <a href="<?php
-                                        $tag = get_term_by('name', 'スイーツ', 'post_tag');
-                                        $tag_id = $tag->term_id;
-                                        echo esc_url(get_tag_link($tag_id));
-                                    ?>" ontouchstart="">Sweets<span>スイーツ</span>
-                            </a>
-                        </li>
-                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="800"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '和風メニュー' ) ) ); ?>" ontouchstart="">Style<span>和風メニュー</span></a></li>
-                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="900"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '洋風メニュー' ) ) ); ?>" ontouchstart="">Style<span>洋風メニュー</span></a></li>
-                        <li class="p-menu-btn" data-aos-anchor-placement="top-bottom" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="1000"><a href="<?php echo esc_url( get_category_link( get_cat_ID( '中華風メニュー' ) ) ); ?>" ontouchstart="">Style<span>中華メニュー</span></a></li>
-                    </ul>
-                </div>
-                <!-- /.p-menu-inner -->
-            </section>
+
+            <!-- タグ・カテゴリメニュー呼び出し -->
+            <?php get_template_part('template_parts/mainMenu'); ?>
+
             <section class="p-intro">
                 <div class="p-intro-inner">
                     <div class="p-intro-img">
@@ -148,6 +97,22 @@
             </section>
             <section class="p-detail c-frame">
                 <div class="p-detail-inner">
+                    <div class="p-content-ttl c-sec-ttl">
+                        <h3>
+                            <span class="js-wave">R</span>
+                            <span class="js-wave">e</span>
+                            <span class="js-wave">c</span>
+                            <span class="js-wave">i</span>
+                            <span class="js-wave">p</span>
+                            <span class="js-wave">e</span>
+                            <span class="js-wave u-ml__16">M</span>
+                            <span class="js-wave">o</span>
+                            <span class="js-wave">v</span>
+                            <span class="js-wave">i</span>
+                            <span class="js-wave">e</span>
+                        </h3>
+                        <p>レシピ動画</p>
+                    </div>
                     <?php
                         $movie = esc_url(get_field('movie'));
                         if( !empty($movie) ):
@@ -156,7 +121,7 @@
                     <?php endif; ?>
 
                     <div class="p-detail-table" id="tableTtl" data-aos="zoom-in" data-aos-duration="2000">
-                        <h3><?php the_field('tableTtl_mate'); ?></h3>
+                        <h4><?php the_field('tableTtl_mate'); ?></h4>
                         <!-- テーブルのデータを取得 -->
                         <?php
                         $table = get_field( 'table_mate' );
@@ -193,7 +158,7 @@
                         </div>
                         <!-- /.p-detail-table -->
                         <div class="p-detail-table" id="tableTtl2" data-aos="zoom-in" data-aos-duration="2000">
-                            <h3>作り方</h3>
+                            <h4>作り方</h4>
                             <!-- テーブルのデータを取得 -->
                             <?php
                             $table = get_field( 'table_way' );
@@ -230,7 +195,7 @@
                         </div>
                         <!-- /.p-detail-table -->
                         <div class="p-detail-review" data-aos="zoom-in" data-aos-duration="2000">
-                            <h3>レビュー</h3>
+                            <h4>レビュー</h4>
                             <?php the_content(); ?>
                         </div>
                         <!-- /.p-detail-explain -->
@@ -240,4 +205,4 @@
                 <!-- /.p-detail-inner -->
             </section>
 
-<?php get_footer('cta_products'); ?>
+<?php get_template_part('template_footer/footer-cta_products'); ?>

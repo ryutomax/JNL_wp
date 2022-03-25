@@ -200,19 +200,17 @@ function waveAnime(){
 $(function() {
     var str = document.getElementById("tableTtl").innerHTML;
 
-str = str.replace(/＜(.*?)＞/g,'<br><b class="p-detail-tableTtl">＜$1＞</b>');
-// str = str.replace(/＞/g,'＞</b>');
+    str = str.replace(/＜(.*?)＞/g,'<br><b class="p-detail-tableTtl">＜$1＞</b>');
 
-document.getElementById("tableTtl").innerHTML = str;
+    document.getElementById("tableTtl").innerHTML = str;
 });
 
 $(function() {
     var str = document.getElementById("tableTtl2").innerHTML;
 
-str = str.replace(/＜/g,'<br><b class="p-detail-tableTtl>＜');
-str = str.replace(/＞/g,'＞</b>');
+    str = str.replace(/＜(.*?)＞/g,'<br><b class="p-detail-tableTtl">＜$1＞</b>');
 
-document.getElementById("tableTtl2").innerHTML = str;
+    document.getElementById("tableTtl2").innerHTML = str;
 });
 
 

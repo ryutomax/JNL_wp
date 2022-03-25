@@ -1690,7 +1690,7 @@ a.next.page-numbers {
   background-color: #2C3848;
   padding: 0.5rem;
 }
-.p-detail h3 {
+.p-detail h4 {
   display: inline-block;
   margin: 0 auto;
   color: #ffffff;
@@ -2167,6 +2167,14 @@ a.next.page-numbers {
 .is-show__wave:nth-of-type(10) {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
+}
+.is-show__wave:nth-of-type(11) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.is-show__wave:nth-of-type(12) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
 }
 
 .u-ml__16 {

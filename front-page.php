@@ -1,4 +1,5 @@
-<?php get_header('home'); ?>
+<?php get_template_part('template_header/header-home'); ?>
+
         <main class="l-main">
             <section class="p-fv"  style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>)">
                 <div class="p-fv-inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-delay="1000">
@@ -148,58 +149,15 @@
                                 if ( $the_query->have_posts() ) :
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
+                                <!-- メニューリストのテンプレート呼び出し -->
+                                <?php get_template_part('template_parts/recipeList'); ?>
 
-                                <li class="c-recipe-cont__item" ontouchstart="">
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                    <?php endif; ?>
-                                        <div class="c-recipe-img">
-                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
-                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                                <?php else: ?><!-- アイキャッチが無い時-->
-                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
-                                                <?php endif; ?>
-                                            </figure>
-                                            <!-- 更新から14日間 表示 -->
-                                            <?php
-                                                $post_time = get_the_time('U');
-                                                $days = 14; //New!を表示させる日数
-                                                $last = time() - ($days * 24 * 60 * 60);
-                                                if ($post_time > $last):
-                                            ?>
-                                                <span class="c-recipe-new"><p>New</p></span>
-                                            <?php endif; ?>
-
-                                            <span class="c-recipe-tag">
-                                                <p>
-                                                    <?php
-                                                        $category = get_the_category();
-                                                        echo $category[0]->name;
-                                                    ?>
-                                                </p>
-                                            </span>
-                                            <!-- 予約投稿時 表示 -->
-                                            <?php if( get_post_status( $post->ID ) == 'future'): ?>
-                                                <span class="c-recipe-coming">coming soon</span>
-                                            <?php endif; ?>
-                                        </div>
-                                        <!-- /.c-recipe-img -->
-                                        <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
-                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
-                                        </div>
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
                                 <p>レシピがありません。</p>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
+
 
                                 <div class="p-recipe-more">
                                     <div class="p-recipe-btn c-ctaBtn">
@@ -223,52 +181,9 @@
                                 if ( $the_query->have_posts() ) :
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
+                                <!-- メニューリストのテンプレート呼び出し -->
+                                <?php get_template_part('template_parts/recipeList'); ?>
 
-                                <li class="c-recipe-cont__item" ontouchstart="">
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                    <?php endif; ?>
-                                    <div class="c-recipe-img">
-                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
-                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                                <?php else: ?><!-- アイキャッチが無い時-->
-                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
-                                                <?php endif; ?>
-                                            </figure>
-
-                                            <!-- 更新から14日間 表示 -->
-                                            <?php
-                                                $post_time = get_the_time('U');
-                                                $days = 14; //New!を表示させる日数
-                                                $last = time() - ($days * 24 * 60 * 60);
-                                                if ($post_time > $last):
-                                            ?>
-                                                <span class="c-recipe-new"><p>New</p></span>
-                                            <?php endif; ?>
-
-                                            <span class="c-recipe-tag"><p>
-                                                    <?php
-                                                        $category = get_the_category();
-                                                        echo $category[0]->name;
-                                                    ?>
-                                            </p></span>
-                                            <!-- 予約投稿時 表示 -->
-                                            <?php if( get_post_status( $post->ID ) == 'future'): ?>
-                                                <span class="c-recipe-coming">coming soon</span>
-                                            <?php endif; ?>
-                                        </div>
-                                        <!-- /.c-recipe-img -->
-                                        <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
-                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
-                                        </div>
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
                                 <p>レシピがありません。</p>
@@ -297,52 +212,9 @@
                                 if ( $the_query->have_posts() ) :
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
+                                <!-- メニューリストのテンプレート呼び出し -->
+                                <?php get_template_part('template_parts/recipeList'); ?>
 
-                                <li class="c-recipe-cont__item" ontouchstart="">
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                    <?php endif; ?>
-                                        <div class="c-recipe-img">
-                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
-                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                                <?php else: ?><!-- アイキャッチが無い時-->
-                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
-                                                <?php endif; ?>
-                                            </figure>
-
-                                            <!-- 更新から14日間 表示 -->
-                                            <?php
-                                                $post_time = get_the_time('U');
-                                                $days = 14; //New!を表示させる日数
-                                                $last = time() - ($days * 24 * 60 * 60);
-                                                if ($post_time > $last):
-                                            ?>
-                                                <span class="c-recipe-new"><p>New</p></span>
-                                            <?php endif; ?>
-
-                                            <span class="c-recipe-tag"><p>
-                                                    <?php
-                                                        $category = get_the_category();
-                                                        echo $category[0]->name;
-                                                    ?>
-                                            </p></span>
-                                            <!-- 予約投稿時 表示 -->
-                                            <?php if( get_post_status( $post->ID ) == 'future'): ?>
-                                                <span class="c-recipe-coming">coming soon</span>
-                                            <?php endif; ?>
-                                        </div>
-                                        <!-- /.c-recipe-img -->
-                                        <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
-                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
-                                        </div>
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
                                 <p>レシピがありません。</p>
@@ -371,51 +243,9 @@
                                 if ( $the_query->have_posts() ) :
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
+                                <!-- メニューリストのテンプレート呼び出し -->
+                                <?php get_template_part('template_parts/recipeList'); ?>
 
-                                <li class="c-recipe-cont__item" ontouchstart="">
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                    <?php endif; ?>
-                                        <div class="c-recipe-img">
-                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
-                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                                <?php else: ?><!-- アイキャッチが無い時-->
-                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
-                                                <?php endif; ?>
-                                            </figure>
-
-                                            <!-- 更新から14日間 表示 -->
-                                            <?php
-                                                $post_time = get_the_time('U');
-                                                $days = 14; //New!を表示させる日数
-                                                $last = time() - ($days * 24 * 60 * 60);
-                                                if ($post_time > $last):
-                                            ?>
-                                                <span class="c-recipe-new"><p>New</p></span>
-                                            <?php endif; ?>
-                                            <span class="c-recipe-tag"><p>
-                                                    <?php
-                                                        $category = get_the_category();
-                                                        echo $category[0]->name;
-                                                    ?>
-                                            </p></span>
-                                            <!-- 予約投稿時 表示 -->
-                                            <?php if( get_post_status( $post->ID ) == 'future'): ?>
-                                                <span class="c-recipe-coming">coming soon</span>
-                                            <?php endif; ?>
-                                        </div>
-                                        <!-- /.c-recipe-img -->
-                                        <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
-                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
-                                        </div>
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </li>
                                 <?php endwhile; ?>
                                 <?php else: ?>
                                 <p>レシピがありません。</p>
@@ -444,52 +274,9 @@
                                 if ( $the_query->have_posts() ) :
                                     while ( $the_query->have_posts() ) : $the_query->the_post();
                                 ?>
-
-                                <li class="c-recipe-cont__item" ontouchstart="">
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        <a class="c-recipe-cont__item-inner" href="<?php the_permalink(); ?>" ontouchstart="">
-                                    <?php endif; ?>
-                                        <div class="c-recipe-img">
-                                            <figure class="c-recipe-img__inner js-img-bg object-fit">
-                                                <?php if ( has_post_thumbnail() ): ?><!-- if文による条件分岐 アイキャッチが有る時-->
-                                                    <?php the_post_thumbnail( 'thumbnail' ); ?>
-                                                <?php else: ?><!-- アイキャッチが無い時-->
-                                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg');?>" alt="アイキャッチがない時の画像です。" />
-                                                <?php endif; ?>
-                                            </figure>
-
-                                            <!-- 更新から14日間 表示 -->
-                                            <?php
-                                                $post_time = get_the_time('U');
-                                                $days = 14; //New!を表示させる日数
-                                                $last = time() - ($days * 24 * 60 * 60);
-                                                if ($post_time > $last):
-                                            ?>
-                                                <span class="c-recipe-new"><p>New</p></span>
-                                            <?php endif; ?>
-
-                                            <span class="c-recipe-tag"><p>
-                                                    <?php
-                                                        $category = get_the_category();
-                                                        echo $category[0]->name;
-                                                    ?>
-                                            </p></span>
-                                            <!-- 予約投稿時 表示 -->
-                                            <?php if( get_post_status( $post->ID ) == 'future'): ?>
-                                                <span class="c-recipe-coming">coming soon</span>
-                                            <?php endif; ?>
-                                        </div>
-                                        <!-- /.c-recipe-img -->
-                                        <div class="c-recipe-txt">
-                                            <p class="c-recipe-txt__exc"><?php the_field( 'sub_ttl' ); ?></p>
-                                            <h3 class="c-recipe-txt__ttl"><?php the_title(); ?></h3>
-                                        </div>
-                                    <!-- 予約投稿時 リンクなし -->
-                                    <?php if( get_post_status( $post->ID ) == 'publish'): ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </li>
+                                <!-- メニューリストのテンプレート呼び出し -->
+                                <?php get_template_part('template_parts/recipeList'); ?>
+                                
                                 <?php endwhile; ?>
                                 <?php else: ?>
                                 <p>レシピがありません。</p>
@@ -511,4 +298,4 @@
                 <!-- /.c-recipe-inner -->
             </section>
 
-<?php get_footer('cta_products'); ?>
+<?php get_template_part('template_footer/footer-cta_products'); ?>
