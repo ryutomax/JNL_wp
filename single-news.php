@@ -22,8 +22,10 @@
                     <!-- /.p-content-head -->
                     <div class="p-contNews_post p-content-post">
 
-                    <?php $head= get_field( 'head_l' );
-                    if($head): ?>
+                    <?php
+                        $head= get_field( 'head_l' );
+                        if($head):
+                    ?>
                         <figure>
                         <?php if ( get_field( 'img' ) ) : ?>
                             <img src="<?php the_field( 'img' ); ?>" />
@@ -44,14 +46,14 @@
 
                             <p><?php echo nl2br(esc_html(get_field( 'text1_1' ))); ?></p>
 
-                            <?php if ( have_rows( 'link_g1' ) ) : ?>
-                                <?php while ( have_rows( 'link_g1' ) ) : the_row(); ?>
-                                    <?php $link1 = get_sub_field( 'link1' ); ?>
-                                    <?php if ( $link1 ) : ?>
-                                        <a href="<?php echo esc_url( $link1); ?>"><?php echo esc_html(get_sub_field( 'linkname_1' )); ?></a>
-                                    <?php endif; ?>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
+                        <?php if ( have_rows( 'link_g1' ) ) : ?>
+                            <?php while ( have_rows( 'link_g1' ) ) : the_row(); ?>
+                                <?php $link1 = get_sub_field( 'link1' ); ?>
+                                <?php if ( $link1 ) : ?>
+                                    <a href="<?php echo esc_url( $link1); ?>"><?php echo esc_html(get_sub_field( 'linkname_1' )); ?></a>
+                                <?php endif; ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
 
                             <p><?php echo nl2br(esc_html(get_field( 'text1_2' ))); ?></p>
 
@@ -77,7 +79,7 @@
                             <p><?php echo nl2br(esc_html(get_field( 'text2_2' ))); ?></p>
 
                     <?php endif; ?>
-                    
+
                     <?php the_content(); ?>
                     </div>
                     <!-- /.p-content-wrap -->

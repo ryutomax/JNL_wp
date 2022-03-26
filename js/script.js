@@ -59,7 +59,6 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
     $('.js-img-bg').each(function () {
         $(this).imageBg();
     });
-
 })(jQuery);
 
 // IE対応 object-fit 終了////////////////////////
