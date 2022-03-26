@@ -22,11 +22,12 @@
 
 .p-fv-copy {
     position: absolute;
-		top: 50%;
-        left: max(10rem, 36vw);
-		transform: translate(-50%, -50%);
+	top: 50%;
+    left: max(10rem, 36vw);
+	transform: translate(-50%, -50%);
     p {
         font-size: rem(64);
+        text-transform: uppercase;
         color: $white;
         &:last-child {
             margin-left: rem(56);

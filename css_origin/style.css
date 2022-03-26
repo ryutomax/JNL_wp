@@ -62,7 +62,6 @@ select {
 html, body {
   color: #000000;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif, "Noto Sans JP", sans-serif;
-  text-transform: uppercase;
 }
 
 a {
@@ -347,6 +346,52 @@ a.next.page-numbers {
   display: none;
 }
 
+.c-prevNext {
+  margin-top: 2rem;
+}
+
+.c-prevNext_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.c-prevNext_item {
+  display: block;
+  width: 100%;
+}
+.c-prevNext_item:first-child {
+  margin-right: 0.5rem;
+}
+.c-prevNext_item:last-child {
+  text-align: end;
+}
+.c-prevNext_item a {
+  display: inline-block;
+  font-size: 1.25rem;
+  color: #00B906;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border: 2px solid #00B906;
+  border-radius: 0.25rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.c-prevNext_item a:hover {
+  background-color: #00B906;
+  color: #ffffff;
+}
+
+@media screen and (min-width:480px) {
+  .c-prevNext_item a {
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+}
 .c-recipe-cont__list {
   display: none;
 }
@@ -428,6 +473,7 @@ a.next.page-numbers {
 }
 .c-recipe-tag p::before {
   content: "Style";
+  text-transform: uppercase;
   font-size: 2rem;
 }
 
@@ -497,6 +543,7 @@ a.next.page-numbers {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 .c-sec-ttl p {
   font-size: 1rem;
@@ -551,6 +598,44 @@ a.next.page-numbers {
   text-align: center;
 }
 
+.p-404-inner {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.p-404__txt {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.p-404__link a {
+  text-decoration: underline;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.p-404__link a:hover {
+  text-shadow: 2px 2px 10px #c8c8c8, -2px 2px 10px #c8c8c8, 2px -2px 10px #c8c8c8, -2px -2px 10px #c8c8c8;
+}
+
+@media screen and (min-width:480px) {
+  .p-404__txt {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width:860px) {
+  .p-404__txt {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width:1280px) {
+  .p-404__txt {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+}
 .p-cta {
   background-size: cover;
   background-attachment: fixed;
@@ -1096,6 +1181,7 @@ a.next.page-numbers {
   height: 50px;
   color: #ffffff;
   font-size: min(2rem, 7.2vw);
+  text-transform: uppercase;
   padding: 0.8rem 0.2rem;
   -webkit-box-shadow: 2px 2px 5px #2C3848;
           box-shadow: 2px 2px 5px #2C3848;
@@ -1350,6 +1436,291 @@ a.next.page-numbers {
     margin-top: 0.75rem;
   }
 }
+.p-contact-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 3.75rem;
+  padding-bottom: 5.125rem;
+}
+
+.p-contact-top-ttl {
+  width: 192px;
+}
+
+.p-contact-desc {
+  line-height: 1.6875;
+  margin-bottom: 3rem;
+}
+
+.p-contact-item {
+  margin-bottom: 1.25rem;
+}
+.p-contact-item:nth-child(4), .p-contact-item:nth-child(5) {
+  margin-bottom: 1.5rem;
+}
+.p-contact-item:nth-child(6) {
+  margin-bottom: 1.875rem;
+}
+
+.p-contact-name {
+  line-height: 1.6875;
+}
+.p-contact-name span {
+  font-weight: bold;
+}
+
+.p-contact-input {
+  width: 100%;
+  height: 50px;
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+  border: solid 0.125rem #2C3848;
+  border-radius: 0.125rem;
+  font-size: 1rem;
+}
+.p-contact-input::-webkit-input-placeholder {
+  color: #B4B4B4;
+  font-size: 0.75rem;
+}
+.p-contact-input::-moz-placeholder {
+  color: #B4B4B4;
+  font-size: 0.75rem;
+}
+.p-contact-input:-ms-input-placeholder {
+  color: #B4B4B4;
+  font-size: 0.75rem;
+}
+.p-contact-input::-ms-input-placeholder {
+  color: #B4B4B4;
+  font-size: 0.75rem;
+}
+.p-contact-input::placeholder {
+  color: #B4B4B4;
+  font-size: 0.75rem;
+}
+.p-contact-input:focus {
+  border: solid 0.15625rem #298800;
+}
+
+.mw_wp_form .error {
+  margin-top: 0.5rem;
+}
+
+.p-contact-select {
+  margin-top: 1.25rem;
+}
+.p-contact-select span:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.mwform-radio-field-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 30px;
+  padding-left: 2.5rem;
+  position: relative;
+  width: auto;
+  height: 1.5625rem;
+}
+.mwform-radio-field-text::before {
+  background: #fff;
+  border: 0.09375rem solid #2C3848;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  width: 19px;
+  height: 19px;
+  left: 0;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+}
+.mwform-radio-field-text::after {
+  background: #298800;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 16px;
+  left: 0.1875rem;
+  opacity: 0;
+  position: absolute;
+  top: 22.5%;
+  width: 16px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input[type=radio]:checked + .mwform-radio-field-text::before {
+  border-color: #298800;
+}
+
+input[type=radio]:checked + .mwform-radio-field-text::after {
+  opacity: 1;
+}
+
+.p-contact-textarea {
+  resize: none;
+  width: 100%;
+  height: 240px;
+  margin-top: 0.75rem;
+  padding-top: 1.375rem;
+  padding-left: 1.4375rem;
+  font-size: 0.75rem;
+  border: solid 0.125rem #2C3848;
+  border-radius: 0.125rem;
+}
+.p-contact-textarea::-webkit-input-placeholder {
+  color: #B4B4B4;
+}
+.p-contact-textarea::-moz-placeholder {
+  color: #B4B4B4;
+}
+.p-contact-textarea:-ms-input-placeholder {
+  color: #B4B4B4;
+}
+.p-contact-textarea::-ms-input-placeholder {
+  color: #B4B4B4;
+}
+.p-contact-textarea::placeholder {
+  color: #B4B4B4;
+}
+.p-contact-textarea:focus {
+  border: solid 0.15625rem #298800;
+}
+
+.p-contact-privacy {
+  text-align: center;
+  margin-bottom: 2.8125rem;
+}
+
+.p-contact-privacy__txt {
+  margin-bottom: 1.875rem;
+}
+.p-contact-privacy__txt a {
+  color: #298800;
+  text-decoration: underline;
+  line-height: 1.6875;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+.mwform-checkbox-field-text {
+  font-size: 0.95rem;
+}
+
+span.mwform-checkbox-field-text {
+  display: inline-block;
+  padding-right: 30px;
+  padding-left: 2.8175rem;
+  position: relative;
+  cursor: pointer;
+  width: auto;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+span.mwform-checkbox-field-text p {
+  font-weight: bold;
+}
+span.mwform-checkbox-field-text::before {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #2C3848;
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  left: 10px;
+  margin-top: -10px;
+  top: 50%;
+}
+span.mwform-checkbox-field-text::after {
+  border-right: 3px solid #298800;
+  border-bottom: 3px solid #298800;
+  content: "";
+  display: block;
+  height: 12px;
+  left: 15px;
+  margin-top: -9px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 6px;
+}
+
+input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
+  opacity: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.p-contact-submit {
+  text-align: center;
+}
+
+.p-contact-btn {
+  width: 200px;
+  height: 50px;
+  background-color: #298800;
+  cursor: pointer;
+  padding: 0;
+  z-index: 0;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+}
+
+.p-contact-btn__input {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.p-contact-thanks {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.p-contact-back {
+  text-align: center;
+}
+.p-contact-back a {
+  text-decoration: underline;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.p-contact-back a:hover {
+  text-shadow: 2px 2px 10px #c8c8c8, -2px 2px 10px #c8c8c8, 2px -2px 10px #c8c8c8, -2px -2px 10px #c8c8c8;
+}
+
+@media screen and (min-width:860px) {
+  .p-contact-thanks {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width:1280px) {
+  .p-contact-thanks {
+    font-size: 2rem;
+  }
+}
 .p-fv {
   height: 23.75rem;
   background-size: cover;
@@ -1379,6 +1750,7 @@ a.next.page-numbers {
 }
 .p-fv-copy p {
   font-size: 4rem;
+  text-transform: uppercase;
   color: #ffffff;
 }
 .p-fv-copy p:last-child {
@@ -1678,6 +2050,172 @@ a.next.page-numbers {
     font-size: min(2rem, 2.8vw);
   }
 }
+.p-contNews-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.p-contNews-head {
+  text-align: center;
+}
+
+.p-contNews__date {
+  text-align: end;
+  margin-bottom: 1rem;
+}
+
+.p-contNews__ttl {
+  display: inline-block;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-align: start;
+}
+.p-contNews__ttl h1 {
+  position: relative;
+}
+.p-contNews__ttl h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #00B906;
+  left: 0;
+  bottom: -0.25rem;
+}
+
+.p-content-news__item {
+  height: auto;
+  padding-bottom: 1rem;
+}
+
+.p-content-news__item-inner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+
+.p-contNews_post h1, .p-contNews_post h2, .p-contNews_post h3, .p-contNews_post h4, .p-contNews_post h5, .p-contNews_post h6, .p-contNews_post p, .p-contNews_post ul, .p-contNews_post img, .p-contNews_post a, .p-contNews_post div,
+.p-contNews_post .wp-block-quote {
+  margin-bottom: 1.5rem;
+}
+.p-contNews_post h1 {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.p-contNews_post h2 {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: bold;
+  background-color: #eaf4dc;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  border-radius: 0.25rem;
+}
+.p-contNews_post h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+  padding-left: 0.625rem;
+  border-left: 4px solid #298800;
+}
+.p-contNews_post div, .p-contNews_post p {
+  line-height: 1.5;
+}
+.p-contNews_post li {
+  position: relative;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+}
+.p-contNews_post li::before {
+  content: "・";
+  position: absolute;
+  color: #FCF5B8;
+  font-size: 3.4rem;
+  top: -28px;
+  left: -23px;
+}
+.p-contNews_post a {
+  display: block;
+  font-size: 1.125rem;
+  color: #298800;
+  text-decoration: underline;
+}
+.p-contNews_post img {
+  max-width: 600px;
+  max-height: 500px;
+  border: 0.1875rem solid #00a800;
+  border-radius: 0.25rem;
+}
+.p-contNews_post #attachment_1628,
+.p-contNews_post .alignnone,
+.p-contNews_post .wp-caption {
+  max-width: 525px !important;
+}
+.p-contNews_post .wp-block-quote {
+  position: relative;
+  background-color: #F8F8F8;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.125rem;
+  padding-left: 4.625rem;
+}
+.p-contNews_post .wp-block-quote::before {
+  content: " “ ";
+  position: absolute;
+  color: #B4B4B4;
+  font-size: 5.625rem;
+  left: 15px;
+  top: 12px;
+}
+
+@media screen and (min-width:480px) {
+  .p-contNews__ttl {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width:860px) {
+  .p-contNews__ttl {
+    font-size: 2.25rem;
+  }
+
+  .p-contNews__date {
+    font-size: 1.25rem;
+  }
+
+  .p-contNews_post h2 {
+    font-size: 2rem;
+  }
+  .p-contNews_post h3 {
+    font-size: 1.75rem;
+  }
+  .p-contNews_post div, .p-contNews_post p, .p-contNews_post a {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width:1280px) {
+  .p-contNews__ttl {
+    font-size: 2.5rem;
+  }
+
+  .p-contNews_post h1, .p-contNews_post h2, .p-contNews_post h3, .p-contNews_post h4, .p-contNews_post h5, .p-contNews_post h6, .p-contNews_post p, .p-contNews_post ul, .p-contNews_post img, .p-contNews_post a, .p-contNews_post div,
+.p-contNews_post .wp-block-quote {
+    margin-bottom: 2rem;
+  }
+  .p-contNews_post h2 {
+    font-size: 2.25rem;
+  }
+  .p-contNews_post h3 {
+    font-size: 2rem;
+  }
+  .p-contNews_post div, .p-contNews_post p, .p-contNews_post a {
+    font-size: 1.25rem;
+  }
+}
 .p-detail {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -1886,6 +2424,7 @@ a.next.page-numbers {
 }
 .p-intro-tag p::before {
   content: "Style";
+  text-transform: uppercase;
   font-size: 1.5rem;
 }
 
@@ -2122,7 +2661,7 @@ a.next.page-numbers {
 .js-wave {
   display: inline-block;
   opacity: 0;
-  letter-spacing: -0.625rem;
+  letter-spacing: -0.5rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

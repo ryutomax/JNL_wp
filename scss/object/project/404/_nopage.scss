@@ -1,0 +1,41 @@
+@use "global" as *;
+
+
+.p-404-inner {
+    text-align: center;
+    padding-top: rem(64);
+    padding-bottom: rem(64);
+}
+
+.p-404__txt {
+    margin-bottom: rem(32);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.p-404__link {
+    a {
+        text-decoration: underline;
+        @include txt-shadow
+    }
+}
+
+@include mq (sp) {
+    .p-404__txt {
+        font-size: rem(20);
+    }
+}
+
+@include mq () {
+    .p-404__txt {
+        font-size: rem(24);
+        margin-bottom: rem(32);
+    }
+}
+
+@include mq (pc) {
+    .p-404__txt {
+        font-size: rem(28);
+        margin-bottom: rem(40);
+    }
+}

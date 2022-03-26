@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.c-prevNext {
+    margin-top: rem(32);
+}
+
+.c-prevNext_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-prevNext_item {
+    display: block;
+    width: 100%;
+    &:first-child {
+        margin-right: rem(8);
+    }
+    &:last-child {
+        text-align: end;
+    }
+    a {
+        display: inline-block;
+        font-size: rem(20);
+        color: $green;
+        width: 100%;
+        padding: rem(16) rem(8);
+        border: 2px solid $green;
+        border-radius: rem(4);
+        transition: 1s;
+        &:hover {
+            background-color: $green;
+            color: $white;
+        }
+    }
+}
+
+@include mq (sp) {
+    .c-prevNext_item {
+        a {
+            font-size: rem(24);
+            padding: rem(16) rem(8);
+            border-radius: rem(4);
+        }
+    }
+}
+
+@include mq () {
+}
+
+@include mq (pc) {
+}

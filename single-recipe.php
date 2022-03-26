@@ -109,52 +109,54 @@
                                 echo '</tbody>';
                             echo '</table>';
                         }
+                    ?>
+                    </div>
+                    <!-- /.p-detail-table -->
+                    <div class="p-detail-table" id="tableTtl2" data-aos="zoom-in" data-aos-duration="2000">
+                        <h4>作り方</h4>
+                        <!-- テーブルのデータを取得 -->
+                        <?php
+                        $table = get_field( 'table_way' );
+                        if ( ! empty ( $table ) ) {
+                            echo '<table>';
+                                if ( ! empty( $table['caption'] ) ) {
+                                    echo '<caption>' . $table['caption'] . '</caption>';
+                                }
+                                if ( ! empty( $table['header'] ) ) {
+                                    echo '<thead>';
+                                        echo '<tr>';
+                                            foreach ( $table['header'] as $th ) {
+                                                echo '<th>';
+                                                    echo $th['c'];
+                                                echo '</th>';
+                                            }
+                                        echo '</tr>';
+                                    echo '</thead>';
+                                }
+                                echo '<tbody>';
+                                    foreach ( $table['body'] as $tr ) {
+                                        echo '<tr>';
+                                            foreach ( $tr as $td ) {
+                                                echo '<td class="p-detail-table_explain">';
+                                                    echo nl2br($td['c']);
+                                                echo '</td>';
+                                            }
+                                        echo '</tr>';
+                                    }
+                                echo '</tbody>';
+                            echo '</table>';
+                        }
                         ?>
-                        </div>
-                        <!-- /.p-detail-table -->
-                        <div class="p-detail-table" id="tableTtl2" data-aos="zoom-in" data-aos-duration="2000">
-                            <h4>作り方</h4>
-                            <!-- テーブルのデータを取得 -->
-                            <?php
-                            $table = get_field( 'table_way' );
-                            if ( ! empty ( $table ) ) {
-                                echo '<table>';
-                                    if ( ! empty( $table['caption'] ) ) {
-                                        echo '<caption>' . $table['caption'] . '</caption>';
-                                    }
-                                    if ( ! empty( $table['header'] ) ) {
-                                        echo '<thead>';
-                                            echo '<tr>';
-                                                foreach ( $table['header'] as $th ) {
-                                                    echo '<th>';
-                                                        echo $th['c'];
-                                                    echo '</th>';
-                                                }
-                                            echo '</tr>';
-                                        echo '</thead>';
-                                    }
-                                    echo '<tbody>';
-                                        foreach ( $table['body'] as $tr ) {
-                                            echo '<tr>';
-                                                foreach ( $tr as $td ) {
-                                                    echo '<td class="p-detail-table_explain">';
-                                                        echo nl2br($td['c']);
-                                                    echo '</td>';
-                                                }
-                                            echo '</tr>';
-                                        }
-                                    echo '</tbody>';
-                                echo '</table>';
-                            }
-                            ?>
-                        </div>
-                        <!-- /.p-detail-table -->
-                        <div class="p-detail-review" data-aos="zoom-in" data-aos-duration="2000">
-                            <h4>レビュー</h4>
-                            <?php the_content(); ?>
-                        </div>
-                        <!-- /.p-detail-explain -->
+                    </div>
+                    <!-- /.p-detail-table -->
+                    <div class="p-detail-review" data-aos="zoom-in" data-aos-duration="2000">
+                        <h4>レビュー</h4>
+                        <?php the_content(); ?>
+                    </div>
+                    <!-- /.p-detail-explain -->
 
+                    <!-- prevNextのテンプレートの呼び出し -->
+                    <?php get_template_part('template_parts/prevNext'); ?>
 
                 </div>
                 <!-- /.p-detail-inner -->
