@@ -15,7 +15,7 @@ function include_files() {
     wp_enqueue_script('my-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array('jquery'), '3.6.0', true);
     wp_enqueue_script('aos','https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true);
     wp_enqueue_script('swiper','https://unpkg.com/swiper@8/swiper-bundle.min.js', array(), '8', true);
-    wp_enqueue_script('my-script', get_theme_file_uri('/js/script.js'), array('jquery'), '1.0.0', true);
+    wp_enqueue_script('my-script', get_theme_file_uri('app/js/bundle.js'), array('jquery'), '1.0.0', true);
 }
 // バリデーション/////////////////////////////////////////////////////////////////////////////////////////
 function my_exam_validation_rule( $Validation, $data, $Data ) {

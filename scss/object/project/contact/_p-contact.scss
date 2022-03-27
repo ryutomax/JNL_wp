@@ -50,7 +50,7 @@
         font-size: 0.75rem;
     }
     &:focus {
-        border: solid rem(2.5) $d-green;
+        border: solid rem(2.5) $green;
     }
 }
 
@@ -96,7 +96,7 @@ input[type=radio] {
         top: 50%;
     }
     &::after {
-        background: $d-green;
+        background: $green;
         border-radius: 50%;
         content: '';
         display: block;
@@ -111,7 +111,7 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + .mwform-radio-field-text::before {
-    border-color: $d-green;
+    border-color: $green;
 }
 
 input[type=radio]:checked + .mwform-radio-field-text::after {
@@ -134,7 +134,7 @@ input[type=radio]:checked + .mwform-radio-field-text::after {
         color: $MD-gray;
     }
     &:focus {
-        border: solid rem(2.5) $d-green;
+        border: solid rem(2.5) $green;
     }
 }
 
@@ -188,8 +188,8 @@ span.mwform-checkbox-field-text {
         top: 50%;
     }
     &::after {
-        border-right: 3px solid $d-green;
-        border-bottom: 3px solid $d-green;
+        border-right: 3px solid $green;
+        border-bottom: 3px solid $green;
         content: '';
         display: block;
         height: 12px;
@@ -219,7 +219,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 .p-contact-btn {
     width: 200px;
     height: 50px;
-    background-color: $d-green;
+    background-color: $green;
     cursor: pointer;
     padding: 0;
     z-index: 0;

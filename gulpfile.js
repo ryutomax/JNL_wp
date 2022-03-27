@@ -10,8 +10,8 @@ const plumber = require("gulp-plumber");
 const sassGlob = require("gulp-sass-glob-use-forward");
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require("gulp-autoprefixer");
-const purgecss = require("gulp-purgecss");
 const cleancss = require("gulp-clean-css");
+const media = require("gulp-group-css-media-queries");
 
 
 //----------------------------------------------------------------------
@@ -27,8 +27,7 @@ function compile(done) {
             {
                 includePaths: ['./scss/']
             }
-        ))                                 // sassのコンパイルをする
-        .pipe(autoprefixer())              // ベンダープレフィックスを自動付与する
+        ))                                 // sassコンパイル
         .pipe(dest("./css_origin/"));
 
     done();
@@ -38,27 +37,39 @@ function clean(done) {
     src(
         "./css_origin/*.css",
         )
-        .pipe(plumber())                                  // watch中にエラーが発生してもwatchが止まらないようにする
-        .pipe(purgecss({
-            content: ["./*.html","./js/*.js","./*.php"],  // 指定したファイル（SCSS）が使用される可能性のあるファイルを全て指定
-        }))
-        .pipe(cleancss())                                 // コードの不要なインデントや改行を削除
+        .pipe(plumber())                   // watch中にエラーが発生してもwatchが止まらないようにする
+        .pipe(autoprefixer())              // ベンダープレフィック自動付与
+        .pipe(cleancss())                  // 圧縮 コードの不要なインデントや改行を削除
+        .pipe(media())                     // メディアクエリ統合
         .pipe(dest("./css/"));
 
     done();
 }
+function min(done) {
+    src(
+        "./css/*.css",
+        )
+        .pipe(plumber())                   // watch中にエラーが発生してもwatchが止まらないようにする
+        .pipe(cleancss())                  // 圧縮 コードの不要なインデントや改行を削除
+        .pipe(dest("./css_min/"));
+
+    done();
+}
+
+
 
 //----------------------------------------------------------------------
 //  watch関数定義
 //----------------------------------------------------------------------
 function watchTask(done) {
     // watch( "監視したいファイル(またはフォルダ)を指定" , 処理 );
-    watch("./scss/**/*.scss" , series(compile,clean));
+    watch("./scss/**/*.scss" , series(compile,clean,min));
 }
 //----------------------------------------------------------------------
 //  タスク定義
 //----------------------------------------------------------------------
 exports.watch = series(watchTask);
+// exports.comp = series(compile);
 
 /************************************************************************/
 /*  END OF FILE                                                         */
@@ -69,38 +80,38 @@ exports.watch = series(watchTask);
 // //  モジュール読み込み
 // //----------------------------------------------------------------------
 
-const imageMin = require("gulp-imagemin");
-const mozjpeg = require("imagemin-mozjpeg");
-const pngquant = require("imagemin-pngquant");
-const changed = require("gulp-changed");
+// const imageMin = require("gulp-imagemin");
+// const mozjpeg = require("imagemin-mozjpeg");
+// const pngquant = require("imagemin-pngquant");
+// const changed = require("gulp-changed");
 
 // // //----------------------------------------------------------------------
 // // //  関数定義
 // // //----------------------------------------------------------------------
-function imagemin(done) {
-    src("./img_origin/*")
-    .pipe(changed("./img/"))
-    .pipe(
-        imageMin([
-            pngquant({
-                quality: [0.6, 0.7],
-                speed: 1,
-            }),
-            mozjpeg({ quality: 65 }),
-            imageMin.svgo(),
-            imageMin.optipng(),
-            imageMin.gifsicle({ optimizationLevel: 3 }),
-        ])
-    )
-    .pipe(dest("./img/"));
+// function imagemin(done) {
+//     src("./img_origin/*")
+//     .pipe(changed("./img/"))
+//     .pipe(
+//         imageMin([
+//             pngquant({
+//                 quality: [0.6, 0.7],
+//                 speed: 1,
+//             }),
+//             mozjpeg({ quality: 65 }),
+//             imageMin.svgo(),
+//             imageMin.optipng(),
+//             imageMin.gifsicle({ optimizationLevel: 3 }),
+//         ])
+//     )
+//     .pipe(dest("./img/"));
 
-    done();
-}
+//     done();
+// }
 
-// // //----------------------------------------------------------------------
-// // //  タスク定義
-// // //----------------------------------------------------------------------
-exports.imgin = imagemin;
+// // // //----------------------------------------------------------------------
+// // // //  タスク定義
+// // // //----------------------------------------------------------------------
+// exports.imgin = imagemin;
 
 // /************************************************************************/
 // /*  END OF FILE                                                         */

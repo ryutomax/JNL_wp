@@ -36,7 +36,7 @@ $(".js-nav__btn").click(function () {//ボタンがクリックされたら
     $(".js-nav__open").toggleClass('is-menu__open');//ナビゲーションにpanelactiveクラスを付与
 });
 
-$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+$(".js-nav__open a").click(function () {//ナビゲーションのリンクがクリックされたら
     $(".js-nav__btn").removeClass('is-btn__active');//ボタンの activeクラスを除去し
     $(".js-nav__open").removeClass('is-menu__open');//ナビゲーションのpanelactiveクラスも除去
 });

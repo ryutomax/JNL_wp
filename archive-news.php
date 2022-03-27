@@ -8,9 +8,9 @@
     <!-- パンくずリストのテンプレート呼び出し -->
     <?php get_template_part('template_parts/breadcrumb'); ?>
 
-    <section class="p-content c-frame">
-        <div class="p-content-inner">
-            <div class="p-content-ttl c-sec-ttl">
+    <section class="p-listNews c-frame">
+        <div class="p-listNews-inner">
+            <div class="p-listNewst-ttl c-sec-ttl">
                 <h3>
                     <span class="js-wave">N</span>
                     <span class="js-wave">e</span>
@@ -24,9 +24,11 @@
                 <p>お知らせ一覧</p>
             </div>
 
-            <div class="p-contNews__wrap">
-                <ul class="p-contNews__list">
+            <div class="p-listNews__wrap">
+                <ul class="p-listNews__list">
                     <?php
+                    $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
+
                     $query_args = array(
 
                             'orderby' => 'post_date',
@@ -43,10 +45,10 @@
 
                     ?>
 
-                    <li class="p-contNews__item">
-                        <a class="p-contNews__item-inner" href="<?php the_permalink(); ?>">
-                            <div class="p-contNews__date"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time></div>
-                            <h3 class="p-contNews__ttl">
+                    <li class="p-listNews__item">
+                        <a class="p-listNews__item-inner" href="<?php the_permalink(); ?>">
+                            <div class="p-listNews__date"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time></div>
+                            <h3 class="p-listNews__ttl">
                                 <?php
                                         if(mb_strlen($post->post_title, 'UTF-8')>40){
                                         $title= mb_substr($post->post_title, 0, 40, 'UTF-8');
