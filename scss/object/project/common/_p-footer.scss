@@ -17,14 +17,20 @@
 .p-footer-nav__item {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    transition: 1s;
     a {
+        display: inline-block;
         color: $white;
         font-weight: bold;
-        @include txt-shadow;
+        @include txt-border($white);
+        &::after {
+            bottom: -0.25rem;
+            height: 0.1rem;
+            transition: transform 1s;
+        }
     }
-
     &:not(:last-child) {
-        border-bottom: 1px solid $white;
+        border-bottom: 2px solid rgb(255, 255, 255);
     }
 }
 
@@ -74,7 +80,6 @@
     }
     a {
         font-size:max(rem(12), 3.8vw);
-        @include txt-shadow;
     }
 }
 
@@ -105,12 +110,13 @@
 
     .p-footer-nav__item {
         padding: 0.5rem 1rem;
+        border-bottom: none;
         a {
             color: $white;
             font-weight: bold;
         }
         &:not(:last-child) {
-            border-bottom: none;
+            border: none;
             border-right: 2px solid $white;
         }
     }

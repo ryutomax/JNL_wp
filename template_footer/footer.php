@@ -3,19 +3,19 @@
             <div class="l-footer-inner">
                 <nav class="p-footer-nav">
                     <ul class="p-footer-nav__list">
-                        <li class="p-footer-nav__item" ontouchstart="">
+                        <li class="p-footer-nav__item js-borderNone" ontouchstart="">
                             <a href="<?php esc_url( home_url('/') );?>">ホーム</a>
                         </li>
-                        <li class="p-footer-nav__item" ontouchstart="">
+                        <li class="p-footer-nav__item js-borderNone" ontouchstart="">
                             <a href="<?php esc_url( home_url('/') );?>">商品について</a>
                         </li>
-                        <li class="p-footer-nav__item" ontouchstart="">
+                        <li class="p-footer-nav__item js-borderNone" ontouchstart="">
                             <a href="<?php esc_url('');?>">ジャパンナチュラル研究所</a>
                         </li>
-                        <li class="p-footer-nav__item" ontouchstart="">
+                        <li class="p-footer-nav__item js-borderNone" ontouchstart="">
                             <a href="<?php esc_url('');?>">ご購入はこちらから</a>
                         </li>
-                        <li class="p-footer-nav__item" ontouchstart="">
+                        <li class="p-footer-nav__item js-borderNone" ontouchstart="">
                             <a href="<?php esc_url( home_url('/recipe') );?>">レシピ</a>
                         </li>
                     </ul>

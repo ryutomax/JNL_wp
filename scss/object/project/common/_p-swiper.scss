@@ -121,15 +121,16 @@
     }
 
     .p-swiper-img__meta {
-        max-width: 900px;
+        max-width: 1080px
     }
 
     .p-swiper-img__tag {
         padding: 1rem 0.8rem;
-        width: 310px;
+        width: 325px;
         font-size: rem(32);
     }
     .p-swiper-img__ttl {
+        max-width: calc(100% - min(340px, 49vw));
         font-size: rem(40);
         margin-top: 0.75rem;
     }

@@ -28,7 +28,7 @@
                             <li class="p-products-item js-fade">
                                 <a href="#">
                                     <figure class="p-products-img">
-                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products.png'); ?>" alt="moringa soba">
+                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products_pauchi.png'); ?>" alt="moringa soba">
                                     </figure>
                                 </a>
                             </li>

@@ -80,38 +80,38 @@ exports.watch = series(watchTask);
 // //  モジュール読み込み
 // //----------------------------------------------------------------------
 
-// const imageMin = require("gulp-imagemin");
-// const mozjpeg = require("imagemin-mozjpeg");
-// const pngquant = require("imagemin-pngquant");
-// const changed = require("gulp-changed");
+const imageMin = require("gulp-imagemin");
+const mozjpeg = require("imagemin-mozjpeg");
+const pngquant = require("imagemin-pngquant");
+const changed = require("gulp-changed");
+
+// //----------------------------------------------------------------------
+// //  関数定義
+// //----------------------------------------------------------------------
+function imagemin(done) {
+    src("./img_origin/*")
+    .pipe(changed("./img/"))
+    .pipe(
+        imageMin([
+            pngquant({
+                quality: [0.6, 0.7],
+                speed: 1,
+            }),
+            mozjpeg({ quality: 65 }),
+            imageMin.svgo(),
+            imageMin.optipng(),
+            imageMin.gifsicle({ optimizationLevel: 3 }),
+        ])
+    )
+    .pipe(dest("./img/"));
+
+    done();
+}
 
 // // //----------------------------------------------------------------------
-// // //  関数定義
+// // //  タスク定義
 // // //----------------------------------------------------------------------
-// function imagemin(done) {
-//     src("./img_origin/*")
-//     .pipe(changed("./img/"))
-//     .pipe(
-//         imageMin([
-//             pngquant({
-//                 quality: [0.6, 0.7],
-//                 speed: 1,
-//             }),
-//             mozjpeg({ quality: 65 }),
-//             imageMin.svgo(),
-//             imageMin.optipng(),
-//             imageMin.gifsicle({ optimizationLevel: 3 }),
-//         ])
-//     )
-//     .pipe(dest("./img/"));
-
-//     done();
-// }
-
-// // // //----------------------------------------------------------------------
-// // // //  タスク定義
-// // // //----------------------------------------------------------------------
-// exports.imgin = imagemin;
+exports.imgin = imagemin;
 
 // /************************************************************************/
 // /*  END OF FILE                                                         */

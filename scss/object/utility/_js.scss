@@ -13,6 +13,24 @@
     opacity: 0;
 }
 
+
+// borderNon////////////////////////////
+.is-borderNone {
+    &:not(:last-child) {
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+    }
+}
+
+@include mq () {
+    .is-borderNone {
+        &:not(:last-child) {
+            border: none;
+            border-right: 2px solid rgba(255, 255, 255, 0);
+        }
+    }
+}
+
+
 //ハンバーガー////////////////////////
 .is-btn__active {
     span {

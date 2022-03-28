@@ -436,6 +436,7 @@ a.next.page-numbers {
   right: 0;
   top: 0;
   font-size: 1.5rem;
+  font-family: Fahkwang,"Fjalla One","Montserrat Subrayada","Concert One",cursive,sans-serif;
   color: #fff;
   border-style: solid;
   border-width: 0 80px 80px 0;
@@ -616,9 +617,11 @@ a.next.page-numbers {
   height: 55px;
   border: 2px solid #00b906;
   transition: 1s;
+  position: relative;
+  z-index: 1;
 }
 
-.p-cta-btn a::after {
+.p-cta-btn a::before {
   content: "＞";
   position: absolute;
   transition: .5s;
@@ -640,13 +643,35 @@ a.next.page-numbers {
   box-shadow: 3px 3px 10px #2c3848;
 }
 
-.p-cta-btn a:hover::after {
+.p-cta-btn a:hover::before {
   content: "＞";
   right: 14%;
 }
 
 .p-cta-btn a:hover span {
   color: #000;
+}
+
+.p-cta-btn a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #fff;
+  border-radius: 1.5625rem;
+  transition: all .5s ease-in-out;
+}
+
+.p-cta-btn a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.p-cta-btn a:active {
+  top: 2px;
 }
 
 .p-footer-nav {
@@ -666,16 +691,40 @@ a.next.page-numbers {
 .p-footer-nav__item {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  transition: 1s;
 }
 
 .p-footer-nav__item a {
+  display: inline-block;
   color: #fff;
   font-weight: 700;
-  transition: all .5s ease-in-out;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.p-footer-nav__item a:hover {
-  text-shadow: 2px 2px 10px #c8c8c8,-2px 2px 10px #c8c8c8,2px -2px 10px #c8c8c8,-2px -2px 10px #c8c8c8;
+.p-footer-nav__item a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scale(0,1);
+  transform-origin: top top;
+  transition: transform .5s;
+}
+
+.p-footer-nav__item a:hover::after {
+  transform-origin: top top;
+  transform: scale(1,1);
+}
+
+.p-footer-nav__item a::after {
+  bottom: -.25rem;
+  height: .1rem;
+  transition: transform 1s;
 }
 
 .p-footer-nav__item:not(:last-child) {
@@ -723,11 +772,6 @@ a.next.page-numbers {
 
 .p-footer-bottom__item a {
   font-size: max(.75rem,3.8vw);
-  transition: all .5s ease-in-out;
-}
-
-.p-footer-bottom__item a:hover {
-  text-shadow: 2px 2px 10px #c8c8c8,-2px 2px 10px #c8c8c8,2px -2px 10px #c8c8c8,-2px -2px 10px #c8c8c8;
 }
 
 .l-footer-copy {
@@ -813,7 +857,7 @@ a.next.page-numbers {
 .p-header-nav__item:not(:last-child) a::after {
   z-index: -1;
   bottom: -.25rem;
-  height: .8rem;
+  height: .1rem;
   transition: transform 1s;
 }
 
@@ -829,17 +873,37 @@ a.next.page-numbers {
   display: block;
   color: #fff;
   background-color: #00b906;
+  border: 1px solid #00b906;
   border-radius: 5px;
   line-height: 3.5rem;
-  box-shadow: 2px 2px 5px #2c3848;
-  border: 2px solid #00b906;
-  transition: 1s;
+  position: relative;
+  z-index: 1;
+}
+
+.p-header-nav__item:last-child a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #fff;
+  border-radius: .3125rem;
+  transition: all .5s ease-in-out;
+}
+
+.p-header-nav__item:last-child a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.p-header-nav__item:last-child a:active {
+  top: 2px;
 }
 
 .p-header-nav__item:last-child a:hover {
-  background-color: #fff;
   color: #00b906;
-  box-shadow: 3px 3px 10px #2c3848;
 }
 
 .p-header-nav__item a {
@@ -1452,13 +1516,12 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
 
 .p-recipe-tab {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   background-color: #298800;
   height: 4rem;
   width: calc((100% - 16px)/ 5);
   border-radius: 0 10px 0 0;
   padding-right: .25rem;
-  padding-bottom: .5rem;
   transition: all .5s ease;
   cursor: pointer;
 }
@@ -1471,7 +1534,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   color: #fff;
   font-size: min(.875rem,3.75vw);
   font-weight: 700;
-  margin-left: auto;
+  margin: 0 auto;
   text-align: end;
 }
 
@@ -2000,6 +2063,10 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   opacity: 0;
 }
 
+.is-borderNone:not(:last-child) {
+  border-bottom: 2px solid rgba(255,255,255,0);
+}
+
 .is-btn__active span {
   top: 0;
   bottom: 0;
@@ -2349,7 +2416,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   }
 
   .p-swiper-img__tag {
-    width: 2px;
+    width: 210px;
     font-size: 1.25rem;
   }
 
@@ -2386,7 +2453,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   }
 
   .p-recipe-tab:nth-child(4) p {
-    width: 6.625rem;
+    width: 5.625rem;
   }
 
   .p-recipe-tab:not(:last-child) {
@@ -2538,6 +2605,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
 
   .p-footer-nav__item {
     padding: .5rem 1rem;
+    border-bottom: none;
   }
 
   .p-footer-nav__item a {
@@ -2546,7 +2614,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   }
 
   .p-footer-nav__item:not(:last-child) {
-    border-bottom: none;
+    border: none;
     border-right: 2px solid #fff;
   }
 
@@ -2582,8 +2650,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
 
   .p-header-nav__item:not(:last-child) {
     margin-bottom: 0;
-    margin-right: 1rem;
-    padding-bottom: 0;
+    padding: 1.25rem;
     border-bottom: none;
   }
 
@@ -2591,11 +2658,6 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
     width: auto;
     padding-right: 0;
     padding-left: 0;
-  }
-
-  .p-header-nav__item:not(:last-child) a::after {
-    bottom: -.25rem;
-    height: .8rem;
   }
 
   .p-header-nav__item a {
@@ -2766,6 +2828,11 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   .u-db-tb {
     display: block;
   }
+
+  .is-borderNone:not(:last-child) {
+    border: none;
+    border-right: 2px solid rgba(255,255,255,0);
+  }
 }
 
 @media screen and (min-width:1280px) {
@@ -2857,16 +2924,17 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   }
 
   .p-swiper-img__meta {
-    max-width: 900px;
+    max-width: 1080px;
   }
 
   .p-swiper-img__tag {
     padding: 1rem .8rem;
-    width: 310px;
+    width: 325px;
     font-size: 2rem;
   }
 
   .p-swiper-img__ttl {
+    max-width: calc(100% - min(340px,49vw));
     font-size: 2.5rem;
     margin-top: .75rem;
   }
