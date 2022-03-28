@@ -46,7 +46,7 @@
             padding-right: 0.5rem;
             padding-left: 0.5rem;
             transition: color 1s;
-            @include txt-border($green);
+            @include txt-border($d-green);
             &::after {
                 z-index: -1;
                 bottom: -0.25rem;
@@ -63,13 +63,13 @@
         a {
             display: block;
             color: $white;
-            background-color: $green;
-            border: 1px solid $green;
+            background-color: $d-green;
+            border: 1px solid $d-green;
             border-radius: 5px;
             line-height: calc(3.75rem - rem(4));
             @include btn-anime($white, rem(5));
             &:hover {
-                color: $green;
+                color: $d-green;
             }
         }
     }

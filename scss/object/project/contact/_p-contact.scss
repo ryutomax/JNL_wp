@@ -50,7 +50,7 @@
         font-size: 0.75rem;
     }
     &:focus {
-        border: solid rem(2.5) $green;
+        border: solid rem(2.5) $d-green;
     }
 }
 
@@ -96,7 +96,7 @@ input[type=radio] {
         top: 50%;
     }
     &::after {
-        background: $green;
+        background: $d-green;
         border-radius: 50%;
         content: '';
         display: block;
@@ -111,7 +111,7 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + .mwform-radio-field-text::before {
-    border-color: $green;
+    border-color: $d-green;
 }
 
 input[type=radio]:checked + .mwform-radio-field-text::after {
@@ -134,7 +134,7 @@ input[type=radio]:checked + .mwform-radio-field-text::after {
         color: $MD-gray;
     }
     &:focus {
-        border: solid rem(2.5) $green;
+        border: solid rem(2.5) $d-green;
     }
 }
 
@@ -188,8 +188,8 @@ span.mwform-checkbox-field-text {
         top: 50%;
     }
     &::after {
-        border-right: 3px solid $green;
-        border-bottom: 3px solid $green;
+        border-right: 3px solid $d-green;
+        border-bottom: 3px solid $d-green;
         content: '';
         display: block;
         height: 12px;
@@ -213,18 +213,26 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 //送信ボタン/////////////
 
 .p-contact-submit {
-    text-align: center;
+    text-align: center; //
+    display: flex;
+    flex-direction: column-reverse; //
+    justify-content: center;
 }
 
 .p-contact-btn {
     width: 200px;
     height: 50px;
-    background-color: $green;
+    background-color: $d-green;
     cursor: pointer;
     padding: 0;
     z-index: 0;
-    margin: 0 auto;
     border-radius: rem(4);
+    color: $white;
+    margin: 0 auto;  //
+    font-weight: bold;
+    &:last-child {
+        margin-bottom: rem(32); //
+    }
 }
 
 .p-contact-btn__input {
@@ -261,6 +269,18 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 /////////////////////////////////////
 
 @include mq () {
+    .p-contact-submit {
+        flex-direction: row-reverse; //
+    }
+    .p-contact-btn {
+        margin: 0;  //
+        &:first-child {
+            margin: 0 rem(32);
+        }
+        &:last-child {
+            margin: 0 rem(32);
+        }
+    }
     .p-contact-thanks {
         font-size: rem(24);
     }

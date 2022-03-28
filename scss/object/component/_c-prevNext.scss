@@ -21,14 +21,14 @@
     a {
         display: inline-block;
         font-size: rem(20);
-        color: $green;
+        color: $d-green;
         width: 100%;
         padding: rem(16) rem(8);
-        border: 2px solid $green;
+        border: 2px solid $d-green;
         border-radius: rem(4);
         transition: 1s;
         &:hover {
-            background-color: $green;
+            background-color: $d-green;
             color: $white;
         }
     }

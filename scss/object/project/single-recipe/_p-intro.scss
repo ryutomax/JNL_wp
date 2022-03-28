@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-intro {
-    background-color: $green;
+    background-color: $d-green;
 }
 
 .p-intro-img {
@@ -20,7 +20,7 @@
     background-color: $white;
     padding: 0.5rem;
     p {
-        color: $green;
+        color: $d-green;
         &::before {
             content: "Style";
             text-transform: uppercase;

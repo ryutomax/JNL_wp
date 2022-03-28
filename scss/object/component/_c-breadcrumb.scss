@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .c-breadcrumb {
-    background-color: $green;
+    background-color: $d-green;
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -22,7 +22,7 @@
     a {
         @include txt-border ($white);
         &::after {
-            bottom: 3.2px;
+            bottom: rem(-0.4);
             height: 1px;
         }
     }

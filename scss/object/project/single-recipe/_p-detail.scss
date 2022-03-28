@@ -114,10 +114,14 @@
         display: block;
         color: $white;
         font-weight: bold;
-        background-color: $green;
+        background-color: $d-green;
+        border: 2px solid $d-green;
         border-radius: 5px;
         line-height: calc(2.75rem - rem(4));
-        @include btn-anime-2;
+        @include btn-anime($white, rem(5));
+        &:hover {
+            color: $d-green;
+        }
     }
 }
 

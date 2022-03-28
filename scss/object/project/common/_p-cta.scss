@@ -37,7 +37,7 @@
     margin:  0 auto;
     a {
         display: inline-block;
-        background-color: $green;
+        background-color: $d-green;
         position: relative;
         padding-top: calc(1.2rem - 2px);        //borderの幅分
         padding-right: calc(1.05rem - 2px);
@@ -49,7 +49,7 @@
         border-radius: 25px;
         width: 100%;
         height: 55px;
-        border: 2px solid $green;
+        border: 2px solid $d-green;
         transition: 1s;
         &::before{
             content: "＞";
@@ -67,7 +67,7 @@
         }
         &:hover {
             background-color: rgba(255, 255, 255, 0.5);
-            color: $green;
+            color: $d-green;
             box-shadow: 3px 3px 10px $navy;
             &::before {
                 content: "＞";
