@@ -6,17 +6,17 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/******/ (function() { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/js/entry.js":
 /*!*************************!*\
   !*** ./src/js/entry.js ***!
   \*************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/script */ \"./src/js/modules/script.js\");\n/* harmony import */ var _modules_script__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_script__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_plugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/plugin */ \"./src/js/modules/plugin.js\");\n/* harmony import */ var _modules_plugin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_plugin__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scroll */ \"./src/js/modules/scroll.js\");\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_scroll__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n\n_modules_script__WEBPACK_IMPORTED_MODULE_0___default()();\n_modules_plugin__WEBPACK_IMPORTED_MODULE_1___default()();\n_modules_scroll__WEBPACK_IMPORTED_MODULE_2___default()();\n\n\n//# sourceURL=webpack://engress/./src/js/entry.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/script */ \"./src/js/modules/script.js\");\n/* harmony import */ var _modules_script__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_script__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_plugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/plugin */ \"./src/js/modules/plugin.js\");\n/* harmony import */ var _modules_plugin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_plugin__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scroll */ \"./src/js/modules/scroll.js\");\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_scroll__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n\n_modules_script__WEBPACK_IMPORTED_MODULE_0___default()();\n_modules_plugin__WEBPACK_IMPORTED_MODULE_1___default()();\n_modules_scroll__WEBPACK_IMPORTED_MODULE_2___default()();\n\n\n//# sourceURL=webpack://jnl_recipe/./src/js/entry.js?");
 
 /***/ }),
 
@@ -24,9 +24,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /*!**********************************!*\
   !*** ./src/js/modules/plugin.js ***!
   \**********************************/
-/***/ (function() {
+/***/ (() => {
 
-eval("// swiper////////////////////////////////\n\nconst mySwiper = new Swiper('.swiper-container', {\n    speed: 3000,\n    effect: 'fade',\n    fadeEffect: {\n        crossFade: true\n    },\n    loop: true,\n\tautoplay: {\n\t\tdelay: 3000,\n\t\tstopOnLastSlide: false,\n\t\tdisableOnInteraction: false,\n\t\treverseDirection: false\n\t},\n    navigation: {\n\t\tnextEl: '.swiper-button-next',\n\t\tprevEl: '.swiper-button-prev'\n\t}\n});\n\n// swiper 終了////////////////////////////////\n\n// AOS/////////////////////////////////\n\nAOS.init({\n    once: true,\n});\n\n// AOS 終了////////////////////////////\n\n//# sourceURL=webpack://engress/./src/js/modules/plugin.js?");
+eval("// swiper////////////////////////////////\n\nconst mySwiper = new Swiper('.swiper-container', {\n    speed: 3000,\n    effect: 'fade',\n    fadeEffect: {\n        crossFade: true\n    },\n    loop: true,\n\tautoplay: {\n\t\tdelay: 3000,\n\t\tstopOnLastSlide: false,\n\t\tdisableOnInteraction: false,\n\t\treverseDirection: false\n\t},\n    navigation: {\n\t\tnextEl: '.swiper-button-next',\n\t\tprevEl: '.swiper-button-prev'\n\t}\n});\n\n// swiper 終了////////////////////////////////\n\n// AOS/////////////////////////////////\n\nAOS.init({\n    once: true,\n});\n\n// AOS 終了////////////////////////////\n\n//# sourceURL=webpack://jnl_recipe/./src/js/modules/plugin.js?");
 
 /***/ }),
 
@@ -34,9 +34,9 @@ eval("// swiper////////////////////////////////\n\nconst mySwiper = new Swiper('
 /*!**********************************!*\
   !*** ./src/js/modules/script.js ***!
   \**********************************/
-/***/ (function() {
+/***/ (() => {
 
-eval("// ハンバーガーメニュー\n\n$(\".js-nav__btn\").click(function () {//ボタンがクリックされたら\n    $(this).toggleClass('is-btn__active');//ボタン自身に activeクラスを付与し\n    $(\".js-nav__open\").toggleClass('is-menu__open');//ナビゲーションにpanelactiveクラスを付与\n});\n\n$(\"#g-nav a\").click(function () {//ナビゲーションのリンクがクリックされたら\n    $(\".js-nav__btn\").removeClass('is-btn__active');//ボタンの activeクラスを除去し\n    $(\".js-nav__open\").removeClass('is-menu__open');//ナビゲーションのpanelactiveクラスも除去\n});\n\n// ハンバーガーメニュー終了/////////////////////////////////////////////\n\n// IE対応 object-fit ////////////////////////\n\n(function ($) {\n    // image bg\n    $.fn.imageBg = function () {\n        var $this = this;\n        var imgSrc = $this.find('img').attr('src');\n        $this.find('img').hide();\n        $this.css({\n            backgroundImage: 'url(\"' + imgSrc + '\")'\n        });\n    }\n    //↓実行\n    $('.js-img-bg').each(function () {\n        $(this).imageBg();\n    });\n})(jQuery);\n\n// IE対応 object-fit 終了////////////////////////\n\n\n// タブ切り替え//////////////////////////////////////////////\n\n$(function() {\n\t$('.js-tab').click(function() {\n\t\tvar index02 = $('.js-tab').index(this);\n\t\t$('.js-tab-cont').css('display','none');\n\t\t$('.js-tab-cont').eq(index02).fadeIn(2000);\n\t\t$('.js-tab').removeClass('is-tab-select');\n\t\t$(this).addClass('is-tab-select');\n\t});\n    // 初期状態//\n\tvar index01 = $('.js-tab.is-tab-select').index();\n\t$('.js-tab-cont').css('display','none');\n\t$('.js-tab-cont').eq(index01).fadeIn(2000);\n});\n\n// タブ切り替え 終了/////////////////////////////////////////\n\n\n// パンくずリスト<br>削除///////////////////////\n$(function() {\n    $('.current-item').children('br').remove();\n});\n// パンくずリスト<br>削除 終了///////////////////////\n\n//Site reviewsの配置入れ替え///////////////////\n$(function() {\n    $('.glsr-field-textarea').insertAfter('.glsr-field-text');\n});\n//Site reviewsの配置入れ替え 終了///////////////////\n\n\n//正規表現 [カスタムフィールド]/////////////////////////////////\n\n$(function() {\n    var str = document.getElementById(\"tableTtl\").innerHTML;\n\n    str = str.replace(/＜(.*?)＞/g,'<br><b class=\"p-detail-tableTtl\">＜$1＞</b>');\n\n    document.getElementById(\"tableTtl\").innerHTML = str;\n});\n\n$(function() {\n    var str = document.getElementById(\"tableTtl2\").innerHTML;\n\n    str = str.replace(/＜(.*?)＞/g,'<br><b class=\"p-detail-tableTtl\">＜$1＞</b>');\n\n    document.getElementById(\"tableTtl2\").innerHTML = str;\n});\n\n\n// getElementsByClassName = class\n\n// getElementsByTagName = HTMLtag\n\n// getElementById = id\n\n//正規表現 end ////////////////////////////////////\n\n//# sourceURL=webpack://engress/./src/js/modules/script.js?");
+eval("// ハンバーガーメニュー\n\n$(\".js-nav__btn\").click(function () {//ボタンがクリックされたら\n    $(this).toggleClass('is-btn__active');//ボタン自身に activeクラスを付与し\n    $(\".js-nav__open\").toggleClass('is-menu__open');//ナビゲーションにpanelactiveクラスを付与\n});\n\n$(\"#g-nav a\").click(function () {//ナビゲーションのリンクがクリックされたら\n    $(\".js-nav__btn\").removeClass('is-btn__active');//ボタンの activeクラスを除去し\n    $(\".js-nav__open\").removeClass('is-menu__open');//ナビゲーションのpanelactiveクラスも除去\n});\n\n// ハンバーガーメニュー終了/////////////////////////////////////////////\n\n// IE対応 object-fit ////////////////////////\n\n(function ($) {\n    // image bg\n    $.fn.imageBg = function () {\n        var $this = this;\n        var imgSrc = $this.find('img').attr('src');\n        $this.find('img').hide();\n        $this.css({\n            backgroundImage: 'url(\"' + imgSrc + '\")'\n        });\n    }\n    //↓実行\n    $('.js-img-bg').each(function () {\n        $(this).imageBg();\n    });\n})(jQuery);\n\n// IE対応 object-fit 終了////////////////////////\n\n\n// タブ切り替え//////////////////////////////////////////////\n\n$(function() {\n\t$('.js-tab').click(function() {\n\t\tvar index02 = $('.js-tab').index(this);\n\t\t$('.js-tab-cont').css('display','none');\n\t\t$('.js-tab-cont').eq(index02).fadeIn(2000);\n\t\t$('.js-tab').removeClass('is-tab-select');\n\t\t$(this).addClass('is-tab-select');\n\t});\n    // 初期状態//\n\tvar index01 = $('.js-tab.is-tab-select').index();\n\t$('.js-tab-cont').css('display','none');\n\t$('.js-tab-cont').eq(index01).fadeIn(2000);\n});\n\n// タブ切り替え 終了/////////////////////////////////////////\n\n\n// パンくずリスト<br>削除///////////////////////\n$(function() {\n    $('.current-item').children('br').remove();\n});\n// パンくずリスト<br>削除 終了///////////////////////\n\n//Site reviewsの配置入れ替え///////////////////\n$(function() {\n    $('.glsr-field-textarea').insertAfter('.glsr-field-text');\n});\n//Site reviewsの配置入れ替え 終了///////////////////\n\n\n//正規表現 [カスタムフィールド]/////////////////////////////////\n\n$(function() {\n    var str = document.getElementById(\"tableTtl\").innerHTML;\n\n    str = str.replace(/＜(.*?)＞/g,'<br><b class=\"p-detail-tableTtl\">＜$1＞</b>');\n\n    document.getElementById(\"tableTtl\").innerHTML = str;\n});\n\n$(function() {\n    var str = document.getElementById(\"tableTtl2\").innerHTML;\n\n    str = str.replace(/＜(.*?)＞/g,'<br><b class=\"p-detail-tableTtl\">＜$1＞</b>');\n\n    document.getElementById(\"tableTtl2\").innerHTML = str;\n});\n\n\n// getElementsByClassName = class\n\n// getElementsByTagName = HTMLtag\n\n// getElementById = id\n\n//正規表現 end ////////////////////////////////////\n\n//# sourceURL=webpack://jnl_recipe/./src/js/modules/script.js?");
 
 /***/ }),
 
@@ -44,9 +44,9 @@ eval("// ハンバーガーメニュー\n\n$(\".js-nav__btn\").click(function ()
 /*!**********************************!*\
   !*** ./src/js/modules/scroll.js ***!
   \**********************************/
-/***/ (function() {
+/***/ (() => {
 
-eval("// スムーススクロール///////////////////////////////////////////////\n$(function ($) {\n    $('.js-news').on('click',function(){\n        const faqTop = $('.p-news').offset().top;\n        $(\"html,body\").animate({scrollTop: faqTop-80},1000);\n    });\n    $('.js-recipe').on('click',function(){\n        const faqTop = $('.p-recipe').offset().top;\n        $(\"html,body\").animate({scrollTop: faqTop-80},1000);\n    });\n    $('.js-products').on('click',function(){\n        const faqTop = $('.p-products').offset().top;\n        $(\"html,body\").animate({scrollTop: faqTop-80},1000);\n    });\n});\n// スムースクロール終了/////////////////////////////////////////////\n\n\n// ヘッダー変形/////////////////////////////////////////////\n\nfunction FixedAnime() {\n    $(window).scroll(function () {\n        var headerH = $(\".js-header-scroll\").outerHeight(true);      //headerの高さを取得\n        var $header = $('.js-header-scroll');\n\n        // header高以上スクロールしたら処理\n        if ($(window).scrollTop() > headerH) {\n        $header.addClass('is-header__op06');\n        $header.addClass('is-header__h65');\n        $header.addClass('is-header__slidein');\n        $header.removeAttr('data-aos');       //AOS削除\n\n        } else {\n\n        $header.removeClass('is-header__op06');\n        $header.removeClass('is-header__h65');\n        $header.removeClass('is-header__slidein');\n\n        }\n    });\n\t\t/* ウィンドウサイズ860以上の処理を記述 */\n    $(window).on('load scroll', function () {\n        if (window.matchMedia('(min-width: 860px)').matches) {\n            var $logo = $('.js-header-h65-scroll');\n            if ($(window).scrollTop() > 200) {\n                $logo.addClass('is-header__h65');\n        }else {\n            $logo.removeClass('is-header__h65');;\n        }}\n    });\n}\n//スクロール途中からヘッダーの高さを変化させる関数を呼ぶ\n$(window).on('load', function () {\n\tFixedAnime();\n});\n\n// ヘッダー変形 終了/////////////////////////////////////////////\n\n\n// スクロールアニメ//////////////////////////\n\n//[waveAnime]\n//|||||||||||||||||||||||||||||||||||||||||||||\nfunction waveAnime(){\n    $('.js-wave').each(function(){\n        const elemPos = $(this).offset().top-50;//要素より、50px上の\n        const scroll = $(window).scrollTop();\n        const windowHeight = $(window).height();\n        if (scroll >= elemPos - windowHeight){\n            $(this).addClass('is-show__wave');// 画面内に入ったらfadeInというクラス名を追記\n        } else {\n            $(this).removeClass('is-show__wave');// 画面外に出たらfadeInというクラス名を外す\n        }\n    });\n}\n// 画面をスクロールをしたら動く場合の記述\n    $(window).scroll(function (){ waveAnime(); });\n\n// 画面が読み込まれたらすぐに動く場合の記述\n    $(window).on('load', function(){ waveAnime(); });\n\n//[fadeUpAnime]\n//|||||||||||||||||||||||||||||||||||||||||||||\n    function fadeUpAnime(){\n    $('.js-fade').each(function(){\n        const elemPos = $(this).offset().top+100;//要素より、50px上の\n        const scroll = $(window).scrollTop();\n        const windowHeight = $(window).height();\n        if (scroll >= elemPos - windowHeight){\n            $(this).addClass('is-show__fadeup');;// 画面内に入ったらfadeInというクラス名を追記\n        }\n    });\n}\n// 画面をスクロールをしたら動く場合の記述\n    $(window).scroll(function (){ fadeUpAnime(); });\n\n// 画面が読み込まれたらすぐに動く場合の記述\n    $(window).on('load', function(){ fadeUpAnime(); });\n\n// スクロールアニメ 終了//////////////////////////////////\n\n//# sourceURL=webpack://engress/./src/js/modules/scroll.js?");
+eval("// スムーススクロール///////////////////////////////////////////////\n$(function ($) {\n    $('.js-news').on('click',function(){\n        const faqTop = $('.p-news').offset().top;\n        $(\"html,body\").animate({scrollTop: faqTop-80},1000);\n    });\n    $('.js-recipe').on('click',function(){\n        const faqTop = $('.p-recipe').offset().top;\n        $(\"html,body\").animate({scrollTop: faqTop-80},1000);\n    });\n    $('.js-products').on('click',function(){\n        const faqTop = $('.p-products').offset().top;\n        $(\"html,body\").animate({scrollTop: faqTop-80},1000);\n    });\n});\n// スムースクロール終了/////////////////////////////////////////////\n\n\n// ヘッダー変形/////////////////////////////////////////////\n\nfunction FixedAnime() {\n    $(window).scroll(function () {\n        var headerH = $(\".js-header-scroll\").outerHeight(true);      //headerの高さを取得\n        var $header = $('.js-header-scroll');\n\n        // header高以上スクロールしたら処理\n        if ($(window).scrollTop() > headerH) {\n        $header.addClass('is-header__op06');\n        $header.addClass('is-header__h65');\n        $header.addClass('is-header__slidein');\n        $header.removeAttr('data-aos');       //AOS削除\n\n        } else {\n\n        $header.removeClass('is-header__op06');\n        $header.removeClass('is-header__h65');\n        $header.removeClass('is-header__slidein');\n\n        }\n    });\n\t\t/* ウィンドウサイズ860以上の処理を記述 */\n    $(window).on('load scroll', function () {\n        if (window.matchMedia('(min-width: 860px)').matches) {\n            var $logo = $('.js-header-h65-scroll');\n            if ($(window).scrollTop() > 200) {\n                $logo.addClass('is-header__h65');\n        }else {\n            $logo.removeClass('is-header__h65');;\n        }}\n    });\n}\n//スクロール途中からヘッダーの高さを変化させる関数を呼ぶ\n$(window).on('load', function () {\n\tFixedAnime();\n});\n\n// ヘッダー変形 終了/////////////////////////////////////////////\n\n\n// スクロールアニメ//////////////////////////\n\n//[waveAnime]\n//|||||||||||||||||||||||||||||||||||||||||||||\nfunction waveAnime(){\n    $('.js-wave').each(function(){\n        const elemPos = $(this).offset().top-50;//要素より、50px上の\n        const scroll = $(window).scrollTop();\n        const windowHeight = $(window).height();\n        if (scroll >= elemPos - windowHeight){\n            $(this).addClass('is-show__wave');// 画面内に入ったらfadeInというクラス名を追記\n        } else {\n            $(this).removeClass('is-show__wave');// 画面外に出たらfadeInというクラス名を外す\n        }\n    });\n}\n// 画面をスクロールをしたら動く場合の記述\n    $(window).scroll(function (){ waveAnime(); });\n\n// 画面が読み込まれたらすぐに動く場合の記述\n    $(window).on('load', function(){ waveAnime(); });\n\n//[fadeUpAnime]\n//|||||||||||||||||||||||||||||||||||||||||||||\n    function fadeUpAnime(){\n    $('.js-fade').each(function(){\n        const elemPos = $(this).offset().top+100;//要素より、50px上の\n        const scroll = $(window).scrollTop();\n        const windowHeight = $(window).height();\n        if (scroll >= elemPos - windowHeight){\n            $(this).addClass('is-show__fadeup');;// 画面内に入ったらfadeInというクラス名を追記\n        }\n    });\n}\n// 画面をスクロールをしたら動く場合の記述\n    $(window).scroll(function (){ fadeUpAnime(); });\n\n// 画面が読み込まれたらすぐに動く場合の記述\n    $(window).on('load', function(){ fadeUpAnime(); });\n\n// スクロールアニメ 終了//////////////////////////////////\n\n//# sourceURL=webpack://jnl_recipe/./src/js/modules/scroll.js?");
 
 /***/ })
 
@@ -78,44 +78,44 @@ eval("// スムーススクロール////////////////////////////////////////////
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
+/******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 		__webpack_require__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
+/******/ 		__webpack_require__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	

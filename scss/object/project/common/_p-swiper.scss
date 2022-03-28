@@ -68,7 +68,6 @@
     text-shadow: 0.5px  0.5px 0px #000000;
     margin-top: 0.25rem;
     margin-left: 1rem;
-    background: #00b90654;
 }
 
 @include mq (sp) {
@@ -85,7 +84,7 @@
         max-width: 800px;
     }
     .p-swiper-img__tag {
-        width: 205px;
+        width: 210px;
         font-size: rem(20);
     }
     .p-swiper-img__ttl {

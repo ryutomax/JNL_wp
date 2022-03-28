@@ -12,7 +12,7 @@
                         'post_status'=> 'publish',
                         'post_type'=> 'recipe',
                         'order'=>'DESC',
-                        'posts_per_page'=>3,
+                        'posts_per_page'=>6,
                         'paged'=>$paged
                     );
                 $the_query = new WP_Query($query_args);

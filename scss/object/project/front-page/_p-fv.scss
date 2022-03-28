@@ -27,6 +27,7 @@
 	transform: translate(-50%, -50%);
     p {
         font-size: rem(64);
+        font-family: $ff_eng;
         text-transform: uppercase;
         color: $white;
         &:last-child {

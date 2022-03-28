@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;
+@import url(https://fonts.googleapis.com/css2?family=Concert+One&family=Fahkwang:wght@600&family=Fjalla+One&family=Montserrat+Subrayada&family=Zen+Maru+Gothic:wght@400;
 
 700&display=swap);* {
   box-sizing: border-box;
@@ -98,7 +98,7 @@ select {
 body,
 html {
   color: #000;
-  font-family: "游ゴシック体",YuGothic,"游ゴシック","Yu Gothic","メイリオ","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif,"Noto Sans JP",sans-serif;
+  font-family: "Zen Maru Gothic","游ゴシック体",YuGothic,"游ゴシック","Yu Gothic","メイリオ","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif,"Noto Sans JP",sans-serif;
 }
 
 a {
@@ -114,6 +114,11 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+input,
+textarea {
+  font-family: inherit;
 }
 
 .l-header {
@@ -464,6 +469,7 @@ a.next.page-numbers {
   content: "Style";
   text-transform: uppercase;
   font-size: 2rem;
+  font-family: Fahkwang,"Fjalla One","Montserrat Subrayada","Concert One",cursive,sans-serif;
 }
 
 .c-recipe-coming {
@@ -500,6 +506,7 @@ a.next.page-numbers {
 .c-sec-ttl h3 {
   font-size: 2rem;
   font-weight: 700;
+  font-family: Fahkwang,"Fjalla One","Montserrat Subrayada","Concert One",cursive,sans-serif;
   margin-bottom: .5rem;
   text-transform: uppercase;
 }
@@ -912,6 +919,7 @@ a.next.page-numbers {
   height: 50px;
   color: #fff;
   font-size: min(2rem,7.2vw);
+  font-family: Fahkwang,"Fjalla One","Montserrat Subrayada","Concert One",cursive,sans-serif;
   text-transform: uppercase;
   padding: .8rem .2rem;
   box-shadow: 2px 2px 5px #2c3848;
@@ -1006,7 +1014,6 @@ a.next.page-numbers {
   text-shadow: .5px .5px 0 #000;
   margin-top: .25rem;
   margin-left: 1rem;
-  background: #00b90654;
 }
 
 .p-contact-inner {
@@ -1244,7 +1251,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
 .p-contact-btn {
   width: 200px;
   height: 50px;
-  background-color: #298800;
+  background-color: #00b906;
   cursor: pointer;
   padding: 0;
   z-index: 0;
@@ -1313,6 +1320,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
 
 .p-fv-copy p {
   font-size: 4rem;
+  font-family: Fahkwang,"Fjalla One","Montserrat Subrayada","Concert One",cursive,sans-serif;
   text-transform: uppercase;
   color: #fff;
 }
@@ -1909,6 +1917,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   content: "Style";
   text-transform: uppercase;
   font-size: 1.5rem;
+  font-family: Fahkwang,"Fjalla One","Montserrat Subrayada","Concert One",cursive,sans-serif;
 }
 
 .p-intro-ttl__sub {
@@ -2340,7 +2349,7 @@ input[type=checkbox]:checked+span.mwform-checkbox-field-text::after {
   }
 
   .p-swiper-img__tag {
-    width: 205px;
+    width: 2px;
     font-size: 1.25rem;
   }
 

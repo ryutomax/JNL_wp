@@ -3,13 +3,12 @@
 
 html, body {
     color: $black;
-    font-family: $ff;
+    font-family: $ff_jp;
 }
 
 a {
     color: $black;
 }
-
 
 * {
     margin: 0;
@@ -20,4 +19,8 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+
+input,textarea {
+    font-family: inherit;
 }

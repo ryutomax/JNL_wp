@@ -7,6 +7,10 @@ module.exports = {
     mode: 'development',
     /* エントリーポイントの設定 */
     entry: './src/js/entry.js',
+    devServer: {
+        statics: "dist",
+        open: true
+    },
     /* 出力の設定 */
     output: {
         /* 出力するファイル名 */
