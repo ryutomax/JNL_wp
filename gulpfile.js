@@ -28,7 +28,9 @@ function compile(done) {
                 includePaths: ['./scss/']
             }
         ))                                 // sassコンパイル
-        .pipe(autoprefixer())              // ベンダープレフィック自動付与
+        .pipe(autoprefixer({
+            cascade: false
+        }))                                 // ベンダープレフィック自動付与(sass後)
         .pipe(media())                     // メディアクエリ統合
         .pipe(dest("./css_origin/"));
 

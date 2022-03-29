@@ -41,11 +41,17 @@
 }
 
 @include mq (sp) {
+    .p-privacy {
+        padding-right: rem(32);
+        padding-left: rem(32);
+    }
+
     .p-privacy-ttl {
         h3 {
             font-size: rem(32);
         }
     }
+
     .p-privacy-cont {
         padding: rem(32) rem(16);
         h1,h2,h3,h4,h5,h6,p,ul,ol,img,a,div,

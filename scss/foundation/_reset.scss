@@ -1,5 +1,4 @@
 * {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -48,12 +47,9 @@ textarea {
     display: block;
     outline: none;
 }
-
 select {
     background-color: transparent;
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     border: none;
     outline: none;
 }
