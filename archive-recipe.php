@@ -56,8 +56,8 @@
 
     </section>
 
-    <!-- prodactsCtaのテンプレート呼び出し -->
-    <?php get_template_part('template_parts/prodactsCta'); ?>
+    <!-- productsCtaのテンプレート呼び出し -->
+    <?php get_template_part('template_parts/productsCta'); ?>
 
 </main>
 

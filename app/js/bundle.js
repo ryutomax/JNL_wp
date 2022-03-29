@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \**********************************/
 /***/ (() => {
 
-eval("// swiper////////////////////////////////\n\nconst mySwiper = new Swiper('.swiper-container', {\n    speed: 3000,\n    effect: 'fade',\n    fadeEffect: {\n        crossFade: true\n    },\n    loop: true,\n\t// autoplay: {\n\t// \tdelay: 3000,\n\t// \tstopOnLastSlide: false,\n\t// \tdisableOnInteraction: false,\n\t// \treverseDirection: false\n\t// },\n    navigation: {\n\t\tnextEl: '.swiper-button-next',\n\t\tprevEl: '.swiper-button-prev'\n\t}\n});\n\n// swiper 終了////////////////////////////////\n\n// AOS/////////////////////////////////\n\nAOS.init({\n    once: true,\n});\n\n// AOS 終了////////////////////////////\n\n//# sourceURL=webpack://jnl_recipe/./src/js/modules/plugin.js?");
+eval("// swiper////////////////////////////////\nconst mySwiper = new Swiper('.swiper-container', {\n    speed: 3000,\n    effect: 'fade',\n    fadeEffect: {\n        crossFade: true\n    },\n    loop: true,\n\tautoplay: {\n\t\tdelay: 3000,\n\t\tstopOnLastSlide: false,\n\t\tdisableOnInteraction: false,\n\t\treverseDirection: false\n\t},\n    navigation: {\n\t\tnextEl: '.swiper-button-next',\n\t\tprevEl: '.swiper-button-prev'\n\t}\n});\n// swiper 終了////////////////////////////////\n\n// AOS/////////////////////////////////\nAOS.init({\n    once: true,\n});\n// AOS 終了////////////////////////////\n\n//# sourceURL=webpack://jnl_recipe/./src/js/modules/plugin.js?");
 
 /***/ }),
 

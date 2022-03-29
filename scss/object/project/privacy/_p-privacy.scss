@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.p-privacy-ttl {
+    h3 {
+        font-size: rem(28);
+    }
+}
+
+.p-privacy-cont {
+    max-width: rem(900);
+    background-color: $l-green;
+    border-radius: rem(10);
+    padding: rem(16) rem(8);
+    margin: 0 auto;
+    line-height: 1.5;
+
+    h1,h2,h3,h4,h5,h6,p,ul,ol,img,a,div,
+    .wp-block-quote {
+        margin-bottom: rem(32);
+    }
+    h2{
+        display: inline-block;
+        padding: 0.5rem 0;
+        font-size: rem(20);
+    }
+    ol {
+        margin-left: rem(16);
+    }
+    li {
+        list-style-type: decimal;
+        list-style-position: inside;
+        text-indent: -1em;
+        padding-left: 1em;
+        ol {
+            margin-top: rem(16);
+        }
+        &:not(:last-child) {
+            margin-bottom: rem(8);
+        }
+    }
+}
+
+@include mq (sp) {
+    .p-privacy-ttl {
+        h3 {
+            font-size: rem(32);
+        }
+    }
+    .p-privacy-cont {
+        padding: rem(32) rem(16);
+        h1,h2,h3,h4,h5,h6,p,ul,ol,img,a,div,
+        .wp-block-quote {
+            margin-bottom: rem(32);
+        }
+        h2{
+            display: inline-block;
+            padding: 0.5rem 0;
+            font-size: rem(24);
+        }
+    }
+}
+
+@include mq () {
+    .p-privacy-cont {
+        padding: rem(64) rem(32);
+        h1,h2,h3,h4,h5,h6,p,ul,ol,img,a,div,
+        .wp-block-quote {
+            margin-bottom: rem(32);
+            font-size: rem(18);
+        }
+        h2{
+            display: inline-block;
+            padding: 0.5rem 0;
+            font-size: rem(28);
+        }
+    }
+}
+
+@include mq (pc) {
+}

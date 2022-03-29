@@ -1,5 +1,5 @@
 <!--
-    //prodactsCtaのテンプレートです
+    //productsCtaのテンプレートです
 -->
             <section class="p-products c-frame">
                 <div class="p-products-inner">

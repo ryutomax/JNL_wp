@@ -1,4 +1,3 @@
-        </main>
         <footer class="l-footer">
             <div class="l-footer-inner">
                 <nav class="p-footer-nav">
@@ -44,16 +43,16 @@
                         <!-- /.p-footer-sns -->
                         <nav class="p-footer-bottom__nav">
                             <ul class="p-footer-bottom__list">
-                                <li class="p-footer-bottom__item"><a href="<?php esc_url( home_url('/') );?>">お問い合わせ</a></li>
-                                <li class="p-footer-bottom__item"><a href="<?php esc_url( home_url('/') );?>">サイトマップ</a></li>
-                                <li class="p-footer-bottom__item"> <a href="<?php esc_url( home_url('/') );?>">個人情報保護について</a></li>
+                                <li class="p-footer-bottom__item"><a href="<?php echo esc_url( home_url('/contact') );?>">お問い合わせ</a></li>
+                                <li class="p-footer-bottom__item"><a href="<?php echo esc_url( home_url('/') );?>">サイトマップ</a></li>
+                                <li class="p-footer-bottom__item"> <a href="<?php echo esc_url( home_url('/privacypolicy') );?>">プライバシーポリシー</a></li>
                             </ul>
                             <ul class="p-footer-bottom__list">
-                                <li class="p-footer-bottom__item"><a href="<?php esc_url( home_url('/') );?>">ソーシャルメディアポリシー</a></li>
-                                <li class="p-footer-bottom__item"> <a href="<?php esc_url( home_url('/') );?>">ご利用規約</a></li>
+                                <li class="p-footer-bottom__item"><a href="<?php echo esc_url( home_url('/') );?>">ソーシャルメディアポリシー</a></li>
+                                <li class="p-footer-bottom__item"> <a href="<?php echo esc_url( home_url('/') );?>">ご利用規約</a></li>
                             </ul>
                             <ul class="p-footer-bottom__list">
-                                <li class="p-footer-bottom__item"><a href="<?php esc_url( home_url('/') );?>">アクセシビリティへの対応方針</a></li>
+                                <li class="p-footer-bottom__item"><a href="<?php echo esc_url( home_url('/') );?>">アクセシビリティへの対応方針</a></li>
                             </ul>
                         </nav>
                     </div>

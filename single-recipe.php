@@ -68,6 +68,7 @@
                         </h3>
                         <p>レシピ動画</p>
                     </div>
+                    <!-- /.p-content-ttl -->
                     <?php
                         $movie = esc_url(get_field('movie'));
                         if( !empty($movie) ):
@@ -162,8 +163,8 @@
                 <!-- /.p-detail-inner -->
             </section>
 
-            <!-- prodactsCtaのテンプレート呼び出し -->
-            <?php get_template_part('template_parts/prodactsCta'); ?>
+            <!-- productsCtaのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/productsCta'); ?>
 
         </main>
 

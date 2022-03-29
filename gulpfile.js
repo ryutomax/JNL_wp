@@ -28,26 +28,16 @@ function compile(done) {
                 includePaths: ['./scss/']
             }
         ))                                 // sassコンパイル
+        .pipe(autoprefixer())              // ベンダープレフィック自動付与
+        .pipe(media())                     // メディアクエリ統合
         .pipe(dest("./css_origin/"));
 
     done();
 }
 
-function clean(done) {
-    src(
-        "./css_origin/*.css",
-        )
-        .pipe(plumber())                   // watch中にエラーが発生してもwatchが止まらないようにする
-        .pipe(autoprefixer())              // ベンダープレフィック自動付与
-        .pipe(cleancss())                  // 圧縮 コードの不要なインデントや改行を削除
-        .pipe(media())                     // メディアクエリ統合
-        .pipe(dest("./css/"));
-
-    done();
-}
 function min(done) {
     src(
-        "./css/*.css",
+        "./css_origin/*.css",
         )
         .pipe(plumber())                   // watch中にエラーが発生してもwatchが止まらないようにする
         .pipe(cleancss())                  // 圧縮 コードの不要なインデントや改行を削除
@@ -63,7 +53,7 @@ function min(done) {
 //----------------------------------------------------------------------
 function watchTask(done) {
     // watch( "監視したいファイル(またはフォルダ)を指定" , 処理 );
-    watch("./scss/**/*.scss" , series(compile,clean,min));
+    watch("./scss/**/*.scss" , series(compile,min));
 }
 //----------------------------------------------------------------------
 //  タスク定義
