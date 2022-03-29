@@ -63,22 +63,24 @@
         color: $white;
         font-size: rem(20);
         background-color: $d-green;
+        border: rem(1) solid $d-green;
         border-radius: 5px;
         line-height: calc(3.75rem - rem(4));
         padding-right: rem(8);
-        @include btn-anime-2;
+        @include btn-anime($white, rem(5));
         &:hover {
-            &::after {
+            color: $d-green;
+            &::before {
                 content:"＞";
-                margin-left: rem(6);
+                right: rem(8);
             }
         }
-        &::after {
+        &::before {
             content:"＞";
             position: absolute;
             font-size: rem(24);
             font-weight: bold;
-            margin-left: rem(2);
+            right: rem(12);
             transition: 0.5s;
         }
     }

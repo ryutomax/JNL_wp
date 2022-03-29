@@ -227,11 +227,16 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     padding: 0;
     z-index: 0;
     border-radius: rem(4);
+    border: 1px solid $d-green;
     color: $white;
     margin: 0 auto;  //
     font-weight: bold;
     &:last-child {
         margin-bottom: rem(32); //
+    }
+    @include btn-anime ($white, rem(4));
+    &:hover {
+        color: $d-green;
     }
 }
 
@@ -246,6 +251,10 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     position: relative;
     z-index: 1;
     cursor: pointer;
+    transition: 0.7s;
+    &:hover {
+        color: $d-green;
+    }
 }
 
 /////////////////////////////////////
