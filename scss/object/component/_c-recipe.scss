@@ -9,7 +9,6 @@
     max-width: 500px;
     transition: 1s;
     &:hover {
-        box-shadow: 0px 0px 5px $d-green;
         opacity: 0.8;
     }
     &:not(:last-child) {

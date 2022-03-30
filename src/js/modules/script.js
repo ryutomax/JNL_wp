@@ -12,13 +12,6 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 
 // ハンバーガーメニュー終了/////////////////////////////////////////////
 
-// footer nav anime////////////////////////////
-
-$('.js-borderNone a').hover(
-    function() {
-        $(".js-borderNone").toggleClass("is-borderNone");
-    }
-);
 // IE対応 object-fit ////////////////////////
 
 (function ($) {

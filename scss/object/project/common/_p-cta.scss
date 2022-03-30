@@ -39,7 +39,7 @@
         display: inline-block;
         background-color: $d-green;
         position: relative;
-        padding-top: calc(1.2rem - 2px);        //borderの幅分
+        padding-top: calc(rem(28) - 2px);        //borderの幅分
         padding-right: calc(1.05rem - 2px);
         padding-bottom: calc(1rem - 2px);
         padding-left: calc(rem(58) - 2px);
@@ -48,9 +48,9 @@
         font-weight: bold;
         border-radius: 25px;
         width: 100%;
-        height: 55px;
+        height: rem(70);
         border: 2px solid $d-green;
-        transition: 1s;
+        transition: 0.5s;
         &::before{
             content: "＞";
             position: absolute;
@@ -61,14 +61,12 @@
             position: absolute;
             color: rgb(251, 255, 6);
             font-size: rem(12);
-            top: 3px;
-            left: 20px;
+            top: rem(10);
+            left: rem(20);
             transition: 0.7s;
         }
         &:hover {
-            background-color: rgba(255, 255, 255, 0.5);
             color: $d-green;
-            box-shadow: 3px 3px 10px $navy;
             &::before {
                 content: "＞";
                 right: 14%;
@@ -98,12 +96,17 @@
     .p-cta-btn {
         width: 250px;
         a {
-            padding-top: calc(1.4rem - 2px);        //borderの幅分
+            height: 80px;
+            padding-top: calc(rem(28) - 2px);        //borderの幅分
             padding-right: calc(2.5rem - 2px);
             padding-bottom: calc(1.2rem - 2px);
             padding-left: calc(rem(66) - 2px);
             font-size: rem(24);
-            height: 60px;
+            span {
+                font-size: rem(12);
+                top: rem(14);
+                left: rem(20);
+            }
         }
     }
 }
@@ -116,12 +119,12 @@
     .p-cta-btn {
         width: 285px;
         a {
-            padding-top: calc(1.4rem - 2px);        //borderの幅分
+            padding-top: calc(rem(26) - 2px);        //borderの幅分
             padding-right: calc(2.5rem - 2px);
             padding-bottom: calc(1rem - 2px);
             padding-left: calc(rem(60) - 2px);
             font-size: rem(32);
-            height: 70px;
+            height: 85px;
         }
     }
 }
@@ -147,12 +150,12 @@
     .p-cta-btn {
         width: 400px;
         a {
-            padding-top: calc(2rem - 2px);        //borderの幅分
+            padding-top: calc(2.5rem - 2px);        //borderの幅分
             padding-right: calc(rem(54) - 2px);
             padding-bottom: calc(1rem - 2px);
             padding-left: calc(rem(82) - 2px);
             font-size: rem(48);
-            height: 100px;
+            height: 120px;
             span {
                 font-size: rem(24);
             }

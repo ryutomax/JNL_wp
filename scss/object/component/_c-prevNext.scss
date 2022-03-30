@@ -27,8 +27,8 @@
         border: 2px solid $d-green;
         border-radius: rem(4);
         transition: 1s;
+        @include btn-anime($d-green, rem(2));
         &:hover {
-            background-color: $d-green;
             color: $white;
         }
     }

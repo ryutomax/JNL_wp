@@ -42,13 +42,26 @@
                                 <p>お知らせ</p>
                             </div>
                             <ul class="p-news-list">
+                                <?php
+                                    $paged = get_query_var('paged') ?: 1;  //先頭ページでは 0 が返ってくるので、強制的に 1 をセット
+                                    $query_args = array(
+                                        'orderby' => 'post_date',
+                                        'post_status'=> 'publish, future',
+                                        'post_type'=> 'news',
+                                        'order'=>'DESC',
+                                        'posts_per_page'=>5,
+                                        'paged'=>$paged
+                                    );
+                                $the_query = new WP_Query($query_args);
+                                if ( $the_query->have_posts() ) :
+                                    while ( $the_query->have_posts() ) : $the_query->the_post();
+                                ?>
                                 <li class="p-news-item">
-                                    <a class="p-news-item__inner" href="">
-                                        <time class="p-news-date" datetime="">2022.2.2</time>
+                                    <a class="p-news-item__inner" href="<?php the_permalink(); ?>">
+                                        <time class="p-news-date" datetime="<?php the_time('y.m.d'); ?>"><?php the_time('Y.m.d'); ?></time>
                                         <div class="p-news-txt">
                                             <div class="p-news-txt__exc">
-                                                <p>モリンガパンケーキのレシピを
-                                                    アップしました</p>
+                                                <p><?php the_title(); ?></p>
                                             </div>
                                             <div class="p-news-txt__link">
                                                 <p>こちら→</p>
@@ -57,51 +70,11 @@
                                         <!-- /.p-news-txt -->
                                     </a>
                                 </li>
-                                <li class="p-news-item">
-                                    <a class="p-news-item__inner" href="">
-                                        <time class="p-news-date" datetime="">2022.2.2</time>
-                                        <div class="p-news-txt">
-                                            <div class="p-news-txt__exc">
-                                                <p>モリンガパンケーキのレシピを
-                                                    アップしました</p>
-                                            </div>
-                                            <div class="p-news-txt__link">
-                                                <p>こちら→</p>
-                                            </div>
-                                        </div>
-                                        <!-- /.p-news-txt -->
-                                    </a>
-                                </li>
-                                <li class="p-news-item">
-                                    <a class="p-news-item__inner" href="">
-                                        <time class="p-news-date" datetime="">2022.2.2</time>
-                                        <div class="p-news-txt">
-                                            <div class="p-news-txt__exc">
-                                                <p>モリンガパンケーキのレシピを
-                                                    アップしました</p>
-                                            </div>
-                                            <div class="p-news-txt__link">
-                                                <p>こちら→</p>
-                                            </div>
-                                        </div>
-                                        <!-- /.p-news-txt -->
-                                    </a>
-                                </li>
-                                <li class="p-news-item">
-                                    <a class="p-news-item__inner" href="">
-                                        <time class="p-news-date" datetime="">2022.2.2</time>
-                                        <div class="p-news-txt">
-                                            <div class="p-news-txt__exc">
-                                                <p>モリンガパンケーキのレシピを
-                                                    アップしました</p>
-                                            </div>
-                                            <div class="p-news-txt__link">
-                                                <p>こちら→</p>
-                                            </div>
-                                        </div>
-                                        <!-- /.p-news-txt -->
-                                    </a>
-                                </li>
+                                <?php endwhile; ?>
+                                <?php else: ?>
+                                <p>記事がありません。</p>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
                             </ul>
                         </div>
                         <!-- /.p-news-cont__wrap -->

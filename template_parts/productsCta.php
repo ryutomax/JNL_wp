@@ -32,13 +32,6 @@
                                     </figure>
                                 </a>
                             </li>
-                            <li class="p-products-item js-fade">
-                                <a href="#">
-                                    <figure class="p-products-img">
-                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products.png'); ?>" alt="coupon">
-                                    </figure>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
