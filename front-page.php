@@ -31,7 +31,7 @@
                         </div>
                         <!-- /.p-news-top__txt -->
                         <div class="p-news-top__img" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="300">
-                            <figure class="p-news-top__img-inner object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/moringa-powder.png') ?>" alt="Moringa powder"></figure>
+                            <figure class="p-news-top__img-inner object-fit"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/newside_img.png') ?>" alt="Moringa powder"></figure>
                         </div>
                     </div>
                     <!-- /.p-news-top -->
@@ -278,14 +278,9 @@
 
             <!-- productsCtaのテンプレート呼び出し -->
             <?php get_template_part('template_parts/productsCta'); ?>
-            
-            <section class="p-banner u-zindex__1000">
-                <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'); ?>" class="p-banner-inner">
-                    ご購入はこちら
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/arrow.PNG'); ?>" alt="">
-                </a>
-                <!-- /.p-banner-inner -->
-            </section>
+
+            <!-- bannerのテンプレート呼び出し -->
+            <?php get_template_part('template_parts/banner'); ?>
 
         </main>
 

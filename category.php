@@ -62,9 +62,12 @@
         <!-- /.p-content-inner -->
 
     </section>
-    
+
     <!-- productsCtaのテンプレート呼び出し -->
     <?php get_template_part('template_parts/productsCta'); ?>
+
+    <!-- bannerのテンプレート呼び出し -->
+    <?php get_template_part('template_parts/banner'); ?>
 
 </main>
 

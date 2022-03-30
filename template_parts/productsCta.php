@@ -19,14 +19,14 @@
                     <div class="p-products-wrap">
                         <ul class="p-products-list">
                             <li class="p-products-item js-fade">
-                                <a href="#">
+                                <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'); ?>">
                                     <figure class="p-products-img">
                                         <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products.png'); ?>" alt="moringa powder">
                                     </figure>
                                 </a>
                             </li>
                             <li class="p-products-item js-fade">
-                                <a href="#">
+                                <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'); ?>">
                                     <figure class="p-products-img">
                                         <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products_pauchi.png'); ?>" alt="moringa soba">
                                     </figure>

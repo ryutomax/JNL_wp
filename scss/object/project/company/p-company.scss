@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.p-company-cont {
+    max-width: rem(900);
+    background-color: $l-green;
+    border-radius: rem(10);
+    padding: rem(32) rem(8);
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.p-company-cont_inner {
+    max-width: rem(700);
+    margin: 0 auto;
+}
+
+.p-company-name {
+    margin-bottom: rem(32);
+    margin-left: rem(8);
+}
+
+.p-company-name__main {
+    font-size: rem(18);
+}
+
+.p-company-name__sub {
+    font-size: 0.8rem;
+}
+
+.p-company-list {
+    margin-bottom: rem(32);
+}
+
+.p-company-item {
+    &:not(:last-child) {
+        margin-bottom: rem(28);
+    }
+}
+
+.p-company-item_desc {
+    margin-left: 1rem;
+}
+
+.p-company-map {
+}
