@@ -2120,13 +2120,18 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   position: absolute;
   font-size: 1.25rem;
   font-weight: bold;
-  right: 0;
+  right: 0.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .p-listNews__item-inner:hover {
   opacity: 0.5;
-  -webkit-box-shadow: 0.125rem 0.125rem 0.125rem #2C3848;
-  box-shadow: 0.125rem 0.125rem 0.125rem #2C3848;
+}
+
+.p-listNews__item-inner:hover::after {
+  content: "＞";
+  right: 0.25rem;
 }
 
 .p-listNews__item-inner:hover .p-listNews__ttl {
@@ -2293,6 +2298,23 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-detail-review p {
   display: none;
+}
+
+.p-detail-youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 3rem;
+}
+
+.p-detail-youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #glsr_00e475e8 {
@@ -2983,6 +3005,10 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     font-size: 1.5rem;
   }
 
+  .p-listNews__item-inner {
+    padding: 1rem;
+  }
+
   .p-listNews__item-inner::after {
     content: "＞";
     font-size: 1.5rem;
@@ -3312,7 +3338,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   }
 
   .p-menu-btn a span:first-child {
-    font-size: min(2.5rem, 3vw);
+    font-size: min(2.5rem, 2.9vw);
   }
 
   .p-menu-btn a span:last-child {

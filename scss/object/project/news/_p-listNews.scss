@@ -29,11 +29,15 @@
         position: absolute;
         font-size: rem(20);
         font-weight: bold;
-        right: 0;
+        right: rem(8);
+        transition: 0.5s;
     }
     &:hover {
         opacity: 0.5;
-        box-shadow: rem(2) rem(2) rem(2) $navy;
+        &::after {
+            content: "＞";
+            right: rem(4);
+        }
         .p-listNews__ttl {
             text-decoration: underline;
         }
@@ -64,6 +68,7 @@
         font-size: rem(24);
     }
     .p-listNews__item-inner {
+        padding: rem(16);
         &::after {
             content: "＞";
             font-size: rem(24);
@@ -81,5 +86,4 @@
 }
 
 @include mq (pc) {
-    
 }

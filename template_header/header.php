@@ -40,9 +40,15 @@
                             <a href="<?php echo esc_url(home_url('/recipe'));?>">レシピ</a>
                         <?php endif; ?>
                         </li>
+                        <?php if(is_page(array( 'contact', 'confirm', 'thanks','privacypolicy' ) )): ?>
+                        <li class="p-header-nav__item">
+                            <a href="<?php echo esc_url(home_url('/news'));?>#products">商品のご紹介</a>
+                        </li>
+                        <?php else: ?>
                         <li class="p-header-nav__item js-products">
                             <a href="#">商品のご紹介</a>
                         </li>
+                        <?php endif; ?>
                         <li class="p-header-nav__item c-ctaBtn">
                             <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
                         </li>

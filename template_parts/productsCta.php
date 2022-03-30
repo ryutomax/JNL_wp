@@ -1,7 +1,7 @@
 <!--
     //productsCtaのテンプレートです
 -->
-            <section class="p-products c-frame">
+            <section class="p-products c-frame" id="products">
                 <div class="p-products-inner">
                     <div class="p-products-ttl c-sec-ttl">
                         <h3>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </section>
-            <section class="p-cta" style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>);">
+            <section class="p-cta" style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/fv_img.jpg'); ?>);">
                 <div class="p-cta-inner">
                     <div class="p-cta-copy">
                         <h3>

@@ -52,7 +52,7 @@
             </section>
             <section class="p-detail c-frame">
                 <div class="p-detail-inner">
-                    <div class="p-content-ttl c-sec-ttl">
+                    <div class="p-detail-ttl c-sec-ttl">
                         <h3>
                             <span class="js-wave">R</span>
                             <span class="js-wave">e</span>
@@ -73,7 +73,18 @@
                         $movie = esc_url(get_field('movie'));
                         if( !empty($movie) ):
                     ?>
-                        <video src="<?php echo $movie; ?>" controls muted autobuffer autoloop loop playsinline></video>
+                        <video src="<?php echo $movie; ?>" data-aos="zoom-in" data-aos-duration="2000" controls muted autobuffer autoloop loop playsinline></video>
+                    <?php endif; ?>
+
+                    <?php
+                        $youtube = esc_url(get_field('youtube'));
+                        if( !empty($youtube) ):
+                    ?>
+
+                        <div class="p-detail-youtube" data-aos="zoom-in" data-aos-duration="2000">
+                            <?php echo $embed_code = wp_oembed_get( $youtube); ?>
+                        </div>
+
                     <?php endif; ?>
 
                     <div class="p-detail-table" id="tableTtl" data-aos="zoom-in" data-aos-duration="2000">
