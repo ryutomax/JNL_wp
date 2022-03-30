@@ -278,6 +278,14 @@
 
             <!-- productsCtaのテンプレート呼び出し -->
             <?php get_template_part('template_parts/productsCta'); ?>
+            
+            <section class="p-banner u-zindex__1000">
+                <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'); ?>" class="p-banner-inner">
+                    ご購入はこちら
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/arrow.PNG'); ?>" alt="">
+                </a>
+                <!-- /.p-banner-inner -->
+            </section>
 
         </main>
 

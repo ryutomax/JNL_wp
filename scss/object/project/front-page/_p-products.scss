@@ -11,10 +11,41 @@
 
 .p-products-item {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 400px;
     @include box-anime-shadow(0.8);
     &:not(:last-child) {
         margin-bottom: 2.5rem;
+    }
+}
+
+@include mq (sp) {
+}
+
+@include mq () {
+    .p-products-list {
+        display: flex;
+        justify-content: center;
+    }
+    .p-products-item {
+        margin: 0;
+        max-width: 400px;
+        &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: rem(32);
+        }
+    }
+}
+
+@include mq (pc) {
+    .p-products-list {
+        display: flex;
+        justify-content: center;
+    }
+    .p-products-item {
+        max-width: 450px;
+        &:not(:last-child) {
+            margin-right: rem(64);
+        }
     }
 }
 

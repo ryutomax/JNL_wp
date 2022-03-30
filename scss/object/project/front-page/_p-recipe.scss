@@ -19,7 +19,7 @@
     background-color: $d-green;
     height: rem(64);
     width: calc((100% - 4px*4) / 5);
-    border-radius: 0 10px 0 0;
+    border-radius: rem(10) rem(10) 0 0;
     padding-right: rem(4);
 	transition: all 0.5s ease;
     cursor: pointer;
@@ -78,10 +78,11 @@
         &::before {
             content:"＞";
             position: absolute;
-            font-size: rem(24);
+            font-size: rem(18);
             font-weight: bold;
             right: rem(12);
             transition: 0.5s;
+            top: 0;
         }
     }
 }

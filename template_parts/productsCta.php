@@ -45,7 +45,7 @@
                     </h3>
                     </div>
                     <div class="p-cta-btn">
-                        <a href="<?php esc_url( home_url('/') );?>"  ontouchstart=""><span>食べるモリンガ</span>体験する</a>
+                        <a href="<?php echo esc_url("https://item.rakuten.co.jp/jn-lab/c/0000000129/");?>"  ontouchstart=""><span>食べるモリンガ</span>体験する</a>
                     </div>
                 </div>
                 <!-- /.p-cta-inner -->

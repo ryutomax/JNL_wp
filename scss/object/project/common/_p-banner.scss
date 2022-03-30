@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.p-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100vw
+
+}
+
+.p-banner-inner {
+    background-color: $green;
+    padding: rem(16);
+    width: 100%;
+    height: rem(50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-weight: bold;
+    letter-spacing: rem(4);
+    transition: 0.5s ease-in-out;
+    img {
+        width: rem(22);
+        margin-top: rem(4);
+        margin-left: rem(4);
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}
+@include mq (sp) {
+
+}
+
+@include mq () {
+    .p-banner {
+        position: fixed;
+        bottom: auto;
+        top: calc(50vh - rem(125));
+        width: rem(50);
+        right: 0;
+    }
+    .p-banner-inner {
+        background-color: $green;
+        padding: rem(16);
+        width: 100%;
+        height: rem(250);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        writing-mode: vertical-rl;
+        img {
+            width: rem(22);
+            margin-top: rem(4);
+            margin-left: rem(4);
+        }
+    }
+}
+
+@include mq (pc) {
+}

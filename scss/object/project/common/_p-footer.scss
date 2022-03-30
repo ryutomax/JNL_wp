@@ -34,6 +34,7 @@
 .p-footer-bottom {
     background-color: $white;
     padding-top: 2rem;
+    padding-bottom: rem(82);
 }
 
 .p-footer-bottom__inner {}
@@ -80,7 +81,7 @@
     }
 }
 
-.l-footer-copy {
+.p-footer-copy {
     text-align: center;
     small {}
 }
