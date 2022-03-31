@@ -12,6 +12,8 @@ const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require("gulp-autoprefixer");
 const cleancss = require("gulp-clean-css");
 const media = require("gulp-group-css-media-queries");
+const gulpPostcss = require('gulp-postcss');
+const cssDeclarationSorter = require('css-declaration-sorter');
 
 
 //----------------------------------------------------------------------
@@ -32,6 +34,7 @@ function compile(done) {
             cascade: false
         }))                                 // ベンダープレフィック自動付与(sass後)
         .pipe(media())                     // メディアクエリ統合
+        .pipe(gulpPostcss([cssDeclarationSorter({order: 'smacss'})])) //css整列
         .pipe(dest("./css_origin/"));
 
     done();
