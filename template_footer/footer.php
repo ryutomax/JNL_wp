@@ -15,7 +15,7 @@
                             <a href="<?php echo esc_url('#');?>">商品のご紹介</a>
                         </li>
                         <li class="p-footer-nav__item" ontouchstart="">
-                            <a href="<?php echo esc_url('/contact');?>">お問い合わせ</a>
+                            <a href="<?php echo esc_url(home_url('/contact'));?>">お問い合わせ</a>
                         </li>
                     </ul>
                 </nav>

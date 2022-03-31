@@ -23,22 +23,31 @@
 .p-fv-copy {
     position: absolute;
 	top: 50%;
-    left: max(10rem, 36vw);
+    left: 50%;
 	transform: translate(-50%, -50%);
-    p {
-        font-size: rem(64);
-        font-family: $ff_eng;
-        text-transform: uppercase;
-        color: $white;
-        &:last-child {
-            margin-left: rem(56);
-        }
-    }
+    width: 100%;
+    text-align: center;
+    font-size: rem(56);
+    font-family: $ff_eng;
+    text-transform: uppercase;
+    color: $white;
+}
+
+.p-fv-copy_sub {
+    font-size: rem(28);
+    margin-top: rem(16);
+    font-family: $ff_jp;
 }
 
 @include mq (sp) {
     .p-fv {
         height: rem(500);
+    }
+    .p-fv-copy {
+        font-size: rem(64);
+    }
+    .p-fv-copy_sub {
+        font-size: rem(32);
     }
 }
 @include mq () {
@@ -47,13 +56,11 @@
     }
 
     .p-fv-copy {
-        left: 50%;
-    p {
         font-size: rem(72);
-        color: $white;
-        &:last-child {
-            margin-left: rem(64);
-        }
     }
-}
+
+    .p-fv-copy_sub {
+        font-size: rem(40);
+        margin-top: rem(24);
+    }
 }

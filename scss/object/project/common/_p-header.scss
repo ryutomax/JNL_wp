@@ -46,7 +46,6 @@
         border-bottom: 2px dotted $black;
         a {
             display: inline-block;
-            
             transition: color 1s;
             @include txt-border($d-green);
             &::after {

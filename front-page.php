@@ -1,15 +1,8 @@
 <?php get_template_part('template_header/header'); ?>
 
         <main class="l-main">
-            <section class="p-fv"  style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>)">
-                <div class="p-fv-inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-delay="1000">
-                    <h2 class="p-fv-copy">
-                        <p>Moringa</p>
-                        <p>Recipe</p>
-                    </h2>
-                </div>
-                <!-- /.p-fv-inner -->
-            </section>
+            <!-- FV テンプレートの呼び出し -->
+            <?php get_template_part('template_parts/FV'); ?>
 
             <section class="p-news c-frame">
                 <div class="p-news-inner">
@@ -76,6 +69,13 @@
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
                             </ul>
+
+                            <div class="p-news-more">
+                                <div class="p-news-btn c-ctaBtn">
+                                    <a href="<?php echo esc_url(home_url('/news'));?>">もっと見る</a>
+                                </div>
+                            </div>
+                            <!-- /.p-recipe-more -->
                         </div>
                         <!-- /.p-news-cont__wrap -->
                     </div>

@@ -1,12 +1,12 @@
 @use "global" as *;
 
 .c-ctaBtn {
-    position: relative;
     width: 150px;
     text-align: center;
     a {
+        position: relative;
         border-radius: 5px;
-        display: inline-block;
+        display: block;
         line-height: rem(60);
         color: $white;
         font-weight: bold;

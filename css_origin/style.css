@@ -244,14 +244,14 @@ button {
 }
 
 .c-ctaBtn {
-  position: relative;
   width: 150px;
   text-align: center;
 }
 
 .c-ctaBtn a {
+  position: relative;
   border-radius: 5px;
-  display: inline-block;
+  display: block;
   line-height: 3.75rem;
   color: #ffffff;
   font-weight: bold;
@@ -548,6 +548,7 @@ a.next.page-numbers {
   padding-bottom: 1rem;
   -webkit-transition: 1s;
   transition: 1s;
+  text-align: center;
 }
 
 .c-recipe-txt__exc {
@@ -632,7 +633,7 @@ a.next.page-numbers {
 }
 
 .p-banner-inner {
-  background-color: #00B906;
+  background-color: #e35c38;
   padding: 1rem;
   width: 100%;
   height: 3.125rem;
@@ -900,6 +901,46 @@ a.next.page-numbers {
 
 .p-footer-copy {
   text-align: center;
+}
+
+.p-fv {
+  height: 23.75rem;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.p-fv-inner {
+  position: relative;
+  height: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.p-fv-inner[data-aos=zoom-out] {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.p-fv-copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: "Fahkwang", "Fjalla One", "Montserrat Subrayada", "Concert One", cursive, sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.p-fv-copy_sub {
+  font-size: 1.75rem;
+  margin-top: 1rem;
+  font-family: "Zen Maru Gothic", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif, "Noto Sans JP", sans-serif;
 }
 
 .p-header-logo {
@@ -1648,51 +1689,38 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-contact-back a {
   text-decoration: underline;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.p-contact-back a:hover {
-  text-shadow: 2px 2px 10px #c8c8c8, -2px 2px 10px #c8c8c8, 2px -2px 10px #c8c8c8, -2px -2px 10px #c8c8c8;
-}
-
-.p-fv {
-  height: 23.75rem;
-  background-size: cover;
-  background-position: center center;
-  padding-top: 5rem;
-  overflow: hidden;
-}
-
-.p-fv-inner {
   position: relative;
-  height: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.p-fv-inner[data-aos=zoom-out] {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
-
-.p-fv-copy {
+.p-contact-back a::after {
   position: absolute;
-  top: 50%;
-  left: max(10rem, 36vw);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transform-origin: top top;
+  transform-origin: top top;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.p-fv-copy p {
-  font-size: 4rem;
-  font-family: "Fahkwang", "Fjalla One", "Montserrat Subrayada", "Concert One", cursive, sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
+.p-contact-back a:hover::after {
+  -webkit-transform-origin: top top;
+  transform-origin: top top;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
-.p-fv-copy p:last-child {
-  margin-left: 3.5rem;
+.p-contact-back a::after {
+  height: 1px;
 }
 
 .p-news {
@@ -1737,7 +1765,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   margin-right: -2rem;
 }
 
-.p-news-cont {
+.p-news-cont__wrap {
   max-width: 600px;
   margin: 0 auto;
 }
@@ -1798,6 +1826,68 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
 .p-news-txt__link a {
   text-decoration: underline;
+}
+
+.p-news-more {
+  margin-top: 2rem;
+}
+
+.p-news-btn {
+  width: 175px;
+  margin: 0 auto;
+}
+
+.p-news-btn a {
+  font-size: 1.25rem;
+  background-color: #298800;
+  border: 0.0625rem solid #298800;
+  line-height: 3.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.p-news-btn a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #ffffff;
+  border-radius: 0.3125rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.p-news-btn a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.p-news-btn a:active {
+  top: 2px;
+}
+
+.p-news-btn a:hover {
+  color: #298800;
+}
+
+.p-news-btn a:hover::before {
+  content: "＞";
+  right: 0.5rem;
+}
+
+.p-news-btn a::before {
+  content: "＞";
+  position: absolute;
+  font-size: 1.125rem;
+  font-weight: bold;
+  right: 0.75rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 0;
 }
 
 .p-products-item {
@@ -1883,13 +1973,9 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 }
 
 .p-recipe-btn a {
-  display: block;
-  position: relative;
-  color: #ffffff;
   font-size: 1.25rem;
   background-color: #298800;
   border: 0.0625rem solid #298800;
-  border-radius: 5px;
   line-height: 3.5rem;
   padding-right: 0.5rem;
   position: relative;
@@ -2902,6 +2988,18 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     font-size: 1rem;
   }
 
+  .p-fv {
+    height: 31.25rem;
+  }
+
+  .p-fv-copy {
+    font-size: 4rem;
+  }
+
+  .p-fv-copy_sub {
+    font-size: 2rem;
+  }
+
   .p-menu-btn {
     height: 60px;
   }
@@ -2954,10 +3052,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     font-size: 1.75rem;
     font-size: max(1.5rem, 4.2vw);
     margin-left: 1.5rem;
-  }
-
-  .p-fv {
-    height: 31.25rem;
   }
 
   .p-news-top__img {
@@ -3166,7 +3260,7 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   }
 
   .p-banner-inner {
-    background-color: #00B906;
+    background-color: #e35c38;
     padding: 1rem;
     width: 100%;
     height: 15.625rem;
@@ -3241,6 +3335,19 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     background-color: #ffffff;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .p-fv {
+    height: 36.25rem;
+  }
+
+  .p-fv-copy {
+    font-size: 4.5rem;
+  }
+
+  .p-fv-copy_sub {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
   }
 
   .p-header-logo {
@@ -3405,23 +3512,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
 
   .p-contact-thanks {
     font-size: 1.5rem;
-  }
-
-  .p-fv {
-    height: 36.25rem;
-  }
-
-  .p-fv-copy {
-    left: 50%;
-  }
-
-  .p-fv-copy p {
-    font-size: 4.5rem;
-    color: #ffffff;
-  }
-
-  .p-fv-copy p:last-child {
-    margin-left: 4rem;
   }
 
   .p-news-top__txt p {

@@ -2,8 +2,8 @@
 
         <main class="l-main">
 
-            <!-- ページTOPスライドのテンプレート呼び出し -->
-            <?php get_template_part('template_parts/topSlider'); ?>
+            <!-- FV テンプレートの呼び出し -->
+            <?php get_template_part('template_parts/FV'); ?>
 
             <!-- パンくずリストのテンプレート呼び出し -->
             <?php get_template_part('template_parts/breadcrumb'); ?>
@@ -52,6 +52,10 @@
             </section>
             <section class="p-detail c-frame">
                 <div class="p-detail-inner">
+                    <?php
+                        $youtube = esc_url(get_field('youtube'));
+                        if( !empty($youtube) ):
+                    ?>
                     <div class="p-detail-ttl c-sec-ttl">
                         <h3>
                             <span class="js-wave">R</span>
@@ -69,21 +73,10 @@
                         <p>レシピ動画</p>
                     </div>
                     <!-- /.p-content-ttl -->
-                    <?php
-                        $movie = esc_url(get_field('movie'));
-                        if( !empty($movie) ):
-                    ?>
-                        <video src="<?php echo $movie; ?>" data-aos="zoom-in" data-aos-duration="2000" controls muted autobuffer autoloop loop playsinline></video>
-                    <?php endif; ?>
 
-                    <?php
-                        $youtube = esc_url(get_field('youtube'));
-                        if( !empty($youtube) ):
-                    ?>
-
-                        <div class="p-detail-youtube" data-aos="zoom-in" data-aos-duration="2000">
-                            <?php echo $embed_code = wp_oembed_get( $youtube); ?>
-                        </div>
+                    <div class="p-detail-youtube" data-aos="zoom-in" data-aos-duration="2000">
+                        <?php echo $embed_code = wp_oembed_get( $youtube); ?>
+                    </div>
 
                     <?php endif; ?>
 

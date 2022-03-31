@@ -2,20 +2,17 @@
 
 <main class="l-main">
 
-    <!-- ページTOPスライドのテンプレート呼び出し -->
-    <?php get_template_part('template_parts/topSlider'); ?>
+    <!-- FV テンプレートの呼び出し -->
+    <?php get_template_part('template_parts/FV'); ?>
 
     <!-- パンくずリストのテンプレート呼び出し -->
     <?php get_template_part('template_parts/breadcrumb'); ?>
-    
+
     <!-- タグ・カテゴリメニュー呼び出し -->
     <?php get_template_part('template_parts/mainMenu'); ?>
 
     <section class="p-content c-frame">
         <div class="p-content-inner">
-
-            <!-- コンテンツタイトルのテンプレート呼び出し -->
-            <?php get_template_part('template_parts/title-content'); ?>
 
             <div class="p-content-wrap">
                 <ul class="p-content-list">

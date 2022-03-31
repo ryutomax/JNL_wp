@@ -2,28 +2,14 @@
 
 <main class="l-main">
 
-    <!-- ページTOPスライドのテンプレート呼び出し -->
-    <?php get_template_part('template_parts/topSlider'); ?>
+    <!-- FV テンプレートの呼び出し -->
+    <?php get_template_part('template_parts/FV'); ?>
 
     <!-- パンくずリストのテンプレート呼び出し -->
     <?php get_template_part('template_parts/breadcrumb'); ?>
 
     <section class="p-listNews c-frame">
         <div class="p-listNews-inner">
-            <div class="p-listNewst-ttl c-sec-ttl">
-                <h3>
-                    <span class="js-wave">N</span>
-                    <span class="js-wave">e</span>
-                    <span class="js-wave">w</span>
-                    <span class="js-wave">s</span>
-                    <span class="js-wave u-ml__16">L</span>
-                    <span class="js-wave">i</span>
-                    <span class="js-wave">s</span>
-                    <span class="js-wave">t</span>
-                </h3>
-                <p>お知らせ一覧</p>
-            </div>
-
             <div class="p-listNews__wrap">
                 <ul class="p-listNews__list">
                     <?php

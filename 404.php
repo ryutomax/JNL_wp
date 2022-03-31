@@ -1,8 +1,8 @@
 <?php get_template_part('template_header/header'); ?>
 
 <main class="l-main">
-    <!-- ページTOPスライドのテンプレート呼び出し -->
-    <?php get_template_part('template_parts/topSlider'); ?>
+    <!-- FV テンプレートの呼び出し -->
+    <?php get_template_part('template_parts/FV'); ?>
 
     <section class="p-404 c-frame">
         <div class="p-404-inner">

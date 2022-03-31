@@ -2,26 +2,14 @@
 
 <main class="l-main">
 
-    <!-- ページTOPスライドのテンプレート呼び出し -->
-    <?php get_template_part('template_parts/topSlider'); ?>
+    <!-- FV テンプレートの呼び出し -->
+    <?php get_template_part('template_parts/FV'); ?>
 
     <!-- パンくずリストのテンプレート呼び出し -->
     <?php get_template_part('template_parts/breadcrumb'); ?>
 
     <section class="p-company c-frame">
         <div class="p-company-inner">
-            <div class="p-company-ttl c-sec-ttl">
-                <h3>
-                    <span class="js-wave">C</span>
-                    <span class="js-wave">o</span>
-                    <span class="js-wave">m</span>
-                    <span class="js-wave">p</span>
-                    <span class="js-wave">a</span>
-                    <span class="js-wave">n</span>
-                    <span class="js-wave">y</span>
-                </h3>
-                <p>会社概要</p>
-            </div>
 
             <div class="p-company-cont">
                 <div class="p-company-cont_inner">

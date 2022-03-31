@@ -1,10 +1,13 @@
 <?php get_template_part('template_header/header'); ?>
 
     <main class="l-main">
-        <!-- ページTOPスライドのテンプレート呼び出し -->
-        <?php get_template_part('template_parts/topSlider'); ?>
+
+        <!-- FV テンプレートの呼び出し -->
+        <?php get_template_part('template_parts/FV'); ?>
+
         <!-- パンくずリストのテンプレート呼び出し -->
         <?php get_template_part('template_parts/breadcrumb'); ?>
+        
         <section class="p-contNews c-frame">
             <div class="p-contNews-inner">
                 <div class="p-contNews-head">
