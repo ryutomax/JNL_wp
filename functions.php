@@ -16,7 +16,10 @@ function include_files() {
     };
 }
 add_action('wp_enqueue_scripts', 'include_files');
-// バリデーション/////////////////////////////////////////////////////////////////////////////////////////
+
+// ========================================
+// バリデーション
+// ========================================
 function my_exam_validation_rule( $Validation, $data, $Data ) {
 
 	$Validation->set_rule( '会社名', 'noEmpty', array( 'message' => '※入力してください。' ) );
@@ -30,9 +33,13 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 	return $Validation;
 }
 add_filter( 'mwform_validation_mw-wp-form-24', 'my_exam_validation_rule', 10, 3 );
-// バリデーション 終了/////////////////////////////////////////////////////////////////////////////////////////
+// ========================================
+// バリデーション 終了
+// ========================================
 
+// ========================================
 // サムネイル有効化
+// ========================================
 function twpp_setup_theme() {
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'small-thumb', 100, 150, true );
@@ -131,6 +138,5 @@ function my_main_query( $query ) {
         <?php
         }
     add_action( 'admin_print_styles', 'my_dashboard_print_styles' );
-
 
 ?>
