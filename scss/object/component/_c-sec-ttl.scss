@@ -2,7 +2,7 @@
 
 .c-sec-ttl {
     text-align: center;
-    margin-bottom: rem(32);
+    margin-bottom: rem(56);
     h3 {
         font-size: 2rem;
         font-weight: bold;
@@ -18,12 +18,12 @@
 
 @include mq (sp) {
     .c-sec-ttl {
-        margin-bottom: rem(48);
+        margin-bottom: rem(80);
     }
 }
 @include mq () {
     .c-sec-ttl {
-        margin-bottom: rem(64);
+        margin-bottom: rem(96);
         h3 {
             font-size: 2.5rem;
             font-weight: bold;
@@ -37,6 +37,6 @@
 }
 @include mq (pc) {
     .c-sec-ttl {
-        margin-bottom: rem(80);
+        margin-bottom: rem(112);
     }
 }

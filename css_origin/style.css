@@ -310,9 +310,9 @@ input {
 }
 
 .c-frame {
-  padding-top: 2rem;
+  padding-top: 5rem;
   padding-right: 0.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
   padding-left: 0.5rem;
   background-color: #ffffff;
 }
@@ -568,7 +568,7 @@ a.next.page-numbers {
 }
 
 .c-sec-ttl {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
   text-align: center;
 }
 
@@ -583,30 +583,6 @@ a.next.page-numbers {
 .c-sec-ttl p {
   font-weight: bold;
   font-size: 1rem;
-}
-
-.c-top-ttl {
-  height: 300px;
-  padding-top: 80px;
-}
-
-.c-top-ttl-inner {
-  position: relative;
-  height: 220px;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-
-.c-top-ttl-main {
-  -webkit-transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
 }
 
 .p-sitemap-cont {
@@ -2953,7 +2929,7 @@ p.glsr-tag-value {
   }
 
   .c-sec-ttl {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   .p-sitemap-cont {
@@ -3213,8 +3189,8 @@ p.glsr-tag-value {
   }
 
   .c-frame {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .c-recipe-cont__list {
@@ -3248,7 +3224,7 @@ p.glsr-tag-value {
   }
 
   .c-sec-ttl {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
   }
 
   .c-sec-ttl h3 {
@@ -3667,7 +3643,7 @@ p.glsr-tag-value {
 
 @media screen and (min-width:1280px) {
   .c-sec-ttl {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
   }
 
   .p-404__txt {
