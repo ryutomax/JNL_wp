@@ -1,7 +1,6 @@
 /* output.pathに絶対パスを指定するため、pathモジュールが必要 */
 const path = require('path');
 
-
 module.exports = {
     /* モードの設定 webpack4からは必須の設定*/
     mode: 'development',
