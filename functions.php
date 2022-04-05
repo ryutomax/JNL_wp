@@ -1,8 +1,4 @@
 <?php
-/**
- * CSS/JavaScriptの読み込み
- */
-add_action('wp_enqueue_scripts', 'include_files');
 
 function include_files() {
     // CSSファイルの読み込み
@@ -14,9 +10,12 @@ function include_files() {
     // JavaScriptファイルの読み込み
     wp_enqueue_script('my-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array('jquery'), '3.6.0', true);
     wp_enqueue_script('aos','https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true);
-    wp_enqueue_script('swiper','https://unpkg.com/swiper@8/swiper-bundle.min.js', array(), '8', true);
-    wp_enqueue_script('my-script', get_theme_file_uri('app/js/bundle.js'), array('jquery'), '1.0.0', true);
+    wp_enqueue_script('my-script', get_theme_file_uri('/app/js/bundle.js'), array('jquery'), '1.0.0', true);
+    if(is_singular('recipe')){
+        wp_enqueue_script('single-script', get_theme_file_uri('/app/js/single.js'), array('jquery'), '1.0.0', true);
+    };
 }
+add_action('wp_enqueue_scripts', 'include_files');
 // バリデーション/////////////////////////////////////////////////////////////////////////////////////////
 function my_exam_validation_rule( $Validation, $data, $Data ) {
 
@@ -52,7 +51,9 @@ function my_main_query( $query ) {
 }
     add_action( 'pre_get_posts', 'my_main_query' );
 
-//ページネーション////////////////////////////////////////
+//=======================
+//ページネーション
+//=======================
     function custom_pagination_html( $template ) {
         $template = '
         <nav class="c-pagination-inner" role="navigation">
@@ -63,7 +64,9 @@ function my_main_query( $query ) {
     }
     add_filter('navigation_markup_template','custom_pagination_html');
 
-//投稿一覧 タグ絞り込み実装/////////////////////////////////
+//=======================
+//投稿一覧 タグ絞り込み実装
+//=======================
     function add_post_tag_filter() {
         global $post_type;
         if ( $post_type == 'recipe' ) {        //ポストタイプを変更
@@ -84,9 +87,9 @@ function my_main_query( $query ) {
         unset( $_GET['tag'] );
         }
     }
-
-//Breadcrumb NavXT 拡張  ////////////////////////////
-
+//=======================
+// Breadcrumb NavXT 拡張
+//=======================
     function my_static_breadcrumb_adder($breadcrumb_trail){
         if ( is_category() || is_tag()) {
             $item = new bcn_breadcrumb( 'レシピ', NULL, array('archive'), esc_url(home_url('/recipe')), NULL, true );
@@ -97,18 +100,18 @@ function my_main_query( $query ) {
     }
     add_action('bcn_after_fill','my_static_breadcrumb_adder');
 
-    //=========================
-    // 管理画面アイテム消去
-    //=========================
+//=========================
+// 管理画面アイテム消去
+//=========================
     function remove_menus () {
         remove_menu_page( 'edit.php' );       //投稿
         remove_menu_page( 'edit-comments.php' );    //コメント
     }
     add_action('admin_menu', 'remove_menus');
 
-    //=========================
-    // 管理画面メニューアイコン変更
-    //=========================
+//=========================
+// 管理画面メニューアイコン変更
+//=========================
     function my_dashboard_print_styles() {
         ?>
         <style>
