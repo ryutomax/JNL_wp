@@ -740,11 +740,21 @@ a.next.page-numbers {
 .p-cta {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background-position: 0% 50%;
+}
+
+.p-cta::before {
+  display: block;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/moringa.jpg");
+  background-position: 15% 100%;
   background-size: cover;
-  background-size: 850px 700px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  content: "";
 }
 
 .p-cta-inner {
@@ -2965,12 +2975,6 @@ p.glsr-tag-value {
 
   .p-404__txt {
     font-size: 1.25rem;
-  }
-
-  .p-cta {
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .p-cta-copy {

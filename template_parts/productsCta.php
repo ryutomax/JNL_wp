@@ -36,7 +36,8 @@
                     </div>
                 </div>
             </section>
-            <section class="p-cta" style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>);">
+            <section class="p-cta">
+            <!-- <section class="p-cta" style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>);"> -->
                 <div class="p-cta-inner">
                     <div class="p-cta-copy">
                         <h3>
