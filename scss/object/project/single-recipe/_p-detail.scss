@@ -103,8 +103,20 @@
 
 // レビュープラグイン調整用////////////////////////////
 
-#glsr_00e475e8 {
+// レビューサマリーの下
+.glsr-reviews-wrap {
     margin-bottom: rem(48);
+}
+
+// 名前横の空間
+.glsr-review-author {
+    &::before {
+        margin-right: rem(8);
+    }
+}
+//一度消したものを表示
+p.glsr-tag-value {
+    display: block;
 }
 
 #glsr_9be16351 {
@@ -158,10 +170,12 @@
 
 // SNS共有 プラグイン調整用////////////////////////////
 
+.addtoany_share_save_container.addtoany_content.addtoany_content_bottom {
+    margin-top: rem(64);
+}
+
 .addtoany_content {
     max-width: 600px;
-    // padding-left: rem(16);
-    // padding-right: rem(16);
 }
 
 .a2a_kit.addtoany_list {

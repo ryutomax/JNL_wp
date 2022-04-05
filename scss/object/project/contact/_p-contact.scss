@@ -223,7 +223,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
     width: 200px;
     height: 50px;
     background-color: $d-green;
-    cursor: pointer;
     padding: 0;
     z-index: 0;
     border-radius: rem(4);

@@ -2,7 +2,10 @@
 
 .p-cta {
     background-size: cover;
+    background-position: 0% 50%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 850px 700px;
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
@@ -82,6 +85,11 @@
 }
 
 @include mq (sp) {
+    .p-cta {
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
     .p-cta-copy {
         margin-bottom: 2rem;
         h3 {

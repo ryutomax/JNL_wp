@@ -64,6 +64,11 @@
                         <p>Privacy Policy</p>
                         <p class="p-fv-copy_sub">プライバシーポリシー</p>
 
+                        <?php elseif(is_page('sitemap')): ?>
+
+                        <p>Site Map</p>
+                        <p class="p-fv-copy_sub">サイトマップ</p>
+
                         <?php endif; ?>
                     </h2>
                 </div>

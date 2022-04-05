@@ -27,7 +27,7 @@
                                 <li class="p-footer-bottom__item"> <a href="<?php echo esc_url( home_url('/privacypolicy') );?>">プライバシーポリシー</a></li>
                             </ul>
                             <ul class="p-footer-bottom__list">
-                                <li class="p-footer-bottom__item"><a href="<?php echo esc_url( home_url('/') );?>">サイトマップ</a></li>
+                                <li class="p-footer-bottom__item"><a href="<?php echo esc_url( home_url('/sitemap') );?>">サイトマップ</a></li>
                                 <li class="p-footer-bottom__item"> <a href="<?php echo esc_url( home_url('/company') );?>">会社概要</a></li>
                             </ul>
                         </nav>

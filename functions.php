@@ -97,4 +97,37 @@ function my_main_query( $query ) {
     }
     add_action('bcn_after_fill','my_static_breadcrumb_adder');
 
+    //=========================
+    // 管理画面アイテム消去
+    //=========================
+    function remove_menus () {
+        remove_menu_page( 'edit.php' );       //投稿
+        remove_menu_page( 'edit-comments.php' );    //コメント
+    }
+    add_action('admin_menu', 'remove_menus');
+
+    //=========================
+    // 管理画面メニューアイコン変更
+    //=========================
+    function my_dashboard_print_styles() {
+        ?>
+        <style>
+        /* レシピアイコン */
+        #dashboard_right_now .recipe-count:before { content: "\f187"; }
+        #adminmenu #menu-posts-recipe div.wp-menu-image:before { content: "\f187"; }
+        /* フォームアイコン */
+        #dashboard_right_now .mw-wp-form-count:before { content: "\f457"; }
+        #adminmenu #menu-posts-mw-wp-form div.wp-menu-image:before { content: "\f457"; }
+        /* Newsアイコン */
+        #dashboard_right_now .news-count:before { content: "\f123"; }
+        #adminmenu #menu-posts-news div.wp-menu-image:before { content: "\f123"; }
+        /* メディアアイコン */
+        #dashboard_right_now .media-count:before { content: "\f161"; }
+        #adminmenu #menu-media div.wp-menu-image:before { content: "\f161"; }
+        </style>
+        <?php
+        }
+    add_action( 'admin_print_styles', 'my_dashboard_print_styles' );
+
+
 ?>
