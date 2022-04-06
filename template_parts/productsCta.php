@@ -19,14 +19,14 @@
                     <div class="p-products-wrap">
                         <ul class="p-products-list">
                             <li class="p-products-item js-fade">
-                                <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'); ?>">
+                                <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'); ?>" ontouchstart="" target="_blank">
                                     <figure class="p-products-img">
                                         <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products.png'); ?>" alt="moringa powder">
                                     </figure>
                                 </a>
                             </li>
                             <li class="p-products-item js-fade">
-                                <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'); ?>">
+                                <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'); ?>" ontouchstart="" target="_blank">
                                     <figure class="p-products-img">
                                         <img src="<?php echo esc_url(get_template_directory_uri() . '/img/products_pauchi.png'); ?>" alt="moringa soba">
                                     </figure>
@@ -37,7 +37,6 @@
                 </div>
             </section>
             <section class="p-cta">
-            <!-- <section class="p-cta" style="background-image: url(<?php echo esc_url(get_template_directory_uri() . '/img/moringa.jpg'); ?>);"> -->
                 <div class="p-cta-inner">
                     <div class="p-cta-copy">
                         <h3>
@@ -46,7 +45,7 @@
                     </h3>
                     </div>
                     <div class="p-cta-btn">
-                        <a href="<?php echo esc_url("https://item.rakuten.co.jp/jn-lab/c/0000000129/");?>"  ontouchstart=""><span>食べるモリンガ</span>体験する</a>
+                        <a href="<?php echo esc_url("https://item.rakuten.co.jp/jn-lab/c/0000000129/");?>"  ontouchstart=""  target="_blank"><span>食べるモリンガ</span>体験する</a>
                     </div>
                 </div>
                 <!-- /.p-cta-inner -->
