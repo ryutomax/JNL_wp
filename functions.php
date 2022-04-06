@@ -111,6 +111,8 @@ function my_main_query( $query ) {
     function remove_menus () {
         remove_menu_page( 'edit.php' );       //投稿
         remove_menu_page( 'edit-comments.php' );    //コメント
+        remove_menu_page( 'page=slc-linechat-form' );    //LINE チャット
+        remove_menu_page( 'admin.php?page=cptui_manage_post_types' );    //LINE チャット
     }
     add_action('admin_menu', 'remove_menus');
 
