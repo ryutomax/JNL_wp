@@ -1370,8 +1370,13 @@ a.next.page-numbers {
   line-height: 1.6875;
 }
 
-.p-contact-name span {
-  font-weight: bold;
+.p-contact-required {
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3125rem;
+  background-color: #2C3848;
+  color: #ffffff;
+  font-size: 0.75rem;
 }
 
 .p-contact-input {

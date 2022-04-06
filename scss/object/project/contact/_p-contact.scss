@@ -32,9 +32,15 @@
 
 .p-contact-name {
     line-height: 1.6875;
-    span {
-        font-weight: bold;
-    }
+}
+
+.p-contact-required {
+    font-size: rem(12);
+    padding: rem(4) rem(8);
+    background-color: $navy;
+    border-radius: rem(5);
+    color: $white;
+    margin-left: rem(8);
 }
 
 .p-contact-input {

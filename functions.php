@@ -22,17 +22,15 @@ add_action('wp_enqueue_scripts', 'include_files');
 // ========================================
 function my_exam_validation_rule( $Validation, $data, $Data ) {
 
-	$Validation->set_rule( '会社名', 'noEmpty', array( 'message' => '※入力してください。' ) );
-	$Validation->set_rule( 'お名前', 'noEmpty', array( 'message' => '※入力してください。' ) );
-	$Validation->set_rule( 'メールアドレス', 'noEmpty', array( 'message' => '※入力してください。' ) );
+	$Validation->set_rule( 'お名前', 'noEmpty', array( 'message' => '※お名前を入力してください。' ) );
+	$Validation->set_rule( 'メールアドレス', 'noEmpty', array( 'message' => '※メールアドレスを入力してください。' ) );
     $Validation->set_rule( 'メールアドレス', 'mail', array( 'message' => '※正式な書式で入力してください' ) );
-	$Validation->set_rule( '電話番号', 'noEmpty', array( 'message' => '※入力してください。' ) );
     $Validation->set_rule( 'お問い合わせの種類', 'required', array( 'message' => '※１つ選択してください' ) );
-	$Validation->set_rule( 'お問合せ内容', 'noEmpty', array( 'message' => '※入力してください。' ) );
+	$Validation->set_rule( 'お問い合わせ内容', 'noEmpty', array( 'message' => '※お問い合わせ内容を入力してください。' ) );
 	$Validation->set_rule( 'プライバシーポリシー', 'required', array( 'message' => '※チェックを入れてください。' ) );
 	return $Validation;
 }
-add_filter( 'mwform_validation_mw-wp-form-24', 'my_exam_validation_rule', 10, 3 );
+add_filter( 'mwform_validation_mw-wp-form-301', 'my_exam_validation_rule', 10, 3 );
 // ========================================
 // バリデーション 終了
 // ========================================
