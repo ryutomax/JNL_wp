@@ -1,11 +1,11 @@
-<?php get_template_part('template_header/header'); ?>
+<?php get_template_part('./template_header/header'); ?>
     <main class="l-main">
 
         <!-- FV テンプレートの呼び出し -->
-        <?php get_template_part('template_parts/FV'); ?>
+        <?php get_template_part('./template_parts/FV'); ?>
 
         <!-- パンくずリストのテンプレート呼び出し -->
-        <?php get_template_part('template_parts/breadcrumb'); ?>
+        <?php get_template_part('./template_parts/breadcrumb'); ?>
 
         <section class="p-privacy c-frame">
             <div class="p-privacy-inner">
@@ -17,7 +17,7 @@
             <!-- /.p-privacy-inner -->
         </section>
         <!-- bannerのテンプレート呼び出し -->
-        <?php get_template_part('template_parts/banner'); ?>
+        <?php get_template_part('./template_parts/banner'); ?>
 
     </main>
-<?php get_template_part('template_footer/footer'); ?>
+<?php get_template_part('./template_footer/footer'); ?>

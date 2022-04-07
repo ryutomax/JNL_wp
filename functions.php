@@ -139,4 +139,41 @@ function my_main_query( $query ) {
         }
     add_action( 'admin_print_styles', 'my_dashboard_print_styles' );
 
+    // ========================================
+    // templateファイル/フォルダ管理
+    // ========================================
+    /**
+    * タグテンプレート
+    */
+    add_action( 'page_template', 'my_templatefile_folder' );
+    
+    function my_templatefile_folder($template){
+
+        $page = get_queried_object();
+    //専用テンプレートが用意されているのか判定
+        $alternative_template = locate_template( "template-page/page-{$page->slug}.php" );
+
+    // 専用テンプレートが用意されている場合
+        if ($alternative_template) {
+            return $template = $alternative_template;
+        }
+    // 専用テンプレートが用意されていない場合
+        return $template;
+    }
+    /**
+    * カテゴリテンプレート
+    */
+    add_action('category_template', function($template){
+        $category = get_queried_object();
+        //専用テンプレートが用意されているのか判定
+        $alternative_template = locate_template( "category/category-{$category->slug}.php" );
+
+        // 専用テンプレートが用意されている場合
+        if ($alternative_template) {
+            return $template = $alternative_template;
+        }
+        // 専用テンプレートが用意されていない場合
+            return $template;
+    });
+
 ?>
