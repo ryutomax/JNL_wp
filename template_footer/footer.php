@@ -2,20 +2,20 @@
             <div class="l-footer-inner">
                 <nav class="p-footer-nav">
                     <ul class="p-footer-nav__list">
-                        <li class="p-footer-nav__item" ontouchstart="">
-                            <a href="<?php echo esc_url( home_url('/') );?>">ホーム</a>
+                        <li class="p-footer-nav__item">
+                            <a href="<?php echo esc_url( home_url('/') );?>" ontouchstart="">ホーム</a>
                         </li>
-                        <li class="p-footer-nav__item" ontouchstart="">
-                            <a href="<?php echo esc_url( home_url('/news') );?>">お知らせ</a>
+                        <li class="p-footer-nav__item">
+                            <a href="<?php echo esc_url( home_url('/news') );?>" ontouchstart="">お知らせ</a>
                         </li>
-                        <li class="p-footer-nav__item" ontouchstart="">
-                            <a href="<?php echo esc_url( home_url('/recipe') );?>">レシピ</a>
+                        <li class="p-footer-nav__item">
+                            <a href="<?php echo esc_url( home_url('/recipe') );?>" ontouchstart="">レシピ</a>
                         </li>
-                        <li class="p-footer-nav__item js-products" ontouchstart="">
-                            <a href="<?php echo esc_url('#');?>">商品のご紹介</a>
+                        <li class="p-footer-nav__item js-products">
+                            <a href="<?php echo esc_url('#');?>" ontouchstart="">商品のご紹介</a>
                         </li>
-                        <li class="p-footer-nav__item" ontouchstart="">
-                            <a href="<?php echo esc_url(home_url('/contact'));?>">お問い合わせ</a>
+                        <li class="p-footer-nav__item">
+                            <a href="<?php echo esc_url(home_url('/contact'));?>" ontouchstart="">お問い合わせ</a>
                         </li>
                     </ul>
                 </nav>
