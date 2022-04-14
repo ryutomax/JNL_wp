@@ -81,16 +81,16 @@
                             </ul>
                             <ul class="p-sitemap-list">
                                 <li class="p-sitemap-item">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>">会社概要</a>
+                                    <a href="<?php echo esc_url(home_url('/company')); ?>">会社概要</a>
                                 </li>
                                 <li class="p-sitemap-item">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>">お問い合わせ</a>
+                                    <a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
                                 </li>
                                 <li class="p-sitemap-item">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>">プライバシーポリシー</a>
+                                    <a href="<?php echo esc_url(home_url('/privacypolicy')); ?>">プライバシーポリシー</a>
                                 </li>
                                 <li class="p-sitemap-item">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>">サイトマップ</a>
+                                    <a href="<?php echo esc_url(home_url('/sitemap')); ?>">サイトマップ</a>
                                 </li>
                             </ul>
                         </div>

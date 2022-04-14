@@ -254,7 +254,7 @@
                                 ?>
                                 <!-- メニューリストのテンプレート呼び出し -->
                                 <?php get_template_part('template_parts/recipeList'); ?>
-                                
+
                                 <?php endwhile; ?>
                                 <?php else: ?>
                                 <p>レシピがありません。</p>
