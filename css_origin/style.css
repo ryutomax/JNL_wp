@@ -2384,10 +2384,6 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   margin: 0 auto;
 }
 
-.p-detail-review p {
-  display: none;
-}
-
 .p-detail-youtube {
   position: relative;
   height: 0;
@@ -2432,7 +2428,7 @@ p.glsr-tag-value {
 
 .glsr-no-margins {
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .glsr-button {
