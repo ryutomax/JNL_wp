@@ -8,7 +8,7 @@ function include_files() {
     // WPのjQueryを解除
     // wp_deregister_script('jqeury');
     // JavaScriptファイルの読み込み
-    wp_enqueue_script('my-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array('jquery'), '3.6.0', true);
+    wp_enqueue_script('my-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', '3.6.0' , true);
     wp_enqueue_script('aos','https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true);
     wp_enqueue_script('my-script', get_theme_file_uri('/app/js/bundle.js'), array('jquery'), '1.0.0', true);
     if(is_singular('recipe')){

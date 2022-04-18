@@ -696,6 +696,7 @@ a.next.page-numbers {
   width: 100%;
   height: 3.125rem;
   padding: 1rem;
+  border-radius: 0;
   background-color: #e35c38;
   color: #ffffff;
   font-weight: bold;
@@ -1355,16 +1356,16 @@ a.next.page-numbers {
 }
 
 .p-contact-item {
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .p-contact-item:nth-child(4),
 .p-contact-item:nth-child(5) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .p-contact-item:nth-child(6) {
-  margin-bottom: 1.875rem;
+  margin-bottom: 2rem;
 }
 
 .p-contact-nameTop {
@@ -1374,6 +1375,7 @@ a.next.page-numbers {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .p-contact-required {
@@ -1388,7 +1390,6 @@ a.next.page-numbers {
 .p-contact-input {
   width: 100%;
   height: 50px;
-  margin-top: 1rem;
   padding-left: 1.25rem;
   border: solid 0.125rem #2C3848;
   border-radius: 0.125rem;
@@ -1497,28 +1498,33 @@ input[type=radio]:checked + .mwform-radio-field-text::after {
   padding-left: 1.4375rem;
   border: solid 0.125rem #2C3848;
   border-radius: 0.125rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   resize: none;
 }
 
 .p-contact-textarea::-webkit-input-placeholder {
   color: #B4B4B4;
+  font-size: 0.75rem;
 }
 
 .p-contact-textarea::-moz-placeholder {
   color: #B4B4B4;
+  font-size: 0.75rem;
 }
 
 .p-contact-textarea:-ms-input-placeholder {
   color: #B4B4B4;
+  font-size: 0.75rem;
 }
 
 .p-contact-textarea::-ms-input-placeholder {
   color: #B4B4B4;
+  font-size: 0.75rem;
 }
 
 .p-contact-textarea::placeholder {
   color: #B4B4B4;
+  font-size: 0.75rem;
 }
 
 .p-contact-textarea:focus {
@@ -3300,6 +3306,7 @@ p.glsr-tag-value {
     width: 100%;
     height: 15.625rem;
     padding: 1rem;
+    border-radius: 10px 0 0 10px;
     background-color: #e35c38;
     color: #ffffff;
     writing-mode: vertical-rl;

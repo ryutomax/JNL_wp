@@ -20,19 +20,20 @@
 }
 
 .p-contact-item {
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
     &:nth-child(4),
     &:nth-child(5) {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
     &:nth-child(6) {
-        margin-bottom: 1.875rem;
+        margin-bottom: 2rem;;
     }
 }
 
 .p-contact-nameTop {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .p-contact-name {
@@ -50,7 +51,6 @@
 .p-contact-input {
     width: 100%;
     height: 50px;
-    margin-top: rem(16);
     padding-left: 1.25rem;
     border: solid rem(2) $navy;
     border-radius: rem(2);
@@ -137,11 +137,12 @@ input[type=radio]:checked + .mwform-radio-field-text::after {
     margin-top: 0.75rem;
     padding-top: 1.375rem;
     padding-left: 1.4375rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
     border: solid rem(2) $navy;
     border-radius: rem(2);
     &::placeholder {
         color: $MD-gray;
+        font-size: 0.75rem;
     }
     &:focus {
         border: solid rem(2.5) $d-green;

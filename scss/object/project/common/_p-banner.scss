@@ -9,6 +9,7 @@
 
 .p-banner-inner {
     background-color: $d-red;
+    border-radius: 0;
     padding: rem(16);
     width: 100%;
     height: rem(50);
@@ -42,6 +43,7 @@
     }
     .p-banner-inner {
         background-color: $d-red;
+        border-radius: 10px 0 0 10px;
         padding: rem(16);
         width: 100%;
         height: rem(250);
