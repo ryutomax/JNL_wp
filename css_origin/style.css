@@ -1898,6 +1898,50 @@ input[type=checkbox]:checked + span.mwform-checkbox-field-text::after {
   transition: 0.5s;
 }
 
+.p-person-cont {
+  width: 95%;
+  max-width: 43.75rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #eaf4dc;
+}
+
+.p-person-img {
+  width: 6.25rem;
+  height: 7.8125rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.p-person-infoItem {
+  line-height: 1.5;
+}
+
+.p-person-infoItem:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.p-person-licenceList {
+  -ms-flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-person-name,
+.p-person-licenceTtl,
+.p-person-prfTtl {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.p-person-licenceList,
+.p-person-prfTxt {
+  line-height: 1.5;
+}
+
 .p-products-item {
   -webkit-transition: 0.5s;
   max-width: 400px;
@@ -3075,6 +3119,10 @@ p.glsr-tag-value {
 
   .p-news-txt {
     font-size: 1rem;
+  }
+
+  .p-person-cont {
+    padding: 4rem;
   }
 
   .p-recipe-tab p {

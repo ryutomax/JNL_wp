@@ -1,9 +1,63 @@
 @use "global" as *;
 
+.p-person {
 
+}
 
+.p-person-inner {
+
+}
+
+.p-person-ttl {
+
+}
+
+.p-person-cont {
+    max-width: rem(700);
+    width: 95%;
+    margin: 0 auto;
+    padding: rem(48) rem(32);
+    background-color: $l-green;
+}
+
+.p-person-img {
+    width: rem(100);
+    height: rem(125);
+    margin: 0 auto;
+    margin-bottom: rem(24);
+    img {
+    }
+}
+
+.p-person-infoItem {
+    line-height: 1.5;
+    &:not(:last-child) {
+        margin-bottom: rem(32);
+    }
+}
+
+.p-person-licenceList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.p-person-name,
+.p-person-licenceTtl,
+.p-person-prfTtl {
+    text-align: center;
+    margin-bottom: rem(16);
+    font-weight: bold;
+}
+
+.p-person-licenceList,
+.p-person-prfTxt {
+    line-height: 1.5;
+}
 
 @include mq (sp) {
+    .p-person-cont {
+        padding: rem(64);
+    }
 }
 
 @include mq () {
