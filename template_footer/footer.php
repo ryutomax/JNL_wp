@@ -12,7 +12,7 @@
                             <a href="<?php echo esc_url( home_url('/recipe') );?>" ontouchstart="">レシピ</a>
                         </li>
                         <li class="p-footer-nav__item js-products">
-                            <a href="<?php echo esc_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/');?>" ontouchstart="">商品のご紹介</a>
+                            <a href="<?php echo esc_url('/');?>#products" ontouchstart="">商品のご紹介</a>
                         </li>
                         <li class="p-footer-nav__item">
                             <a href="<?php echo esc_url(home_url('/contact'));?>" ontouchstart="">お問い合わせ</a>
