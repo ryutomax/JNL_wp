@@ -276,6 +276,28 @@
                 <!-- /.c-recipe-inner -->
             </section>
 
+            <section class="p-person c-frame">
+                <div class="p-person-inner">
+                    <div class="p-person-ttl c-sec-ttl">
+                        <h3>
+                            <span class="js-wave">P</span>
+                            <span class="js-wave">e</span>
+                            <span class="js-wave">r</span>
+                            <span class="js-wave">s</span>
+                            <span class="js-wave">o</span>
+                            <span class="js-wave">n</span>
+                        </h3>
+                        <p>レシピ考案者</p>
+                    </div>
+                    <!-- /.p-person-ttl -->
+                    <div class="p-person-cont">
+                        
+                    </div>
+                    <!-- /.p-person-cont -->
+                </div>
+                <!-- /.p-person-inner -->
+            </section>
+
             <!-- productsCtaのテンプレート呼び出し -->
             <?php get_template_part('template_parts/productsCta'); ?>
 
