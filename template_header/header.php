@@ -42,7 +42,7 @@
                         </li>
                         <?php if(is_page(array( 'contact', 'confirm', 'thanks','privacypolicy' ) )): ?>
                         <li class="p-header-nav__item">
-                            <a href="<?php echo esc_url(home_url('/'));?>#products">商品のご紹介</a>
+                            <a href="<?php echo esc_url(home_url('https://item.rakuten.co.jp/jn-lab/c/0000000129/'));?>#products">商品のご紹介</a>
                         </li>
                         <?php else: ?>
                         <li class="p-header-nav__item js-products">

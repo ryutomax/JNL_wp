@@ -1,0 +1,13 @@
+@use "global" as *;
+
+
+
+
+@include mq (sp) {
+}
+
+@include mq () {
+}
+
+@include mq (pc) {
+}

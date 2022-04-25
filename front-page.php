@@ -291,7 +291,44 @@
                     </div>
                     <!-- /.p-person-ttl -->
                     <div class="p-person-cont">
-                        
+                        <figure class="p-person-img">
+                            <img src="" alt="">
+                        </figure>
+                        <div class="p-person-name">
+                            <p>廣瀬　友子</p>
+                        </div>
+                        <!-- /.p-person-name -->
+                        <div class="p-person-licence">
+                            <div class="p-person-licenceTtl">
+                                <p>＜所持資格＞</p>
+                            </div>
+                            <ul class="p-person-list">
+                                <li class="p-person-item">調理師・</li>
+                                <li class="p-person-item">東京都ふぐ調理師・</li>
+                                <li class="p-person-item">JSA認定ソムリエ・</li>
+                                <li class="p-person-item">酒Diproma・</li>
+                                <li class="p-person-item">WSET.level3・</li>
+                                <li class="p-person-item">魚検定1級・</li>
+                                <li class="p-person-item">薬膳アドバイザー</li>
+                            </ul>
+                        </div>
+                        <!-- /.p-person-licence -->
+                        <div class="p-person-prf">
+                            <div class="p-person-prfTtl">
+                                <p>＜プロフィール＞</p>
+                            </div>
+                            <!-- /.p-person-prfTtl -->
+                            <div class="p-person-prfTxt">
+                                <p>調理師学校卒業後、宮古島の琉球料理店を皮切りに
+                                    <br>北海道ではラーメン作りを経て、都内料亭・割烹・寿司店・和食店・フレンチ・ワインバル等で研鑽を積み、
+                                    <br>銀座「奏」の料理長に就任。
+                                    <br>その後、一部上場企業のメニュー開発、新規事業開発に携わる。
+                                    <br>現在は惣菜店経営、飲食店の開業を準備中。
+                                </p>
+                            </div>
+                            <!-- /.p-person-prfTxt -->
+                        </div>
+                        <!-- /.p-person-prf -->
                     </div>
                     <!-- /.p-person-cont -->
                 </div>
