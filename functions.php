@@ -4,7 +4,7 @@ function include_files() {
     // CSSファイルの読み込み
     wp_enqueue_style('aos', "https://unpkg.com/aos@2.3.1/dist/aos.css", array(), '2.3.1', false);
     wp_enqueue_style('swiper', "https://unpkg.com/swiper@8/swiper-bundle.min.css", array(), '8', false);
-    wp_enqueue_style('style',get_theme_file_uri('/css_origin/style.css'), array(), '1.0.0', false);
+    wp_enqueue_style('style',get_theme_file_uri('/css_min/style.css'), array(), '1.0.0', false);
     // WPのjQueryを解除
     // wp_deregister_script('jqeury');
     // JavaScriptファイルの読み込み
